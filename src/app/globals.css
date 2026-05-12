@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090909;
+  --foreground: #F5F5F5;
+  --surface: #171717;
+  --surface-hover: #1D1D1D;
+  --accent-primary: #3ABEF9;
+  --accent-secondary: #FF8F00;
+  --accent-tertiary: #FFFFFF;
+  --text-muted: #A1A1AA;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  filter: contrast(150%) brightness(150%);
+}
+
+/* Fluid Typography Utilities */
+@layer utilities {
+  .text-fluid-huge {
+    font-size: clamp(3rem, 10vw, 8.5rem);
+    line-height: 0.85;
+  }
+  
+  .text-fluid-title {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1;
+  }
+
+  .section-padding {
+    padding-top: clamp(4rem, 10vh, 8rem);
+    padding-bottom: clamp(4rem, 10vh, 8rem);
+  }
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: #090909;
+}
+
+/* Hide native scrollbar but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
