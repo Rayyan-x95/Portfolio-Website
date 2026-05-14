@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/ui/Navbar";
@@ -8,8 +8,8 @@ import { Footer } from "@/components/ui/Footer";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { SideScrollbar } from "@/components/ui/SideScrollbar";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
 });
 
@@ -17,6 +17,14 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
   subsets: ["latin"],
 });
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-editorial",
+  subsets: ["latin"],
+  style: ["italic"],
+  weight: ["400", "500", "600"],
+});
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rayyan.qzz.io"),
@@ -65,9 +73,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${plusJakarta.variable} ${spaceGrotesk.variable} ${cormorant.variable} antialiased`}
     >
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white antialiased`}>
+      <body className={`${plusJakarta.variable} ${spaceGrotesk.variable} ${cormorant.variable} font-sans bg-black text-white antialiased`}>
         <SideScrollbar />
         <SmoothScroll>
           {children}

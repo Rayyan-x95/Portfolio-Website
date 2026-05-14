@@ -16,7 +16,7 @@ interface FadeUpProps {
   yOffset?: number;
 }
 
-export function FadeUp({ children, delay = 0, className, yOffset = 24 }: FadeUpProps) {
+export function FadeUp({ children, delay = 0, className, yOffset = 20 }: FadeUpProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
@@ -27,18 +27,18 @@ export function FadeUp({ children, delay = 0, className, yOffset = 24 }: FadeUpP
       { 
         opacity: 0, 
         y: yOffset,
-        scale: 0.96,
+        scale: 0.98,
       },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 1.2,
+        duration: 0.8,
         delay: delay,
-        ease: "power4.out",
+        ease: "expo.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top bottom-=80",
+          start: "top bottom-=40",
           once: true,
         }
       }

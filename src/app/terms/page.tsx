@@ -4,6 +4,17 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
 
 export default function TermsPage() {
+  const renderWithLinks = (text: string) => {
+    const parts = text.split(/(Ninety5 Studio|Ninety5)/g);
+    return parts.map((part, i) => 
+      part === "Ninety5 Studio" || part === "Ninety5" ? (
+        <a key={i} href="https://ninety5.dpdns.org/" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-white/10 hover:text-accent-primary transition-colors">
+          {part}
+        </a>
+      ) : part
+    );
+  };
+
   const terms = [
     {
       title: "Service Agreement",
@@ -27,7 +38,7 @@ export default function TermsPage() {
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
       <PageHeader 
         title="Terms & Conditions" 
-        description="The operational framework of Ninety5 Studio." 
+        description={renderWithLinks("The operational framework of Ninety5 Studio.")}
       />
       
       <div className="container mx-auto max-w-4xl px-4 md:px-6">
@@ -42,7 +53,7 @@ export default function TermsPage() {
                   </h2>
                 </div>
                 <p className="text-lg md:text-xl font-light text-white/40 leading-relaxed group-hover:text-white transition-colors duration-700">
-                  {term.content}
+                  {renderWithLinks(term.content)}
                 </p>
               </div>
             </FadeUp>

@@ -21,36 +21,46 @@ export function ServicesPreview() {
           <div className="md:col-span-12 mb-8 md:mb-24">
             <FadeUp>
               <div className="flex items-center gap-4 mb-6">
-                <span className="w-12 h-[1px] bg-accent-primary" />
-                <span className="text-xs font-mono tracking-[0.4em] text-accent-primary uppercase">Expertise</span>
+                <span className="text-[10px] font-mono tracking-[0.5em] text-accent-primary uppercase">// Expertise_Matrix</span>
+                <div className="w-12 h-[1px] bg-white/10" />
               </div>
-              <h2 className="font-heading text-fluid-huge font-bold uppercase tracking-tighter text-white">
-                Core <br /> Services
+              <h2 className="font-heading text-fluid-huge font-black uppercase tracking-tighter text-white">
+                Core <br /> <span className="font-editorial italic text-accent-primary">Services</span>
               </h2>
             </FadeUp>
           </div>
 
           {/* Service Cards Grid */}
-          <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
             {services.map((service, index) => (
               <FadeUp key={index} delay={index * 0.1}>
-                <div className="group relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-700 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 p-8 md:p-12 opacity-20 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-700 scale-75 group-hover:scale-100">
-                    <ArrowUpRight className="w-12 h-12" />
+                <div 
+                  data-cursor="expand"
+                  className="group relative p-8 md:p-16 rounded-3xl bg-[#080808] border border-white/5 hover:border-accent-primary/20 transition-all duration-500 cursor-pointer overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  
+                  <div className="absolute top-8 right-8 opacity-10 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-500">
+                    <ArrowUpRight className="w-8 h-8" />
                   </div>
                   
+                  {/* Technical ID */}
+                  <div className="absolute bottom-8 right-8 text-[8px] font-mono text-white/5 uppercase tracking-[0.4em] group-hover:text-accent-primary/10 transition-colors">
+                    SRV_ID_0{index + 1}
+                  </div>
+
                   <div className="relative z-10">
-                    <span className="text-sm font-mono text-white/20 mb-6 block">0{index + 1}</span>
-                    <h3 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors duration-500">
+                    <span className="text-[10px] font-mono text-accent-secondary mb-8 block tracking-[0.4em]">// 0{index + 1}</span>
+                    <h3 className="font-heading text-2xl md:text-5xl font-black text-white mb-6 group-hover:text-accent-primary transition-colors duration-500 uppercase tracking-tighter">
                       {service.title}
                     </h3>
-                    <p className="text-lg text-text-muted font-light max-w-xs opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-lg text-white/50 font-light max-w-xs leading-relaxed">
                       {service.desc}
                     </p>
                   </div>
                   
-                  {/* Hover Background Accent */}
-                  <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-accent-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                  {/* Scanline Overlay */}
+                  <div className="absolute inset-0 scanline opacity-[0.02] pointer-events-none group-hover:opacity-[0.05] transition-opacity" />
                 </div>
               </FadeUp>
             ))}
@@ -59,9 +69,9 @@ export function ServicesPreview() {
           {/* Footer CTA */}
           <div className="md:col-span-12 mt-12 md:mt-24 flex justify-center">
             <FadeUp>
-              <Link href="/services" className="group flex items-center gap-6 px-10 py-5 rounded-full bg-white text-black font-heading text-lg uppercase tracking-widest hover:bg-accent-primary transition-all duration-500">
-                Explore Expertise
-                <ArrowUpRight className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
+              <Link href="/services" className="group flex items-center gap-6 px-10 py-5 rounded-full bg-white text-black font-sans text-xs uppercase tracking-[0.4em] font-bold hover:bg-accent-primary transition-all duration-500">
+                Explore_Expertise
+                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500" />
               </Link>
             </FadeUp>
           </div>

@@ -50,7 +50,7 @@ export function About() {
                   Based at the intersection of design and engineering, my work focuses on crafting digital products that don't just work—they perform with cinematic intent.
                 </p>
                 <p>
-                  As the Founder & Lead Designer of <span className="text-white font-medium">Ninety5 Studio</span>, I lead projects that challenge conventional UI patterns, leveraging my background in AOSP development to build interfaces that are as technically sound as they are visually striking.
+                  As the Founder & Lead Designer of <a href="https://ninety5.dpdns.org/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent-primary transition-colors font-medium">Ninety5 Studio</a>, I lead projects that challenge conventional UI patterns, leveraging my background in AOSP development to build interfaces that are as technically sound as they are visually striking.
                 </p>
                 <p>
                   I believe that true minimalism isn't just about removing the unnecessary, but about engineering the essential to perfection.

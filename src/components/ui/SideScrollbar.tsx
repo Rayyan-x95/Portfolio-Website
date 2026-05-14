@@ -43,11 +43,11 @@ export function SideScrollbar() {
         {/* Fill/Thumb */}
         <motion.div
           style={{ 
-            height: 100, 
-            background: "linear-gradient(to bottom, #3ABEF9, #FF8F00)",
+            height: 80, 
+            background: "linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary))",
             y: translateY
           }}
-          className="w-full rounded-full shadow-[0_0_20px_rgba(58,190,249,0.2)] transition-shadow duration-500"
+          className="w-full rounded-full shadow-[0_0_15px_rgba(0,229,255,0.15)] transition-shadow duration-500"
         />
       </div>
     </div>

@@ -4,6 +4,17 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
 
 export default function PrivacyPage() {
+  const renderWithLinks = (text: string) => {
+    const parts = text.split(/(Ninety5 Studio|Ninety5)/g);
+    return parts.map((part, i) => 
+      part === "Ninety5 Studio" || part === "Ninety5" ? (
+        <a key={i} href="https://ninety5.dpdns.org/" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-white/10 hover:text-accent-primary transition-colors">
+          {part}
+        </a>
+      ) : part
+    );
+  };
+
   const sections = [
     {
       title: "Data Collection",
@@ -27,7 +38,7 @@ export default function PrivacyPage() {
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
       <PageHeader 
         title="Privacy Policy" 
-        description="How Ninety5 Studio handles your digital footprint." 
+        description={renderWithLinks("How Ninety5 Studio handles your digital footprint.")}
       />
       
       <div className="container mx-auto max-w-4xl px-4 md:px-6">
@@ -42,7 +53,7 @@ export default function PrivacyPage() {
                   </h2>
                 </div>
                 <p className="text-lg md:text-xl font-light text-white/40 leading-relaxed group-hover:text-white transition-colors duration-700">
-                  {section.content}
+                  {renderWithLinks(section.content)}
                 </p>
               </div>
             </FadeUp>
@@ -51,7 +62,7 @@ export default function PrivacyPage() {
           <FadeUp delay={0.5}>
             <div className="pt-20 border-t border-white/5">
               <p className="text-xs font-mono text-white/20 uppercase tracking-[0.3em]">
-                Last Updated: May 2026 // Ninety5 Studio
+                Last Updated: May 2026 // {renderWithLinks("Ninety5 Studio")}
               </p>
             </div>
           </FadeUp>

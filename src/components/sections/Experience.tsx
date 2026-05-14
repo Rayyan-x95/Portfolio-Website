@@ -48,6 +48,17 @@ const experiences = [
 ];
 
 export function Experience() {
+  const renderWithLinks = (text: string) => {
+    const parts = text.split(/(Ninety5 Studio|Ninety5)/g);
+    return parts.map((part, i) => 
+      part === "Ninety5 Studio" || part === "Ninety5" ? (
+        <a key={i} href="https://ninety5.dpdns.org/" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-white/10 hover:text-accent-primary transition-colors">
+          {part}
+        </a>
+      ) : part
+    );
+  };
+
   return (
     <section className="py-32 md:py-64 px-4 md:px-6 relative bg-black overflow-hidden">
       <div className="container mx-auto max-w-7xl">
@@ -98,11 +109,11 @@ export function Experience() {
 
                         <div className="flex items-center gap-2 mb-6">
                           <Globe className="w-3 h-3 text-white/20" />
-                          <span className="text-sm font-light text-text-muted">@ {exp.company}</span>
+                          <span className="text-sm font-light text-text-muted">@ {renderWithLinks(exp.company)}</span>
                         </div>
 
                         <p className="text-base text-white/40 leading-relaxed font-light">
-                          {exp.desc}
+                          {renderWithLinks(exp.desc)}
                         </p>
 
                         {/* Background Glow */}

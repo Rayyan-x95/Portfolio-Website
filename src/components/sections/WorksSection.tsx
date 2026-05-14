@@ -29,7 +29,7 @@ const projects = [
     color: "from-accent-tertiary/20 to-transparent",
     image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop",
     aspect: "aspect-[4/3]",
-    url: "https://github.com/rayyan-x95/Portfolio"
+    url: "https://ninety5.dpdns.org/"
   },
   {
     title: "Habitate",
@@ -109,41 +109,47 @@ export function WorksSection({ limit }: { limit?: number }) {
                 href={project.url}
                 target={project.url.startsWith("http") ? "_blank" : undefined}
                 rel={project.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group relative flex flex-col gap-6 cursor-pointer bg-white/[0.02] border border-white/5 rounded-[2.5rem] md:rounded-[3rem] p-4 md:p-6 hover:bg-white/[0.04] transition-all duration-700 hover:shadow-2xl hover:shadow-accent-primary/5 block"
+                data-cursor="view"
+                className="group relative flex flex-col gap-6 cursor-pointer bg-[#080808] border border-white/5 rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-6 hover:border-accent-primary/20 transition-all duration-700 block overflow-hidden"
               >
-                
+                {/* Background Tech Label */}
+                <div className="absolute top-4 right-4 text-[8px] font-mono text-white/5 uppercase tracking-[0.4em] pointer-events-none group-hover:text-accent-primary/10 transition-colors">
+                  PROJ_SPEC_{index < 9 ? `0${index + 1}` : index + 1}
+                </div>
+
                 {/* Image Container */}
-                <div className={`w-full ${project.aspect} relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[#050505] border border-white/5`}>
+                <div className={`w-full ${project.aspect} relative rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505] border border-white/5`}>
                   <Image 
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover opacity-60 group-hover:opacity-100 transition-all duration-1000 ease-[cubic-bezier(0.21,1,0.32,1)] group-hover:scale-[1.05]"
+                    className="object-cover opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 ease-[cubic-bezier(0.21,1,0.32,1)] group-hover:scale-[1.05]"
                   />
+                  <div className="absolute inset-0 scanline opacity-10 pointer-events-none" />
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-40 transition-opacity duration-1000 pointer-events-none mix-blend-overlay`} />
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-col px-2">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 2).map((tag) => (
-                      <span key={tag} className="text-[9px] uppercase font-mono tracking-[0.2em] px-3 py-1 rounded-full border border-white/10 text-white/40">
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="text-[8px] uppercase font-mono tracking-[0.2em] px-3 py-1 rounded-md border border-white/5 bg-white/[0.02] text-white/30 group-hover:text-accent-primary group-hover:border-accent-primary/20 transition-colors">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-accent-primary transition-colors duration-500">
+                  <h3 className="font-heading text-2xl md:text-3xl font-black text-white mb-3 group-hover:text-accent-primary transition-colors duration-500 uppercase tracking-tighter">
                     {project.title}
                   </h3>
                   
-                  <p className="text-sm md:text-base text-text-muted leading-relaxed font-light line-clamp-3 mb-6">
+                  <p className="text-sm md:text-base text-white/50 leading-relaxed font-light line-clamp-3 mb-8">
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-2 text-white font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                    View Project 
-                    <span className="w-8 h-[1px] bg-white/30" />
+                  <div className="flex items-center gap-3 text-white/40 font-mono text-[9px] uppercase tracking-[0.4em] group-hover:text-white transition-all duration-500">
+                    <span className="text-accent-primary">//</span> Launch_Resource
+                    <div className="w-12 h-[1px] bg-white/10 group-hover:w-20 group-hover:bg-accent-primary transition-all duration-700" />
                   </div>
                 </div>
 

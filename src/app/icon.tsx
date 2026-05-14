@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "N95.";
+export const alt = "RAYYAN.";
 export const size = {
   width: 32,
   height: 32,
