@@ -57,7 +57,7 @@ export function Navbar() {
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "expo.out" }}
+        transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
         style={{ y: navY }}
         className="fixed top-4 md:top-8 left-0 w-full z-[100] px-4 md:px-8 pointer-events-none"
       >

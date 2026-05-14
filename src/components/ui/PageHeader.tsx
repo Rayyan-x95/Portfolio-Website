@@ -1,13 +1,13 @@
 "use client";
 
 import { FadeUp } from "./FadeUp";
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 interface PageHeaderProps {
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 export function PageHeader({ title, description }: PageHeaderProps) {
