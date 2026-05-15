@@ -1,7 +1,11 @@
-"use client";
-
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "The operational framework and terms of service for Ninety5 Studio.",
+};
 
 export default function TermsPage() {
   const terms = [

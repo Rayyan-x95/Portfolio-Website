@@ -7,6 +7,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { SideScrollbar } from "@/components/ui/SideScrollbar";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "http://rayyan.qzz.io/",
+    url: "https://rayyan.qzz.io/",
     siteName: "Mohammed Rayyan Portfolio",
     title: "Mohammed Rayyan | Designer & Technologist",
     description: "Bridging the gap between raw performance and cinematic design.",
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "./",
   }
 };
 
@@ -62,12 +66,60 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Rayyan",
+    "url": "https://rayyan.qzz.io",
+    "image": "https://github.com/rayyan-x95.png",
+    "sameAs": [
+      "https://github.com/rayyan-x95",
+      "https://linkedin.com/in/rayyan-x95",
+      "https://twitter.com/rayyan_x95"
+    ],
+    "jobTitle": "Creative Technologist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Ninety5 Studio"
+    },
+    "description": "Designer who codes and Engineer who obsesses over pixels. Specializing in AOSP development and premium UI/UX."
+  };
+
+  const studioSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ninety5 Studio",
+    "url": "https://rayyan.qzz.io",
+    "logo": "https://github.com/rayyan-x95.png",
+    "image": "https://github.com/rayyan-x95.png",
+    "description": "Premium AOSP development and UI/UX design studio.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "13.0827",
+      "longitude": "80.2707"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mohammed Rayyan"
+    },
+    "foundingDate": "2024",
+    "priceRange": "$$$"
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white antialiased`}>
+        <JsonLd data={personSchema} />
+        <JsonLd data={studioSchema} />
         <SideScrollbar />
         <SmoothScroll>
           {children}
