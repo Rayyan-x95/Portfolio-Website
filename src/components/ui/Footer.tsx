@@ -23,7 +23,6 @@ export function Footer() {
         { name: "Uses", href: "/uses" },
         { name: "Labs", href: "/labs" },
         { name: "Contact", href: "/contact" },
-        { name: "Sitemap", href: "/sitemap.xml" },
       ],
     },
     {
@@ -54,7 +53,7 @@ export function Footer() {
             <div className="md:col-span-4 flex flex-col items-start">
               <Link href="/" className="group">
                 <h2 className="font-heading text-4xl md:text-5xl font-extrabold tracking-tighter text-white uppercase group-hover:text-accent-primary transition-colors duration-500">
-                  NINETY5<span className="text-accent-primary">.</span>
+                  RAYYAN<span className="text-accent-primary">.</span>
                 </h2>
               </Link>
               <p className="mt-8 text-text-muted font-light leading-relaxed max-w-xs">

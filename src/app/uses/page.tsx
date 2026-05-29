@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { UsesHardware } from "@/components/sections/UsesHardware";
 import { UsesSoftware } from "@/components/sections/UsesSoftware";
+import { UsesCreative } from "@/components/sections/UsesCreative";
 import { UsesIntegrations } from "@/components/sections/UsesIntegrations";
 import { Metadata } from "next";
 
@@ -19,6 +20,7 @@ export default function UsesPage() {
       <div className="space-y-32">
         <UsesHardware />
         <UsesSoftware />
+        <UsesCreative />
         <UsesIntegrations />
       </div>
     </main>

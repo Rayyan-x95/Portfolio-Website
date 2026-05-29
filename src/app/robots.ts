@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://rayyan.qzz.io/sitemap.xml',
+    sitemap: 'https://rayyan.ninety5.in/sitemap.xml',
   };
 }

@@ -8,6 +8,7 @@ import { Footer } from "@/components/ui/Footer";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { SideScrollbar } from "@/components/ui/SideScrollbar";
 import { JsonLd } from "@/components/SEO/JsonLd";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rayyan.qzz.io"),
+  metadataBase: new URL("https://rayyan.ninety5.in"),
   title: {
     default: "Mohammed Rayyan | Designer & Technologist",
     template: "%s | Mohammed Rayyan"
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rayyan.qzz.io/",
+    url: "https://rayyan.ninety5.in/",
     siteName: "Mohammed Rayyan Portfolio",
     title: "Mohammed Rayyan | Designer & Technologist",
     description: "Bridging the gap between raw performance and cinematic design.",
@@ -70,7 +71,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mohammed Rayyan",
-    "url": "https://rayyan.qzz.io",
+    "url": "https://rayyan.ninety5.in",
     "image": "https://github.com/rayyan-x95.png",
     "sameAs": [
       "https://github.com/rayyan-x95",
@@ -89,7 +90,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Ninety5 Studio",
-    "url": "https://rayyan.qzz.io",
+    "url": "https://ninety5.in",
     "logo": "https://github.com/rayyan-x95.png",
     "image": "https://github.com/rayyan-x95.png",
     "description": "Premium AOSP development and UI/UX design studio.",
@@ -118,6 +119,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white antialiased`}>
+        <PageTransition />
         <JsonLd data={personSchema} />
         <JsonLd data={studioSchema} />
         <SideScrollbar />

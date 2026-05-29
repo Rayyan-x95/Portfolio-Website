@@ -71,7 +71,7 @@ export function Navbar() {
             >
               <Link href="/" className="flex items-center gap-3 group">
                 <span className="font-heading text-xl md:text-2xl font-black uppercase tracking-tighter text-white">
-                  N95<span className="text-accent-primary">.</span>
+                  RAYYAN<span className="text-accent-primary">.</span>
                 </span>
               </Link>
               

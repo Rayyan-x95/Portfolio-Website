@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "N95.";
+export const alt = "RAYYAN.";
 export const size = {
   width: 32,
   height: 32,
@@ -29,7 +29,7 @@ export default function Icon() {
           overflow: "hidden",
         }}
       >
-        {/* Minimalist Geometric 'N' */}
+        {/* Minimalist Geometric 'R' */}
         <svg
           width="20"
           height="20"
@@ -38,7 +38,7 @@ export default function Icon() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M4 20V4L16 20V4"
+            d="M5 20V4H13C17 4 17 12 13 12H5M12 12L17 20"
             stroke="white"
             strokeWidth="3.5"
             strokeLinecap="round"

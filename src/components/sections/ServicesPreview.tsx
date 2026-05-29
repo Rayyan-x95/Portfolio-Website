@@ -4,6 +4,62 @@ import { FadeUp } from "@/components/ui/FadeUp";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { useState, useRef, MouseEvent } from "react";
+
+function ServiceCard({ service, index }: { service: { title: string; desc: string }; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setCoords({ x, y });
+  };
+
+  return (
+    <FadeUp delay={index * 0.1}>
+      <div 
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        className="group relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/[0.01] border border-white/5 hover:bg-white/[0.02] hover:border-white/10 transition-all duration-500 cursor-pointer overflow-hidden"
+      >
+        {/* Background Spotlight Glow */}
+        <div
+          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          style={{
+            background: `radial-gradient(300px circle at ${coords.x}px ${coords.y}px, rgba(58, 190, 249, 0.06), transparent 80%)`,
+          }}
+        />
+        
+        {/* Border Spotlight Glow */}
+        <div
+          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-accent-primary z-20"
+          style={{
+            maskImage: `radial-gradient(120px circle at ${coords.x}px ${coords.y}px, black, transparent)`,
+            WebkitMaskImage: `radial-gradient(120px circle at ${coords.x}px ${coords.y}px, black, transparent)`,
+          }}
+        />
+
+        <div className="absolute top-0 right-0 p-8 md:p-12 opacity-20 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-700 scale-75 group-hover:scale-100">
+          <ArrowUpRight className="w-12 h-12" />
+        </div>
+        
+        <div className="relative z-10">
+          <span className="text-sm font-mono text-white/20 mb-6 block">0{index + 1}</span>
+          <h3 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors duration-500">
+            {service.title}
+          </h3>
+          <p className="text-lg text-text-muted font-light max-w-xs opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+            {service.desc}
+          </p>
+        </div>
+      </div>
+    </FadeUp>
+  );
+}
+
 export function ServicesPreview() {
   const services = [
     { title: "Full-Stack Engineering", desc: "Building scalable, type-safe systems." },
@@ -33,26 +89,7 @@ export function ServicesPreview() {
           {/* Service Cards Grid */}
           <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => (
-              <FadeUp key={index} delay={index * 0.1}>
-                <div className="group relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-700 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 p-8 md:p-12 opacity-20 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-700 scale-75 group-hover:scale-100">
-                    <ArrowUpRight className="w-12 h-12" />
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <span className="text-sm font-mono text-white/20 mb-6 block">0{index + 1}</span>
-                    <h3 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors duration-500">
-                      {service.title}
-                    </h3>
-                    <p className="text-lg text-text-muted font-light max-w-xs opacity-60 group-hover:opacity-100 transition-opacity duration-500">
-                      {service.desc}
-                    </p>
-                  </div>
-                  
-                  {/* Hover Background Accent */}
-                  <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-accent-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                </div>
-              </FadeUp>
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </div>
 

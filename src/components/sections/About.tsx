@@ -25,7 +25,7 @@ export function About() {
                 <img
                   src="https://github.com/rayyan-x95.png"
                   alt="Mohammed Rayyan"
-                  className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                  className="w-full h-full object-cover object-top grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-12 left-12">

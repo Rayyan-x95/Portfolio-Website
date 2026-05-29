@@ -33,7 +33,7 @@ export function AboutPreview() {
                 <img 
                   src="https://github.com/rayyan-x95.png" 
                   alt="Mohammed Rayyan"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
+                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
                 />
               </div>
               <p className="text-xl md:text-2xl font-light text-white leading-relaxed mb-8">

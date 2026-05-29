@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeUp } from "./FadeUp";
+import { TextReveal } from "./TextReveal";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -52,11 +53,11 @@ export function PageHeader({ title, description }: PageHeaderProps) {
           </div>
         </FadeUp>
 
-        <FadeUp delay={0.1}>
-          <h1 className="font-heading text-fluid-title md:text-fluid-huge font-bold uppercase tracking-tighter mb-8 text-white">
-            {title}
-          </h1>
-        </FadeUp>
+        <TextReveal 
+          text={title} 
+          className="font-heading text-fluid-title md:text-fluid-huge font-bold uppercase tracking-tighter mb-8 text-white justify-center text-center w-full"
+          delay={0.1} 
+        />
 
         <FadeUp delay={0.2} className="max-w-2xl">
           <p className="text-xl md:text-2xl font-light text-text-muted leading-relaxed tracking-tight">

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://rayyan.qzz.io';
+  const baseUrl = 'https://rayyan.ninety5.in';
   
   const routes = [
     '',
