@@ -41,7 +41,7 @@ export function UsesHardware() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-8 right-8 text-right">
-                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] block mb-2">// Setup</span>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] block mb-2">{"// Setup"}</span>
                   <span className="text-2xl font-heading font-bold text-white uppercase italic">Essential V1</span>
                 </div>
               </div>

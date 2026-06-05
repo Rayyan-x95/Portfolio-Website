@@ -54,6 +54,7 @@ export function TextReveal({
 
   return (
     <Component 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref={containerRef as any} 
       className={`${className} flex flex-wrap gap-y-1`}
     >

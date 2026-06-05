@@ -4,7 +4,7 @@ import { FadeUp } from "@/components/ui/FadeUp";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Terminal, MessageCircle, Music, ArrowRight, Briefcase, Send } from "lucide-react";
+import { Terminal, Music, ArrowRight, Briefcase, Send } from "lucide-react";
 
 export function Curtains() {
   return (
@@ -34,7 +34,7 @@ export function Curtains() {
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <Terminal className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-lg font-heading font-bold text-white uppercase italic tracking-tighter">Parth's GitHub</span>
+                <span className="text-lg font-heading font-bold text-white uppercase italic tracking-tighter">Rayyan&apos;s GitHub</span>
               </div>
 
               <div className="space-y-4">
@@ -46,7 +46,7 @@ export function Curtains() {
                   </div>
                 </div>
                 <p className="text-lg font-medium text-white leading-relaxed group-hover:text-white transition-colors">
-                  "feat: add scripts for template registry generation, operational checks, and stor..."
+                  &quot;feat: add scripts for template registry generation, operational checks, and stor...&quot;
                 </p>
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-mono text-white/20 uppercase tracking-widest">Repo:</span>

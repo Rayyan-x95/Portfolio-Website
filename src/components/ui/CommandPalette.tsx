@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Search, 
@@ -12,8 +12,7 @@ import {
   Link2, 
   Monitor, 
   MessageCircle,
-  Command as CommandIcon,
-  X
+  Command as CommandIcon
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -35,6 +34,17 @@ export function CommandPalette() {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const filteredActions = actions.filter((action) =>
+    action.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const handleAction = useCallback((action: typeof actions[0]) => {
+    if (action) {
+      router.push(action.href);
+      setIsOpen(false);
+    }
+  }, [router]);
+
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -51,7 +61,10 @@ export function CommandPalette() {
           setSelectedIndex((prev) => (prev - 1 + filteredActions.length) % filteredActions.length);
         } else if (e.key === "Enter") {
           e.preventDefault();
-          handleAction(filteredActions[selectedIndex]);
+          const selectedAction = filteredActions[selectedIndex];
+          if (selectedAction) {
+            handleAction(selectedAction);
+          }
         } else if (e.key === "Escape") {
           setIsOpen(false);
         }
@@ -66,24 +79,18 @@ export function CommandPalette() {
       document.removeEventListener("keydown", down);
       window.removeEventListener("open-command-palette", openPalette);
     };
-  }, [isOpen, selectedIndex]);
+  }, [isOpen, selectedIndex, filteredActions, handleAction]);
 
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
-      setSearch("");
-      setSelectedIndex(0);
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+        setSearch("");
+        setSelectedIndex(0);
+      }, 100);
+      return () => clearTimeout(timer);
     }
   }, [isOpen]);
-
-  const filteredActions = actions.filter((action) =>
-    action.name.toLowerCase().includes(search.toLowerCase())
-  );
-
-  const handleAction = (action: typeof actions[0]) => {
-    router.push(action.href);
-    setIsOpen(false);
-  };
 
   return (
     <AnimatePresence>
@@ -163,7 +170,7 @@ export function CommandPalette() {
                   </div>
                 ) : (
                   <div className="py-12 text-center">
-                    <p className="text-white/20 font-mono text-xs uppercase tracking-widest">No results found for "{search}"</p>
+                    <p className="text-white/20 font-mono text-xs uppercase tracking-widest">No results found for &quot;{search}&quot;</p>
                   </div>
                 )}
               </div>

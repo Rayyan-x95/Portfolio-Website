@@ -9,11 +9,16 @@ export function PageTransition() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setIsActive(true);
+    const frame = requestAnimationFrame(() => {
+      setIsActive(true);
+    });
     const timer = setTimeout(() => {
       setIsActive(false);
     }, 1200);
-    return () => clearTimeout(timer);
+    return () => {
+      cancelAnimationFrame(frame);
+      clearTimeout(timer);
+    };
   }, [pathname]);
 
   if (!isActive) return null;

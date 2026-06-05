@@ -1,7 +1,7 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import { FadeUp } from "@/components/ui/FadeUp";
-import { Camera, Globe, GitBranch, Hash, Mail, ArrowUpRight } from "lucide-react";
+import { Camera, Globe, GitBranch, Mail, ArrowUpRight, Send } from "lucide-react";
 import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const links = [
-  { name: "Instagram", icon: Camera, url: "https://instagram.com/rayyan_x95", color: "from-purple-500/20" },
-  { name: "LinkedIn", icon: Globe, url: "https://linkedin.com/in/rayyan-x95", color: "from-blue-500/20" },
+  { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95", color: "from-purple-500/20" },
+  { name: "LinkedIn", icon: Globe, url: "https://www.linkedin.com/in/mohrayyan/", color: "from-blue-500/20" },
   { name: "GitHub", icon: GitBranch, url: "https://github.com/rayyan-x95", color: "from-white/10" },
-  { name: "Twitter", icon: Hash, url: "#", color: "from-sky-400/20" },
+  { name: "Telegram", icon: Send, url: "https://t.me/rayyan_x95", color: "from-accent-primary/20" },
   { name: "Email", icon: Mail, url: "mailto:mmohammedrayyan0808@gmail.com", color: "from-accent-primary/20" },
   { name: "Portfolio", icon: Globe, url: "/", color: "from-accent-secondary/20" },
 ];

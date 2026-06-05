@@ -2,7 +2,7 @@
 
 import { FadeUp } from "@/components/ui/FadeUp";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, Globe, Zap } from "lucide-react";
+import { Globe, Zap } from "lucide-react";
 
 const experiences = [
   {

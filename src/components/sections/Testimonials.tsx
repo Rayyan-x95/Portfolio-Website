@@ -29,10 +29,10 @@ export function Testimonials() {
             <FadeUp key={index} delay={index * 0.1}>
               <div className="flex flex-col h-full">
                 <span className="text-accent-primary font-mono text-sm mb-8 tracking-[0.2em] block uppercase">
-                  // Case 0{index + 1}
+                  {"// Case 0"}{index + 1}
                 </span>
                 <p className="text-xl md:text-2xl font-light text-white leading-relaxed mb-12 italic">
-                  "{item.quote}"
+                  &quot;{item.quote}&quot;
                 </p>
                 <div className="mt-auto">
                   <p className="text-white font-heading text-lg uppercase tracking-tight">{item.author}</p>

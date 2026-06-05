@@ -18,7 +18,7 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-4 md:px-6 mb-12">
           <FadeUp>
             <h2 className="font-heading text-sm font-medium tracking-[0.2em] text-text-muted uppercase">
-              // Selected Work
+              {"// Selected Work"}
             </h2>
           </FadeUp>
         </div>

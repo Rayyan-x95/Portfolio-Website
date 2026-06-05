@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export function SideScrollbar() {
   const { scrollYProgress } = useScroll();
@@ -9,13 +9,18 @@ export function SideScrollbar() {
   const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
-    setIsClient(true);
+    const frame = requestAnimationFrame(() => {
+      setIsClient(true);
+    });
     const handleResize = () => {
       setWindowHeight(window.innerHeight);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   // Liquid spring for the scroll progress

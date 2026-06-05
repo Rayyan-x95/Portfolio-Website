@@ -1,26 +1,20 @@
 "use client";
 
 import { FadeUp } from "@/components/ui/FadeUp";
-import { ArrowUpRight, Camera, Briefcase, Terminal, Copy, Check } from "lucide-react";
+import { ArrowUpRight, Camera, Briefcase, Terminal, Check, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
   const socials = [
-    { name: "Instagram", icon: Camera, url: "https://instagram.com/rayyan_x95" },
-    { name: "LinkedIn", icon: Briefcase, url: "https://linkedin.com/in/rayyan-x95" },
+    { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95" },
+    { name: "LinkedIn", icon: Briefcase, url: "https://www.linkedin.com/in/mohrayyan/" },
     { name: "GitHub", icon: Terminal, url: "https://github.com/rayyan-x95" },
+    { name: "Telegram", icon: Send, url: "https://t.me/rayyan_x95" },
   ];
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("mmohammedrayyan0808@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -70,7 +64,7 @@ export function Contact() {
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent-primary animate-pulse shadow-[0_0_10px_rgba(0,229,255,0.5)]" />
                   <span className="text-[10px] font-mono tracking-[0.5em] text-accent-primary uppercase font-bold">
-                    // CHANNEL_01: DIRECT_INPUT
+                    {"// CHANNEL_01: DIRECT_INPUT"}
                   </span>
                 </div>
                 <h2 className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-white uppercase tracking-tighter leading-[0.8] mb-6">
@@ -78,7 +72,7 @@ export function Contact() {
                   <span className="text-accent-primary">Build?</span>
                 </h2>
                 <p className="text-white/40 font-mono text-xs uppercase tracking-widest leading-relaxed max-w-md">
-                  // Submit your project parameters below to initiate a formal consultation.
+                  {"// Submit your project parameters below to initiate a formal consultation."}
                 </p>
               </div>
 
@@ -167,7 +161,7 @@ export function Contact() {
                       onClick={() => setIsSuccess(false)}
                       className="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-white/40 hover:text-white hover:bg-white/10 transition-all uppercase tracking-widest"
                     >
-                      // Send_New_Packet
+                      {"// Send_New_Packet"}
                     </button>
                   </motion.div>
                 )}
@@ -186,7 +180,7 @@ export function Contact() {
                 </div>
                 
                 <h3 className="font-mono text-[10px] text-white/30 uppercase tracking-[0.4em] mb-10 block">
-                  // SYSTEM_DIAGNOSTICS
+                  {"// SYSTEM_DIAGNOSTICS"}
                 </h3>
 
                 <div className="space-y-6">

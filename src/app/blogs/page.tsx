@@ -61,7 +61,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"
@@ -84,7 +84,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"
@@ -107,7 +107,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"
@@ -130,7 +130,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"
@@ -153,7 +153,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"
@@ -176,7 +176,7 @@ export default function BlogsPage() {
             "name": "Ninety5 Studio",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://github.com/rayyan-x95.png"
+              "url": "https://rayyan.ninety5.in/profile.png"
             }
           },
           "mainEntityOfPage": "https://rayyan.ninety5.in/blogs"

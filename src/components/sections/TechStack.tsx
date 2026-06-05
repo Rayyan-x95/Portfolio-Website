@@ -1,7 +1,6 @@
 "use client";
 
 import { FadeUp } from "@/components/ui/FadeUp";
-import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 const techCategories = [
@@ -32,8 +31,6 @@ const techCategories = [
 ];
 
 export function TechStack() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section className="py-24 md:py-32 px-4 md:px-6 relative bg-black overflow-hidden">
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -42,8 +39,6 @@ export function TechStack() {
             <FadeUp key={index} delay={index * 0.1}>
               <div 
                 className="group relative flex flex-col md:flex-row items-start md:items-center justify-between py-12 md:py-20 border-b border-white/10 cursor-pointer transition-all duration-700"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Background Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none -z-10`} />

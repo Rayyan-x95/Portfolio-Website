@@ -79,6 +79,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "",
   }
 };
 
@@ -92,12 +96,13 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Mohammed Rayyan",
     "url": "https://rayyan.ninety5.in",
-    "image": "https://github.com/rayyan-x95.png",
+    "image": "https://rayyan.ninety5.in/profile.png",
     "sameAs": [
       "https://github.com/rayyan-x95",
-      "https://linkedin.com/in/rayyan-x95",
-      "https://instagram.com/rayyan_x95",
-      "https://twitter.com/rayyan_x95"
+      "https://www.linkedin.com/in/mohrayyan/",
+      "https://www.instagram.com/rayyan.x95",
+      "https://twitter.com/rayyan_x95",
+      "https://t.me/rayyan_x95"
     ],
     "jobTitle": "Creative Technologist",
     "worksFor": {
@@ -128,8 +133,8 @@ export default function RootLayout({
     "@type": "ProfessionalService",
     "name": "Ninety5 Studio",
     "url": "https://ninety5.in",
-    "logo": "https://github.com/rayyan-x95.png",
-    "image": "https://github.com/rayyan-x95.png",
+    "logo": "https://rayyan.ninety5.in/profile.png",
+    "image": "https://rayyan.ninety5.in/profile.png",
     "description": "Premium AOSP development, ROM optimization, and UI/UX design studio.",
     "address": {
       "@type": "PostalAddress",

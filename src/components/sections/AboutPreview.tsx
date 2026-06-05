@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { FadeUp } from "@/components/ui/FadeUp";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function AboutPreview() {
   return (
-    <section className="py-12 md:py-32 px-4 md:px-6 relative border-y border-white/5 bg-[#050505] overflow-hidden">
+    <section className="py-12 md:py-24 px-4 md:px-6 relative border-y border-white/5 bg-[#050505] overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 items-start">
           
@@ -26,21 +27,23 @@ export function AboutPreview() {
           </div>
 
           {/* Scrolling Content Right */}
-          <div className="md:col-span-6 md:col-start-7 space-y-12 md:space-y-24">
+          <div className="md:col-span-6 md:col-start-7 space-y-8 md:space-y-16 max-w-[460px]">
             <FadeUp delay={0.2}>
-              <div className="relative aspect-square md:aspect-[4/3] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-[#0a0a0a] border border-white/5 group mb-12">
+              <div className="relative aspect-[3/4] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-[#0a0a0a] border border-white/5 group mb-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 via-transparent to-accent-secondary/20 opacity-30 group-hover:opacity-40 transition-opacity duration-1000 z-10" />
-                <img 
-                  src="https://github.com/rayyan-x95.png" 
+                <Image 
+                  src="/profile.png" 
                   alt="Mohammed Rayyan"
-                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
                 />
               </div>
-              <p className="text-xl md:text-2xl font-light text-white leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl font-light text-white leading-relaxed mb-6">
                 I focus on the intersection of system-level performance and visual storytelling.
               </p>
               <p className="text-lg md:text-xl font-light text-text-muted leading-relaxed">
-                From building custom Android kernels to crafting high-end design systems, I believe that great digital products are built when the "how" is as beautiful as the "what".
+                From building custom Android kernels to crafting high-end design systems, I believe that great digital products are built when the &quot;how&quot; is as beautiful as the &quot;what&quot;.
               </p>
             </FadeUp>
             

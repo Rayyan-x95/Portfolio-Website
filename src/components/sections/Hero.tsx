@@ -4,7 +4,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FadeUp } from "@/components/ui/FadeUp";
-import { ArrowDown, Code2, Cpu, Palette } from "lucide-react";
+import { Code2, Cpu, Palette } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -96,17 +97,20 @@ export function Hero() {
                 ref={imageRef}
                 className="relative aspect-[3/4] rounded-[4rem] overflow-hidden bg-white/[0.02] border border-white/5 shadow-2xl transition-transform duration-500 ease-out"
               >
-                <img
-                  src="https://github.com/rayyan-x95.png"
+                <Image
+                  src="/profile.png"
                   alt="Mohammed Rayyan"
-                  className="w-full h-full object-cover object-top grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-bottom grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
 
                 {/* Floating Meta-Info */}
                 <div className="absolute bottom-12 left-12 right-12 flex justify-between items-end">
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] mb-2">// Origin</span>
+                    <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] mb-2">{"// Origin"}</span>
                     <span className="text-2xl font-heading font-bold text-white uppercase italic">2008</span>
                   </div>
                   <div className="flex flex-col text-right">

@@ -149,7 +149,7 @@ export function UsesSoftware() {
                 Dev Tools
               </h2>
               <p className="text-lg md:text-xl font-light text-text-muted leading-relaxed">
-                A highly optimized, blazingly fast software stack. I rely heavily on VS Code for primary development, Brave Browser for fluid browsing, and an ensemble of productivity tools like Raycast and Obsidian. My digital workspace is strictly curated. If an app doesn't serve a critical function or sparks joy with its UI, it doesn't stay.
+                A highly optimized, blazingly fast software stack. I rely heavily on VS Code for primary development, Brave Browser for fluid browsing, and an ensemble of productivity tools like Raycast and Obsidian. My digital workspace is strictly curated. If an app doesn&apos;t serve a critical function or sparks joy with its UI, it doesn&apos;t stay.
               </p>
             </FadeUp>
           </div>
