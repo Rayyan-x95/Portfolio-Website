@@ -2,15 +2,45 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { MessageSquareText } from "lucide-react";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "Guestbook",
-  description: "Sign my wall.",
+  description: "Leave a message, sign the wall, or connect with Mohammed Rayyan on his digital portfolio guestbook.",
+  openGraph: {
+    title: "Guestbook | Mohammed Rayyan",
+    description: "Leave a message, sign the wall, or connect with Mohammed Rayyan on his digital portfolio guestbook.",
+    url: "https://rayyan.ninety5.in/guestbook",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rayyan.ninety5.in/guestbook",
+  }
 };
 
 export default function GuestbookPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rayyan.ninety5.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guestbook",
+        "item": "https://rayyan.ninety5.in/guestbook"
+      }
+    ]
+  };
+
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader 
         title="Guestbook" 
         description="Leave a message or just say hi." 

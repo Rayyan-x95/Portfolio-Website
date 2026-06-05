@@ -1,13 +1,42 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { Metadata } from "next";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Ninety5 Studio's privacy policy and data handling protocols.",
+  openGraph: {
+    title: "Privacy Policy | Ninety5 Studio",
+    description: "Ninety5 Studio's privacy policy and data handling protocols.",
+    url: "https://rayyan.ninety5.in/privacy",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rayyan.ninety5.in/privacy",
+  }
 };
 
 export default function PrivacyPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rayyan.ninety5.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://rayyan.ninety5.in/privacy"
+      }
+    ]
+  };
+
   const sections = [
     {
       title: "Data Collection",
@@ -29,6 +58,7 @@ export default function PrivacyPage() {
 
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader 
         title="Privacy Policy" 
         description="How Ninety5 Studio handles your digital footprint." 

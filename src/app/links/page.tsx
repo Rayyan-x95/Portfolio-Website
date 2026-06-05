@@ -2,10 +2,20 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { Camera, Globe, GitBranch, Hash, Mail, ArrowUpRight } from "lucide-react";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "Links",
-  description: "Socials & Profiles.",
+  description: "Official profiles, social media links, email contact, and github repositories of Mohammed Rayyan.",
+  openGraph: {
+    title: "Links & Socials | Mohammed Rayyan",
+    description: "Official profiles, social media links, email contact, and github repositories of Mohammed Rayyan.",
+    url: "https://rayyan.ninety5.in/links",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rayyan.ninety5.in/links",
+  }
 };
 
 const links = [
@@ -18,8 +28,27 @@ const links = [
 ];
 
 export default function LinksPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rayyan.ninety5.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Links",
+        "item": "https://rayyan.ninety5.in/links"
+      }
+    ]
+  };
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader 
         title="Links" 
         description="Socials & Profiles." 

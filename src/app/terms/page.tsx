@@ -1,13 +1,42 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { Metadata } from "next";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "The operational framework and terms of service for Ninety5 Studio.",
+  openGraph: {
+    title: "Terms & Conditions | Ninety5 Studio",
+    description: "The operational framework and terms of service for Ninety5 Studio.",
+    url: "https://rayyan.ninety5.in/terms",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rayyan.ninety5.in/terms",
+  }
 };
 
 export default function TermsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rayyan.ninety5.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms & Conditions",
+        "item": "https://rayyan.ninety5.in/terms"
+      }
+    ]
+  };
+
   const terms = [
     {
       title: "Service Agreement",
@@ -29,6 +58,7 @@ export default function TermsPage() {
 
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader 
         title="Terms & Conditions" 
         description="The operational framework of Ninety5 Studio." 

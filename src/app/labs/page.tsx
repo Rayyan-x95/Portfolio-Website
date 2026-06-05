@@ -2,13 +2,41 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Metadata } from "next";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { GitBranch, ExternalLink, Box, Database, Smartphone, Activity, Terminal, Layout } from "lucide-react";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "Labs",
-  description: "Experimental playground & fun micro-tools.",
+  description: "Mohammed Rayyan's experimental playground featuring PWA utilities, mobile applications, interactive telemetry dashboards, and shader experiments.",
+  openGraph: {
+    title: "Labs & Experiments | Mohammed Rayyan",
+    description: "Mohammed Rayyan's experimental playground featuring PWA utilities, mobile applications, interactive telemetry dashboards, and shader experiments.",
+    url: "https://rayyan.ninety5.in/labs",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rayyan.ninety5.in/labs",
+  }
 };
 
 export default function LabsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rayyan.ninety5.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Labs",
+        "item": "https://rayyan.ninety5.in/labs"
+      }
+    ]
+  };
   const labsProjects = [
     {
       title: "Titan",
@@ -56,6 +84,7 @@ export default function LabsPage() {
 
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader 
         title="Labs" 
         description="Experimental playground & fun micro-tools." 

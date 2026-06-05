@@ -6,15 +6,15 @@ import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn more about Mohammed Rayyan's journey as a Creative Technologist, system architect, AOSP kernel engineer, and lead designer at Ninety5 Studio.",
+  description: "Learn more about Mohammed Rayyan's journey as a Creative Technologist, systems architect, AOSP kernel engineer, and design lead at Ninety5 Studio.",
   openGraph: {
-    title: "About | Mohammed Rayyan",
-    description: "Learn more about Mohammed Rayyan's journey as a Creative Technologist, system architect, and designer.",
+    title: "About Me | Mohammed Rayyan",
+    description: "Learn more about Mohammed Rayyan's journey as a Creative Technologist, systems architect, and designer.",
     url: "https://rayyan.ninety5.in/about",
     type: "profile",
   },
   alternates: {
-    canonical: "/about",
+    canonical: "https://rayyan.ninety5.in/about",
   }
 };
 

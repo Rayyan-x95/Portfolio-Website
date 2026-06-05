@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -23,42 +22,63 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rayyan.ninety5.in"),
   title: {
-    default: "Mohammed Rayyan | Designer & Technologist",
+    default: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
     template: "%s | Mohammed Rayyan"
   },
-  description: "Designer who codes and Engineer who obsesses over pixels. Bridging the gap between raw performance and cinematic design through AOSP development and premium UI/UX.",
-  keywords: ["Mohammed Rayyan", "Creative Technologist", "UI/UX Designer", "ROM Developer", "AOSP Development", "Full-Stack Engineer", "Ninety5 Studio"],
-  authors: [{ name: "Mohammed Rayyan" }],
+  description: "Creative Technologist, ROM/AOSP Developer & UI/UX Designer who bridges the gap between raw systems performance and cinematic interface design. Lead at Ninety5 Studio.",
+  keywords: [
+    "Mohammed Rayyan",
+    "Rayyan x95",
+    "Creative Technologist",
+    "AOSP Developer",
+    "ROM Developer Chennai",
+    "Android Systems Architect",
+    "UI/UX Designer and Engineer",
+    "Ninety5 Studio",
+    "Next.js Developer Portfolio",
+    "Full-Stack Engineer Portfolio",
+    "Fluid Interfaces Design",
+    "Jetpack Compose",
+    "GSAP Web Animations"
+  ],
+  authors: [{ name: "Mohammed Rayyan", url: "https://rayyan.ninety5.in" }],
   creator: "Mohammed Rayyan",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://rayyan.ninety5.in/",
     siteName: "Mohammed Rayyan Portfolio",
-    title: "Mohammed Rayyan | Designer & Technologist",
-    description: "Bridging the gap between raw performance and cinematic design.",
+    title: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
+    description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mohammed Rayyan Portfolio"
+        alt: "Mohammed Rayyan - Creative Technologist & ROM Developer"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammed Rayyan | Designer & Technologist",
-    description: "Bridging the gap between raw performance and cinematic design.",
+    title: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
+    description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     creator: "@rayyan_x95",
     images: ["/og-image.jpg"]
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "./",
+    canonical: "https://rayyan.ninety5.in",
   }
 };
 
@@ -76,14 +96,31 @@ export default function RootLayout({
     "sameAs": [
       "https://github.com/rayyan-x95",
       "https://linkedin.com/in/rayyan-x95",
+      "https://instagram.com/rayyan_x95",
       "https://twitter.com/rayyan_x95"
     ],
     "jobTitle": "Creative Technologist",
     "worksFor": {
       "@type": "Organization",
-      "name": "Ninety5 Studio"
+      "name": "Ninety5 Studio",
+      "url": "https://ninety5.in"
     },
-    "description": "Designer who codes and Engineer who obsesses over pixels. Specializing in AOSP development and premium UI/UX."
+    "knowsAbout": [
+      "AOSP Engineering",
+      "Android ROM Optimization",
+      "Systems Architecture",
+      "UI/UX Design",
+      "Full-Stack Web Development",
+      "TypeScript",
+      "Kotlin",
+      "Next.js",
+      "React",
+      "GSAP Animations",
+      "WebGL Shaders",
+      "Design Systems"
+    ],
+    "email": "mailto:mmohammedrayyan0808@gmail.com",
+    "description": "Designer who codes and Engineer who obsesses over pixels. Specializing in AOSP development, custom systems architecture, and premium web design."
   };
 
   const studioSchema = {
@@ -93,7 +130,7 @@ export default function RootLayout({
     "url": "https://ninety5.in",
     "logo": "https://github.com/rayyan-x95.png",
     "image": "https://github.com/rayyan-x95.png",
-    "description": "Premium AOSP development and UI/UX design studio.",
+    "description": "Premium AOSP development, ROM optimization, and UI/UX design studio.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chennai",
