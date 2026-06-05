@@ -64,7 +64,7 @@ export function Hero() {
 
             <FadeUp delay={0.2} className="max-w-2xl">
               <p className="text-xl md:text-3xl font-light text-text-muted leading-tight tracking-tight mb-12">
-                Founder of Ninety5 Studio. Architecting the intersection of <span className="text-white italic">Graphic Design</span> and high-performance AOSP engineering.
+                Founder of <a href="https://www.ninety5.in/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent-primary underline decoration-accent-primary/20 hover:decoration-accent-primary underline-offset-4 decoration-1 transition-all duration-300">Ninety5 Studio</a>. Architecting the intersection of <span className="text-white italic">Graphic Design</span> and high-performance AOSP engineering.
               </p>
 
               <div className="flex flex-wrap gap-8">

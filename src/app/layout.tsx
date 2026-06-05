@@ -108,7 +108,7 @@ export default function RootLayout({
     "worksFor": {
       "@type": "Organization",
       "name": "Ninety5 Studio",
-      "url": "https://ninety5.in"
+      "url": "https://www.ninety5.in/"
     },
     "knowsAbout": [
       "AOSP Engineering",
@@ -132,7 +132,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Ninety5 Studio",
-    "url": "https://ninety5.in",
+    "url": "https://www.ninety5.in/",
     "logo": "https://rayyan.ninety5.in/profile.png",
     "image": "https://rayyan.ninety5.in/profile.png",
     "description": "Premium AOSP development, ROM optimization, and UI/UX design studio.",

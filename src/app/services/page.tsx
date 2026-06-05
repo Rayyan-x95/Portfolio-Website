@@ -56,7 +56,7 @@ export default function ServicesPage() {
           "provider": {
             "@type": "Organization",
             "name": "Ninety5 Studio",
-            "url": "https://ninety5.in"
+            "url": "https://www.ninety5.in/"
           }
         }
       },
@@ -70,7 +70,7 @@ export default function ServicesPage() {
           "provider": {
             "@type": "Organization",
             "name": "Ninety5 Studio",
-            "url": "https://ninety5.in"
+            "url": "https://www.ninety5.in/"
           }
         }
       },
@@ -84,7 +84,7 @@ export default function ServicesPage() {
           "provider": {
             "@type": "Organization",
             "name": "Ninety5 Studio",
-            "url": "https://ninety5.in"
+            "url": "https://www.ninety5.in/"
           }
         }
       },
@@ -98,7 +98,7 @@ export default function ServicesPage() {
           "provider": {
             "@type": "Organization",
             "name": "Ninety5 Studio",
-            "url": "https://ninety5.in"
+            "url": "https://www.ninety5.in/"
           }
         }
       }
