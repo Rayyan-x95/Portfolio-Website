@@ -13,7 +13,7 @@ export function Stats() {
   return (
     <section className="py-12 md:py-32 px-4 md:px-6 relative border-y border-white/5 bg-black">
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {stats.map((stat, index) => (
             <FadeUp key={stat.label} delay={index * 0.1} className={stat.span}>
               <div className="h-full flex flex-col items-center justify-center text-center p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-700 group relative overflow-hidden">

@@ -22,6 +22,12 @@ export function FadeUp({ children, delay = 0, className, yOffset = 24 }: FadeUpP
   useGSAP(() => {
     if (!containerRef.current) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      gsap.set(containerRef.current, { opacity: 1, y: 0, scale: 1 });
+      return;
+    }
+
     gsap.fromTo(
       containerRef.current,
       { 

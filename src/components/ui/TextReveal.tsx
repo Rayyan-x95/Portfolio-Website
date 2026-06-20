@@ -32,6 +32,12 @@ export function TextReveal({
     const words = containerRef.current.querySelectorAll(".reveal-word-inner");
     if (words.length === 0) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      gsap.set(words, { y: "0%" });
+      return;
+    }
+
     gsap.fromTo(
       words,
       { y: "115%" },

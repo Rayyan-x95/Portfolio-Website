@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -21,7 +21,8 @@ export function PageTransition() {
     };
   }, [pathname]);
 
-  if (!isActive) return null;
+  const shouldReduceMotion = useReducedMotion();
+  if (!isActive || shouldReduceMotion) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999]">

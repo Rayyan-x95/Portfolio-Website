@@ -118,7 +118,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         target={project.url.startsWith("http") ? "_blank" : undefined}
         rel={project.url.startsWith("http") ? "noopener noreferrer" : undefined}
         onMouseMove={handleMouseMove}
-        className="group relative flex flex-col gap-6 cursor-pointer bg-white/[0.01] border border-white/5 rounded-[2.5rem] md:rounded-[3rem] p-4 md:p-6 hover:bg-white/[0.02] hover:border-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-primary/5 block overflow-hidden"
+        className="group relative flex flex-col gap-6 cursor-pointer bg-white/[0.01] border border-white/5 rounded-[2.5rem] md:rounded-[3rem] p-4 md:p-6 hover:bg-white/[0.02] hover:border-white/10 hover:scale-[1.01] focus-visible:scale-[1.01] focus-visible:bg-white/[0.02] focus-visible:border-white/10 focus-visible:outline-none transition-all duration-200 ease-out hover:shadow-2xl hover:shadow-accent-primary/5 block overflow-hidden"
       >
         {/* Background Spotlight Glow */}
         <div
@@ -141,7 +141,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         <div className={`w-full ${project.aspect} relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[#050505] border border-white/5`}>
           <Image 
             src={project.image}
-            alt={project.title}
+            alt={`Screenshot of the ${project.title} project interface`}
             fill
             className="object-cover opacity-50 group-hover:opacity-90 transition-all duration-1000 ease-[cubic-bezier(0.21,1,0.32,1)] group-hover:scale-[1.04]"
           />

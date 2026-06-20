@@ -4,8 +4,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FadeUp } from "@/components/ui/FadeUp";
-import { Code2, Cpu, Palette } from "lucide-react";
+import { Code2, Cpu, Palette, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,7 +43,7 @@ export function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-32 bg-black">
+    <section ref={containerRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-12 sm:pb-32 bg-black">
       {/* Background Dynamics */}
       <div
         ref={orbRef}
@@ -66,6 +67,23 @@ export function Hero() {
               <p className="text-xl md:text-3xl font-light text-text-muted leading-tight tracking-tight mb-12">
                 Founder of <a href="https://www.ninety5.in/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent-primary underline decoration-accent-primary/20 hover:decoration-accent-primary underline-offset-4 decoration-1 transition-all duration-300">Ninety5 Studio</a>. Architecting the intersection of <span className="text-white italic">Graphic Design</span> and high-performance AOSP engineering.
               </p>
+
+              {/* Action CTAs */}
+              <div className="flex flex-wrap gap-4 mb-12">
+                <a 
+                  href="#contact" 
+                  className="group/cta inline-flex items-center gap-3 bg-white text-black px-6 py-3.5 rounded-full font-heading text-xs font-bold uppercase tracking-widest hover:bg-accent-primary hover:text-black transition-all duration-300"
+                >
+                  Initiate Transmission
+                  <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+                </a>
+                <Link 
+                  href="/work" 
+                  className="inline-flex items-center gap-3 border border-white/10 hover:border-white text-white px-6 py-3.5 rounded-full font-heading text-xs font-bold uppercase tracking-widest transition-all duration-300"
+                >
+                  Explore Work
+                </Link>
+              </div>
 
               <div className="flex flex-wrap gap-8">
                 <div className="flex items-center gap-3 group">
