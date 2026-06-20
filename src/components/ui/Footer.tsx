@@ -106,7 +106,7 @@ export function Footer() {
               <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                 {categories.map((cat) => (
                   <div key={cat.title}>
-                    <h4 className="font-heading text-[10px] font-black uppercase tracking-[0.3em] text-white/20 mb-6">
+                    <h4 className="font-heading text-[10px] font-black uppercase tracking-[0.3em] text-text-muted mb-6">
                       {cat.title}
                     </h4>
                     <ul className="space-y-3">
@@ -120,10 +120,11 @@ export function Footer() {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label={`Open ${link.name} in a new tab`}
                                 className="group/link inline-flex items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
                               >
                                 {link.name}
-                                <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
+                                <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" aria-hidden="true" />
                               </a>
                             </li>
                           );
@@ -149,11 +150,11 @@ export function Footer() {
             {/* Bottom Row: Metadata & Scroll to Top */}
             <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                <p className="text-[10px] font-mono text-white/20 uppercase tracking-widest">
+                <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
                   © {currentYear} Ninety5 Studio • Chennai, IN
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
-                <div className="text-[10px] font-mono text-white/20 uppercase tracking-widest space-x-4">
+                <div className="text-[10px] font-mono text-text-muted uppercase tracking-widest space-x-4">
                   <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
                   <span>•</span>
                   <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
@@ -165,7 +166,7 @@ export function Footer() {
                 className="group/totop flex items-center gap-2 border border-white/10 hover:border-accent-primary rounded-full px-5 py-3 text-[10px] font-mono text-white/40 hover:text-accent-primary transition-all duration-300 uppercase tracking-widest"
               >
                 Back to top 
-                <ArrowUp className="w-3.5 h-3.5 group-hover/totop:-translate-y-0.5 transition-transform duration-300" />
+                <ArrowUp className="w-3.5 h-3.5 group-hover/totop:-translate-y-0.5 transition-transform duration-300" aria-hidden="true" />
               </button>
             </div>
           </div>

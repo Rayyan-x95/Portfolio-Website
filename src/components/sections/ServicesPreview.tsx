@@ -7,10 +7,10 @@ import { ArrowUpRight } from "lucide-react";
 import { useState, useRef, MouseEvent } from "react";
 
 function ServiceCard({ service, index }: { service: { title: string; desc: string }; index: number }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: MouseEvent<HTMLAnchorElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -20,14 +20,15 @@ function ServiceCard({ service, index }: { service: { title: string; desc: strin
 
   return (
     <FadeUp delay={index * 0.1}>
-      <div 
+      <Link 
         ref={cardRef}
+        href="/services"
         onMouseMove={handleMouseMove}
-        className="group relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/[0.01] border border-white/5 hover:bg-white/[0.02] hover:border-white/10 transition-all duration-500 cursor-pointer overflow-hidden"
+        className="group relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/[0.01] border border-white/5 hover:bg-white/[0.02] hover:border-white/10 hover:scale-[1.01] focus-visible:scale-[1.01] focus-visible:bg-white/[0.02] focus-visible:border-white/10 focus-visible:outline-none transition-all duration-200 ease-out cursor-pointer overflow-hidden block"
       >
         {/* Background Spotlight Glow */}
         <div
-          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-200"
           style={{
             background: `radial-gradient(300px circle at ${coords.x}px ${coords.y}px, rgba(58, 190, 249, 0.06), transparent 80%)`,
           }}
@@ -35,27 +36,27 @@ function ServiceCard({ service, index }: { service: { title: string; desc: strin
         
         {/* Border Spotlight Glow */}
         <div
-          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-accent-primary z-20"
+          className="pointer-events-none absolute -inset-px rounded-[2.5rem] md:rounded-[3.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-200 border border-accent-primary z-20"
           style={{
             maskImage: `radial-gradient(120px circle at ${coords.x}px ${coords.y}px, black, transparent)`,
             WebkitMaskImage: `radial-gradient(120px circle at ${coords.x}px ${coords.y}px, black, transparent)`,
           }}
         />
 
-        <div className="absolute top-0 right-0 p-8 md:p-12 opacity-20 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-700 scale-75 group-hover:scale-100">
-          <ArrowUpRight className="w-12 h-12" />
+        <div className="absolute top-0 right-0 p-8 md:p-12 opacity-20 group-hover:opacity-100 group-hover:text-accent-primary transition-all duration-200 scale-75 group-hover:scale-100">
+          <ArrowUpRight className="w-12 h-12" aria-hidden="true" />
         </div>
         
         <div className="relative z-10">
           <span className="text-sm font-mono text-white/20 mb-6 block">0{index + 1}</span>
-          <h3 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors duration-500">
+          <h3 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-accent-primary transition-colors duration-200">
             {service.title}
           </h3>
-          <p className="text-lg text-text-muted font-light max-w-xs opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+          <p className="text-lg text-text-muted font-light max-w-xs opacity-60 group-hover:opacity-100 transition-opacity duration-200">
             {service.desc}
           </p>
         </div>
-      </div>
+      </Link>
     </FadeUp>
   );
 }
@@ -78,7 +79,7 @@ export function ServicesPreview() {
             <FadeUp>
               <div className="flex items-center gap-4 mb-6">
                 <span className="w-12 h-[1px] bg-accent-primary" />
-                <span className="text-xs font-mono tracking-[0.4em] text-accent-primary uppercase">Expertise</span>
+                <span role="note" className="text-xs font-mono tracking-[0.4em] text-accent-primary uppercase">Expertise</span>
               </div>
               <h2 className="font-heading text-fluid-huge font-bold uppercase tracking-tighter text-white">
                 Core <br /> Services

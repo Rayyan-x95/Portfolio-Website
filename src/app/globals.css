@@ -9,6 +9,7 @@
   --accent-secondary: #FF8F00;
   --accent-tertiary: #FFFFFF;
   --text-muted: #A1A1AA;
+  --color-brand-orange: var(--accent-secondary);
 }
 
 @theme inline {
@@ -80,6 +81,41 @@ body::before {
 * {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* Skip Link styling */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: var(--color-brand-orange);
+  color: #000000;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 1rem 0;
+  font-family: var(--font-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  outline: none;
+}
+
+/* Global focus outline styling */
+:focus-visible {
+  outline: 2px solid var(--color-brand-orange);
+  outline-offset: 2px;
 }
 
 

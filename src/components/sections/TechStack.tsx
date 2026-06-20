@@ -34,6 +34,7 @@ export function TechStack() {
   return (
     <section className="py-24 md:py-32 px-4 md:px-6 relative bg-black overflow-hidden">
       <div className="container mx-auto max-w-7xl relative z-10">
+        <h2 className="sr-only">Core Services</h2>
         <div className="flex flex-col space-y-12">
           {techCategories.map((category, index) => (
             <FadeUp key={index} delay={index * 0.1}>

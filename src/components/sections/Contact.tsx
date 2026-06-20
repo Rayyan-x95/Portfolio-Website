@@ -9,6 +9,10 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
+  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
   const socials = [
     { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95" },
     { name: "LinkedIn", icon: Briefcase, url: "https://www.linkedin.com/in/mohrayyan/" },
@@ -16,26 +20,69 @@ export function Contact() {
     { name: "Telegram", icon: Send, url: "https://t.me/rayyan_x95" },
   ];
 
+  const validateField = (name: string, value: string) => {
+    let error = "";
+    if (!value.trim()) {
+      error = "This field is required.";
+    } else if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
+      error = "Please enter a valid email address.";
+    }
+    setErrors(prev => ({ ...prev, [name]: error }));
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormState(prev => ({ ...prev, [name]: value }));
+    if (touched[name]) {
+      validateField(name, value);
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setTouched(prev => ({ ...prev, [name]: true }));
+    validateField(name, value);
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Validate all fields
+    const newErrors: Record<string, string> = {};
+    if (!formState.name.trim()) newErrors.name = "This field is required.";
+    if (!formState.email.trim()) {
+      newErrors.email = "This field is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formState.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!formState.message.trim()) newErrors.message = "This field is required.";
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setTouched({ name: true, email: true, message: true });
+      
+      // Screen-reader announcement of the first error
+      const firstErrorField = Object.keys(newErrors)[0];
+      const errorMsg = newErrors[firstErrorField];
+      const el = document.getElementById(`contact-${firstErrorField}`);
+      if (el) el.focus();
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("https://forms-backend.coeffx.tech/api/v1/submit/02b00925-5609-44d7-b7ba-5dce2e7e561d", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formState),
       });
 
       if (response.ok) {
         setIsSuccess(true);
+        setFormState({ name: "", email: "", message: "" });
+        setErrors({});
+        setTouched({});
       }
     } catch (error) {
       console.error("Submission failed:", error);
@@ -71,7 +118,7 @@ export function Contact() {
                   Ready to <br />
                   <span className="text-accent-primary">Build?</span>
                 </h2>
-                <p className="text-white/40 font-mono text-xs uppercase tracking-widest leading-relaxed max-w-md">
+                <p className="text-text-muted font-mono text-xs uppercase tracking-widest leading-relaxed max-w-md">
                   {"// Submit your project parameters below to initiate a formal consultation."}
                 </p>
               </div>
@@ -85,46 +132,80 @@ export function Contact() {
                     exit={{ opacity: 0, x: 20 }}
                     onSubmit={handleSubmit}
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                    noValidate
                   >
                     <div className="md:col-span-1 p-1 bg-white/5 border border-white/5 rounded-3xl group/field focus-within:border-accent-primary/50 transition-all duration-500">
                       <div className="p-6 bg-[#050505] rounded-[1.4rem] space-y-2">
-                        <label className="text-[8px] font-mono uppercase tracking-[0.4em] text-white/20 ml-1">Identity_Full_Name</label>
+                        <label htmlFor="contact-name" className="text-[10px] font-mono uppercase tracking-[0.4em] text-text-muted ml-1">Identity_Full_Name</label>
                         <input 
+                          id="contact-name"
                           required
                           type="text"
                           name="name"
                           data-cursor="type"
                           placeholder="REQUIRED_INPUT"
-                          className="w-full bg-transparent text-white placeholder:text-white/5 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium"
+                          value={formState.name}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          aria-invalid={!!errors.name}
+                          aria-describedby={errors.name ? "name-error" : undefined}
+                          className="w-full bg-transparent text-white placeholder:text-white/20 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium"
                         />
+                        {errors.name && touched.name && (
+                          <span id="name-error" className="text-accent-secondary text-[10px] font-mono uppercase tracking-widest mt-1 block" role="alert">
+                            {errors.name}
+                          </span>
+                        )}
                       </div>
                     </div>
 
                     <div className="md:col-span-1 p-1 bg-white/5 border border-white/5 rounded-3xl group/field focus-within:border-accent-primary/50 transition-all duration-500">
                       <div className="p-6 bg-[#050505] rounded-[1.4rem] space-y-2">
-                        <label className="text-[8px] font-mono uppercase tracking-[0.4em] text-white/20 ml-1">Transmission_Endpoint</label>
+                        <label htmlFor="contact-email" className="text-[10px] font-mono uppercase tracking-[0.4em] text-text-muted ml-1">Transmission_Endpoint</label>
                         <input 
+                          id="contact-email"
                           required
                           type="email"
                           name="email"
                           data-cursor="type"
                           placeholder="EMAIL_ADDRESS"
-                          className="w-full bg-transparent text-white placeholder:text-white/5 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium"
+                          value={formState.email}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          aria-invalid={!!errors.email}
+                          aria-describedby={errors.email ? "email-error" : undefined}
+                          className="w-full bg-transparent text-white placeholder:text-white/20 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium"
                         />
+                        {errors.email && touched.email && (
+                          <span id="email-error" className="text-accent-secondary text-[10px] font-mono uppercase tracking-widest mt-1 block" role="alert">
+                            {errors.email}
+                          </span>
+                        )}
                       </div>
                     </div>
 
                     <div className="md:col-span-2 p-1 bg-white/5 border border-white/5 rounded-3xl group/field focus-within:border-accent-primary/50 transition-all duration-500">
                       <div className="p-6 bg-[#050505] rounded-[1.4rem] space-y-2">
-                        <label className="text-[8px] font-mono uppercase tracking-[0.4em] text-white/20 ml-1">Payload_Specifications</label>
+                        <label htmlFor="contact-message" className="text-[10px] font-mono uppercase tracking-[0.4em] text-text-muted ml-1">Payload_Specifications</label>
                         <textarea 
+                          id="contact-message"
                           required
                           name="message"
                           data-cursor="type"
                           rows={4}
                           placeholder="DESCRIBE_PROJECT_PARAMETERS"
-                          className="w-full bg-transparent text-white placeholder:text-white/5 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium resize-none"
+                          value={formState.message}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          aria-invalid={!!errors.message}
+                          aria-describedby={errors.message ? "message-error" : undefined}
+                          className="w-full bg-transparent text-white placeholder:text-white/20 focus:placeholder:opacity-0 transition-all outline-none font-sans text-lg md:text-xl font-medium resize-none"
                         />
+                        {errors.message && touched.message && (
+                          <span id="message-error" className="text-accent-secondary text-[10px] font-mono uppercase tracking-widest mt-1 block" role="alert">
+                            {errors.message}
+                          </span>
+                        )}
                       </div>
                     </div>
 
@@ -176,10 +257,10 @@ export function Contact() {
               <div className="bg-[#080808] border border-white/5 rounded-[2.5rem] p-10 mb-12 relative overflow-hidden group/status">
                 <div className="absolute top-4 right-4 flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-accent-primary animate-pulse" />
-                  <span className="text-[8px] font-mono text-white/20 uppercase tracking-widest">LIVE_CONNECTION</span>
+                  <span className="text-[8px] font-mono text-white/50 uppercase tracking-widest">LIVE_CONNECTION</span>
                 </div>
                 
-                <h3 className="font-mono text-[10px] text-white/30 uppercase tracking-[0.4em] mb-10 block">
+                <h3 className="font-mono text-[10px] text-text-muted uppercase tracking-[0.4em] mb-10 block">
                   {"// SYSTEM_DIAGNOSTICS"}
                 </h3>
 
@@ -191,7 +272,7 @@ export function Contact() {
                     { label: "CURRENT_MODE", value: "ARCHITECTING", color: "text-accent-secondary" }
                   ].map((stat) => (
                     <div key={stat.label} className="flex items-end justify-between border-b border-white/5 pb-4 group/item">
-                      <span className="text-[9px] font-mono text-white/20 uppercase tracking-[0.3em]">{stat.label}</span>
+                      <span className="text-[9px] font-mono text-text-muted uppercase tracking-[0.3em]">{stat.label}</span>
                       <span className={`text-xs font-mono font-bold uppercase tracking-widest ${stat.color} group-hover/item:translate-x-[-4px] transition-transform`}>{stat.value}</span>
                     </div>
                   ))}
@@ -206,16 +287,17 @@ export function Contact() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit my ${social.name} profile`}
                     className="flex flex-col gap-8 p-8 bg-[#080808] border border-white/5 rounded-3xl hover:border-accent-primary transition-all duration-500 group/soc"
                   >
                     <div className="flex items-center justify-between">
                       <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover/soc:bg-accent-primary group-hover/soc:text-black transition-all">
-                        <social.icon className="w-5 h-5" />
+                        <social.icon className="w-5 h-5" aria-hidden="true" />
                       </div>
-                      <ArrowUpRight className="w-4 h-4 text-white/10 group-hover/soc:text-white transition-colors" />
+                      <ArrowUpRight className="w-4 h-4 text-white/10 group-hover/soc:text-white transition-colors" aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="text-[8px] font-mono text-white/20 uppercase tracking-[0.4em] block mb-2">Endpoint_0x</span>
+                      <span className="text-[8px] font-mono text-text-muted uppercase tracking-[0.4em] block mb-2">Endpoint_0x</span>
                       <span className="font-heading text-lg font-black text-white uppercase tracking-tighter italic">{social.name}</span>
                     </div>
                   </a>

@@ -161,12 +161,15 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
     >
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white antialiased`}>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <PageTransition />
         <JsonLd data={personSchema} />
         <JsonLd data={studioSchema} />
         <SideScrollbar />
         <SmoothScroll>
-          {children}
+          <div id="main-content">
+            {children}
+          </div>
           <Footer />
           <Navbar />
         </SmoothScroll>
