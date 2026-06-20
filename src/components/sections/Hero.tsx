@@ -116,7 +116,7 @@ export function Hero() {
                 className="relative aspect-[3/4] rounded-[4rem] overflow-hidden bg-white/[0.02] border border-white/5 shadow-2xl transition-transform duration-500 ease-out"
               >
                 <Image
-                  src="/profile.png"
+                  src="/profile.webp"
                   alt="Mohammed Rayyan"
                   fill
                   priority

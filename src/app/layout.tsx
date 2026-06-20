@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
+    title: "Mohammed Rayyan | Designer & Technologist",
     description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     creator: "@rayyan_x95",
     images: ["/og-image.jpg"]
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://rayyan.ninety5.in",
+    canonical: "https://rayyan.ninety5.in/",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
@@ -96,36 +96,19 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Mohammed Rayyan",
     "url": "https://rayyan.ninety5.in",
-    "image": "https://rayyan.ninety5.in/profile.png",
     "sameAs": [
-      "https://github.com/rayyan-x95",
-      "https://www.linkedin.com/in/mohrayyan/",
       "https://www.instagram.com/rayyan.x95",
-      "https://twitter.com/rayyan_x95",
-      "https://t.me/rayyan_x95"
+      "https://www.linkedin.com/in/mohrayyan",
+      "https://github.com/rayyan-x95"
     ],
-    "jobTitle": "Creative Technologist",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Ninety5 Studio",
-      "url": "https://www.ninety5.in/"
-    },
-    "knowsAbout": [
-      "AOSP Engineering",
-      "Android ROM Optimization",
-      "Systems Architecture",
-      "UI/UX Design",
-      "Full-Stack Web Development",
-      "TypeScript",
-      "Kotlin",
-      "Next.js",
-      "React",
-      "GSAP Animations",
-      "WebGL Shaders",
-      "Design Systems"
-    ],
-    "email": "mailto:mmohammedrayyan0808@gmail.com",
-    "description": "Designer who codes and Engineer who obsesses over pixels. Specializing in AOSP development, custom systems architecture, and premium web design."
+    "description": "Designer who codes and Engineer who obsesses over pixels. Bridging the gap between raw performance and cinematic design through AOSP development and premium UI/UX.",
+    "jobTitle": "Designer & Technologist",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressRegion": "TN",
+      "addressCountry": "IN"
+    }
   };
 
   const studioSchema = {
@@ -133,8 +116,8 @@ export default function RootLayout({
     "@type": "ProfessionalService",
     "name": "Ninety5 Studio",
     "url": "https://www.ninety5.in/",
-    "logo": "https://rayyan.ninety5.in/profile.png",
-    "image": "https://rayyan.ninety5.in/profile.png",
+    "logo": "https://rayyan.ninety5.in/profile.webp",
+    "image": "https://rayyan.ninety5.in/profile.webp",
     "description": "Premium AOSP development, ROM optimization, and UI/UX design studio.",
     "address": {
       "@type": "PostalAddress",

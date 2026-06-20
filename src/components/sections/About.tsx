@@ -23,7 +23,7 @@ export function About() {
             <FadeUp delay={0.2}>
               <div className="aspect-[3/4] rounded-[3rem] overflow-hidden bg-white/[0.02] border border-white/5 relative group">
                 <Image
-                  src="/profile.png"
+                  src="/profile.webp"
                   alt="Mohammed Rayyan"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

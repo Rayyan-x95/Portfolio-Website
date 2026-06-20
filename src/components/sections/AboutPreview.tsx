@@ -32,7 +32,7 @@ export function AboutPreview() {
               <div className="relative aspect-[3/4] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-[#0a0a0a] border border-white/5 group mb-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 via-transparent to-accent-secondary/20 opacity-30 group-hover:opacity-40 transition-opacity duration-1000 z-10" />
                 <Image 
-                  src="/profile.png" 
+                  src="/profile.webp" 
                   alt="Mohammed Rayyan"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

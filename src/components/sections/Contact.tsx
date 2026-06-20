@@ -4,6 +4,7 @@ import { FadeUp } from "@/components/ui/FadeUp";
 import { ArrowUpRight, Camera, Briefcase, Terminal, Check, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -280,7 +281,7 @@ export function Contact() {
               </div>
 
               {/* Social Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 {socials.map((social) => (
                   <a 
                     key={social.name}
@@ -302,6 +303,34 @@ export function Contact() {
                     </div>
                   </a>
                 ))}
+              </div>
+
+              {/* Local NAP & Map */}
+              <div className="p-8 bg-[#080808] border border-white/5 rounded-3xl space-y-6">
+                <div className="text-[10px] font-mono text-text-muted uppercase tracking-wider space-y-1">
+                  <p className="font-bold text-accent-secondary">{"// Local_Contact_NAP"}</p>
+                  <p className="text-white">Mohammed Rayyan • Chennai, India</p>
+                  <p className="text-white">hello@ninety5.in • +91 XXXXXXXXXX</p>
+                </div>
+                
+                <a 
+                  href="https://maps.google.com/?q=Chennai,+India" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block relative rounded-2xl overflow-hidden border border-white/10 hover:border-accent-primary transition-colors group/map h-32 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-secondary"
+                >
+                  <Image 
+                    src="/map-placeholder.webp" 
+                    alt="Map showing Mohammed Rayyan's location in Chennai" 
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover opacity-40 group-hover/map:opacity-60 transition-opacity duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 font-mono text-[9px] text-white bg-black/60 px-3 py-1 rounded-full border border-white/10 uppercase tracking-widest group-hover/map:text-accent-secondary group-hover/map:border-accent-secondary transition-colors">
+                    Open Live Map
+                  </div>
+                </a>
               </div>
             </FadeUp>
           </div>

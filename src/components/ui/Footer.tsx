@@ -151,7 +151,11 @@ export function Footer() {
             <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                 <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
-                  © {currentYear} Ninety5 Studio • Chennai, IN
+                  © {currentYear} Ninety5 Studio
+                </p>
+                <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
+                <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
+                  Mohammed Rayyan • Chennai, India • hello@ninety5.in • +91 XXXXXXXXXX
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
                 <div className="text-[10px] font-mono text-text-muted uppercase tracking-widest space-x-4">

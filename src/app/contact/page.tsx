@@ -1,8 +1,8 @@
 import { PageHeader } from "@/components/ui/PageHeader";
-import { TerminalSection } from "@/components/sections/TerminalSection";
 import { Contact } from "@/components/sections/Contact";
 import { Metadata } from "next";
 import { JsonLd } from "@/components/SEO/JsonLd";
+import { TerminalWrapper } from "@/components/sections/TerminalWrapper";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -46,7 +46,7 @@ export default function ContactPage() {
         description="Have a project in mind or want to collaborate? I'm currently open to new opportunities." 
       />
       <div className="-mt-32">
-        <TerminalSection />
+        <TerminalWrapper />
       </div>
       <Contact />
     </main>
