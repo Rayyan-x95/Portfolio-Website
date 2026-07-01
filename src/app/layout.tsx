@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/og-image.png",
+        width: 1024,
+        height: 682,
         alt: "Mohammed Rayyan - Creative Technologist & ROM Developer"
       }
     ]
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Mohammed Rayyan | Designer & Technologist",
     description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     creator: "@rayyan_x95",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,

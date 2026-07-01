@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       authors: ["Mohammed Rayyan"],
       images: [
         {
-          url: "/og-image.jpg",
-          width: 1200,
-          height: 630,
+          url: "/og-image.png",
+          width: 1024,
+          height: 682,
           alt: post.title,
         },
       ],
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["/og-image.jpg"],
+      images: ["/og-image.png"],
     },
   };
 }
