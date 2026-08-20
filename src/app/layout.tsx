@@ -124,9 +124,7 @@ export default function RootLayout({
     "sameAs": [
       "https://github.com/rayyan-x95",
       "https://www.linkedin.com/in/mohrayyan/",
-      "https://www.linkedin.com/in/mohrayyan",
       "https://www.instagram.com/rayyan.x95",
-      "https://www.instagram.com/rayyan.x95/",
       "https://t.me/rayyan_x95",
       "https://x.com/rayyan_x95",
       "https://twitter.com/rayyan_x95",
@@ -134,6 +132,11 @@ export default function RootLayout({
       "https://rayyan.ninety5.in"
     ],
     "jobTitle": "Creative Technologist, AOSP Kernel Developer & UI/UX Designer",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Dhaanish Ahmed College of Engineering",
+      "url": "https://dhaanish.com"
+    },
     "worksFor": {
       "@type": "Organization",
       "name": "Ninety5 Studio",
@@ -159,27 +162,32 @@ export default function RootLayout({
       "Tailwind CSS",
       "Systems Architecture"
     ],
+    "knowsLanguage": ["en", "ta", "hi", "ur"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chennai",
       "addressRegion": "Tamil Nadu",
+      "postalCode": "600001",
       "addressCountry": "IN"
     }
   };
 
   const studioSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "LocalBusiness"],
     "@id": "https://www.ninety5.in/#organization",
     "name": "Ninety5 Studio",
     "url": "https://www.ninety5.in/",
     "logo": "https://rayyan.ninety5.in/profile.webp",
     "image": "https://rayyan.ninety5.in/profile.webp",
-    "description": "Premium AOSP development, ROM optimization, and UI/UX design studio founded by Mohammed Rayyan.",
+    "description": "Premium AOSP development, ROM optimization, and UI/UX design studio founded by Mohammed Rayyan in Chennai, India.",
+    "email": "mmohammedrayyan0808@gmail.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Chennai Central",
       "addressLocality": "Chennai",
       "addressRegion": "Tamil Nadu",
+      "postalCode": "600001",
       "addressCountry": "IN"
     },
     "geo": {
@@ -187,11 +195,30 @@ export default function RootLayout({
       "latitude": "13.0827",
       "longitude": "80.2707"
     },
+    "areaServed": [
+      "Worldwide",
+      "India",
+      "Chennai",
+      "Tamil Nadu",
+      "United States",
+      "United Kingdom",
+      "United Arab Emirates",
+      "Remote"
+    ],
+    "currenciesAccepted": "USD, INR, EUR, AED",
+    "paymentAccepted": "Bank Transfer, Stripe, Wire Transfer, Crypto",
     "founder": {
       "@id": "https://rayyan.ninety5.in/#person"
     },
     "foundingDate": "2024",
-    "priceRange": "$$$"
+    "priceRange": "$$$",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "mmohammedrayyan0808@gmail.com",
+      "url": "https://rayyan.ninety5.in/contact",
+      "availableLanguage": ["English", "Tamil", "Hindi", "Urdu"]
+    }
   };
 
   const websiteSchema = {

@@ -61,14 +61,22 @@ export function About() {
             </FadeUp>
 
             <FadeUp delay={0.5}>
-              <div className="grid grid-cols-2 gap-8 pt-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/10">
                 <div>
-                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] block mb-4">Philosophy</span>
-                  <p className="text-white font-heading text-xl uppercase tracking-tighter italic">Intelligent Flow</p>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Location</span>
+                  <p className="text-white font-heading text-base font-bold uppercase tracking-tight">Chennai, India</p>
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.4em] block mb-4">Focus</span>
-                  <p className="text-white font-heading text-xl uppercase tracking-tighter italic">Cinematic UX</p>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Leadership</span>
+                  <p className="text-white font-heading text-base font-bold uppercase tracking-tight">Ninety5 Studio</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Specialty</span>
+                  <p className="text-white font-heading text-base font-bold uppercase tracking-tight">AOSP & Next.js</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Philosophy</span>
+                  <p className="text-white font-heading text-base font-bold uppercase tracking-tight">Cinematic Code</p>
                 </div>
               </div>
             </FadeUp>
