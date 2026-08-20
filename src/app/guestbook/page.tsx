@@ -5,11 +5,11 @@ import { MessageSquareText } from "lucide-react";
 import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Guestbook",
-  description: "Leave a message, sign the wall, or connect with Mohammed Rayyan on his digital portfolio guestbook.",
+  title: "Digital Guestbook",
+  description: "Leave a transmission, sign the wall, or connect directly with Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95) on his digital workspace guestbook.",
   openGraph: {
-    title: "Guestbook | Mohammed Rayyan",
-    description: "Leave a message, sign the wall, or connect with Mohammed Rayyan on his digital portfolio guestbook.",
+    title: "Digital Guestbook | Mohammed Rayyan",
+    description: "Leave a transmission, sign the wall, or connect directly with Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/guestbook",
     type: "website",
   },

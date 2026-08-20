@@ -22,13 +22,19 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rayyan.ninety5.in"),
   title: {
-    default: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
+    default: "Mohammed Rayyan M (@rayyan-x95) | Creative Technologist, AOSP Developer & Designer",
     template: "%s | Mohammed Rayyan"
   },
-  description: "Creative Technologist, ROM/AOSP Developer & UI/UX Designer who bridges the gap between raw systems performance and cinematic interface design. Lead at Ninety5 Studio.",
+  description: "Official portfolio of Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95). Creative Technologist, AOSP Kernel Developer & UI/UX Designer bridging raw systems performance with cinematic interfaces. Lead at Ninety5 Studio.",
   keywords: [
     "Mohammed Rayyan",
+    "Mohammed Rayyan M",
+    "M Mohammed Rayyan",
+    "Rayyan M",
     "Rayyan x95",
+    "rayyan-x95",
+    "rayyan.x95",
+    "Mohammed Rayyan Chennai",
     "Creative Technologist",
     "AOSP Developer",
     "ROM Developer Chennai",
@@ -43,13 +49,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Mohammed Rayyan", url: "https://rayyan.ninety5.in" }],
   creator: "Mohammed Rayyan",
+  publisher: "Ninety5 Studio",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://rayyan.ninety5.in/",
     siteName: "Mohammed Rayyan Portfolio",
-    title: "Mohammed Rayyan | Creative Technologist, AOSP Developer & Designer",
-    description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
+    title: "Mohammed Rayyan M | Creative Technologist, AOSP Developer & Designer",
+    description: "Official portfolio of Mohammed Rayyan. Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
     images: [
       {
         url: "/og-image.png",
@@ -61,8 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammed Rayyan | Designer & Technologist",
-    description: "Systems developer & UI/UX designer bridging the gap between raw performance and cinematic web experiences.",
+    title: "Mohammed Rayyan M | Designer & Technologist",
+    description: "Systems developer & UI/UX designer bridging raw performance with cinematic web experiences.",
     creator: "@rayyan_x95",
     images: ["/og-image.png"]
   },
@@ -94,19 +101,68 @@ export default function RootLayout({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rayyan.ninety5.in/#person",
     "name": "Mohammed Rayyan",
-    "url": "https://rayyan.ninety5.in",
-    "sameAs": [
-      "https://www.instagram.com/rayyan.x95",
-      "https://www.linkedin.com/in/mohrayyan",
-      "https://github.com/rayyan-x95"
+    "givenName": "Mohammed",
+    "familyName": "Rayyan",
+    "additionalName": "M",
+    "alternateName": [
+      "Mohammed Rayyan M",
+      "M Mohammed Rayyan",
+      "Rayyan M",
+      "Rayyan x95",
+      "rayyan-x95",
+      "rayyan.x95",
+      "Mohamed Rayyan",
+      "Mohamed Rayyan M"
     ],
+    "url": "https://rayyan.ninety5.in",
+    "image": "https://rayyan.ninety5.in/profile.webp",
+    "email": "mmohammedrayyan0808@gmail.com",
+    "gender": "Male",
+    "nationality": "Indian",
+    "sameAs": [
+      "https://github.com/rayyan-x95",
+      "https://www.linkedin.com/in/mohrayyan/",
+      "https://www.linkedin.com/in/mohrayyan",
+      "https://www.instagram.com/rayyan.x95",
+      "https://www.instagram.com/rayyan.x95/",
+      "https://t.me/rayyan_x95",
+      "https://x.com/rayyan_x95",
+      "https://twitter.com/rayyan_x95",
+      "https://www.ninety5.in/",
+      "https://rayyan.ninety5.in"
+    ],
+    "jobTitle": "Creative Technologist, AOSP Kernel Developer & UI/UX Designer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Ninety5 Studio",
+      "url": "https://www.ninety5.in/"
+    },
+    "founder": {
+      "@type": "Organization",
+      "name": "Ninety5 Studio",
+      "url": "https://www.ninety5.in/"
+    },
     "description": "Designer who codes and Engineer who obsesses over pixels. Bridging the gap between raw performance and cinematic design through AOSP development and premium UI/UX.",
-    "jobTitle": "Designer & Technologist",
+    "knowsAbout": [
+      "AOSP Development",
+      "Android Kernel Optimization",
+      "Custom ROM Engineering",
+      "UI/UX Design",
+      "Next.js",
+      "React",
+      "Full-Stack Web Development",
+      "Creative Technology",
+      "TypeScript",
+      "GSAP Animations",
+      "Tailwind CSS",
+      "Systems Architecture"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chennai",
-      "addressRegion": "TN",
+      "addressRegion": "Tamil Nadu",
       "addressCountry": "IN"
     }
   };
@@ -114,11 +170,12 @@ export default function RootLayout({
   const studioSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://www.ninety5.in/#organization",
     "name": "Ninety5 Studio",
     "url": "https://www.ninety5.in/",
     "logo": "https://rayyan.ninety5.in/profile.webp",
     "image": "https://rayyan.ninety5.in/profile.webp",
-    "description": "Premium AOSP development, ROM optimization, and UI/UX design studio.",
+    "description": "Premium AOSP development, ROM optimization, and UI/UX design studio founded by Mohammed Rayyan.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chennai",
@@ -131,11 +188,38 @@ export default function RootLayout({
       "longitude": "80.2707"
     },
     "founder": {
-      "@type": "Person",
-      "name": "Mohammed Rayyan"
+      "@id": "https://rayyan.ninety5.in/#person"
     },
     "foundingDate": "2024",
     "priceRange": "$$$"
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://rayyan.ninety5.in/#website",
+    "url": "https://rayyan.ninety5.in",
+    "name": "Mohammed Rayyan Portfolio",
+    "alternateName": ["Mohammed Rayyan", "Mohammed Rayyan M", "Rayyan x95 Portfolio", "Ninety5 Studio"],
+    "description": "Official portfolio and digital workspace of Mohammed Rayyan (Creative Technologist & Designer).",
+    "publisher": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    },
+    "author": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    },
+    "inLanguage": "en-US"
+  };
+
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://rayyan.ninety5.in/#profilepage",
+    "url": "https://rayyan.ninety5.in",
+    "name": "Mohammed Rayyan - Creative Technologist & Designer",
+    "mainEntity": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    }
   };
 
   return (
@@ -148,6 +232,8 @@ export default function RootLayout({
         <PageTransition />
         <JsonLd data={personSchema} />
         <JsonLd data={studioSchema} />
+        <JsonLd data={websiteSchema} />
+        <JsonLd data={profilePageSchema} />
         <SideScrollbar />
         <SmoothScroll>
           <div id="main-content">
@@ -161,3 +247,4 @@ export default function RootLayout({
     </html>
   );
 }
+

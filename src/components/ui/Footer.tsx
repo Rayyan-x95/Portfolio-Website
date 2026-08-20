@@ -45,6 +45,7 @@ export function Footer() {
         { name: "LinkedIn", href: "https://www.linkedin.com/in/mohrayyan/" },
         { name: "Instagram", href: "https://www.instagram.com/rayyan.x95" },
         { name: "Telegram", href: "https://t.me/rayyan_x95" },
+        { name: "Twitter / X", href: "https://x.com/rayyan_x95" },
       ],
     },
   ];
@@ -119,7 +120,7 @@ export function Footer() {
                               <a 
                                 href={link.href}
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="me noopener noreferrer"
                                 aria-label={`Open ${link.name} in a new tab`}
                                 className="group/link inline-flex items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
                               >

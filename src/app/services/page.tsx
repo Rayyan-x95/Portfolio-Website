@@ -6,11 +6,11 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Plus, Minus } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Comprehensive professional digital solutions including high-performance AOSP ROM engineering, mobile systems optimization, custom typography design systems, and rich React/Next.js full-stack development.",
+  title: "Services & Engineering Solutions",
+  description: "Comprehensive engineering and product design solutions by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95): AOSP ROM engineering, Linux kernel tuning, custom UI/UX design systems, and Next.js full-stack development.",
   openGraph: {
-    title: "Services & Expertise | Mohammed Rayyan",
-    description: "Comprehensive professional digital solutions including high-performance AOSP ROM engineering, design systems, and full-stack development.",
+    title: "Services & Engineering Solutions | Mohammed Rayyan",
+    description: "AOSP ROM engineering, mobile systems optimization, design systems, and modern Next.js development by Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/services",
     type: "website",
   },
@@ -42,7 +42,8 @@ export default function ServicesPage() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Services Offered by Ninety5 Studio / Mohammed Rayyan",
+    "@id": "https://rayyan.ninety5.in/services#services",
+    "name": "Services Offered by Ninety5 Studio & Mohammed Rayyan",
     "description": "Professional services spanning system engineering, Android ROM development, and premium UI/UX full-stack development.",
     "url": "https://rayyan.ninety5.in/services",
     "numberOfItems": 4,

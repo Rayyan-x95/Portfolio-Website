@@ -5,11 +5,11 @@ import { GitBranch, ExternalLink, Box, Database, Smartphone, Activity, Terminal,
 import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Labs",
-  description: "Mohammed Rayyan's experimental playground featuring PWA utilities, mobile applications, interactive telemetry dashboards, and shader experiments.",
+  title: "Labs & Experimental Prototypes",
+  description: "Experimental research playground featuring PWA utilities, mobile applications, interactive telemetry dashboards, and WebGL shader prototypes by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95).",
   openGraph: {
-    title: "Labs & Experiments | Mohammed Rayyan",
-    description: "Mohammed Rayyan's experimental playground featuring PWA utilities, mobile applications, interactive telemetry dashboards, and shader experiments.",
+    title: "Labs & Experimental Prototypes | Mohammed Rayyan",
+    description: "Experimental research playground featuring PWA utilities, mobile applications, and WebGL prototypes.",
     url: "https://rayyan.ninety5.in/labs",
     type: "website",
   },
@@ -32,11 +32,24 @@ export default function LabsPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Labs",
+        "name": "Labs & Experiments",
         "item": "https://rayyan.ninety5.in/labs"
       }
     ]
   };
+
+  const labsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://rayyan.ninety5.in/labs#labs",
+    "name": "Mohammed Rayyan's Experimental Labs",
+    "description": "Interactive prototypes, software experiments, and micro-tools created by Mohammed Rayyan.",
+    "url": "https://rayyan.ninety5.in/labs",
+    "author": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    }
+  };
+
   const labsProjects = [
     {
       title: "Titan",
@@ -85,6 +98,7 @@ export default function LabsPage() {
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={labsSchema} />
       <PageHeader 
         title="Labs" 
         description="Experimental playground & fun micro-tools." 

@@ -1,0 +1,42 @@
+# Mohammed Rayyan (@rayyan-x95)
+
+> Creative Technologist, AOSP Kernel Developer & UI/UX Designer bridging raw system performance with cinematic interface design. Lead at Ninety5 Studio.
+
+## Core Identity & Aliases
+- **Full Legal Name**: Mohammed Rayyan (also indexed as Mohammed Rayyan M, M Mohammed Rayyan)
+- **Primary Handles**: @rayyan-x95, @rayyan.x95
+- **Role**: Founder & Lead Designer at Ninety5 Studio, Systems Engineer, UI/UX Architect
+- **Location**: Chennai, Tamil Nadu, India
+- **Primary Website**: https://rayyan.ninety5.in
+- **Studio Website**: https://www.ninety5.in
+
+## Verified Official Profiles
+- **GitHub**: https://github.com/rayyan-x95
+- **LinkedIn**: https://www.linkedin.com/in/mohrayyan/
+- **Instagram**: https://www.instagram.com/rayyan.x95
+- **Telegram**: https://t.me/rayyan_x95
+- **Twitter / X**: https://x.com/rayyan_x95
+- **Email Contact**: mmohammedrayyan0808@gmail.com / hello@ninety5.in
+
+## Key Engineering & Design Specializations
+- **AOSP & Android Kernel Engineering**: Compiling, tuning, and optimizing custom Android kernels, Energy Aware Scheduler (EAS), CPU governor tables, zram controllers, and hardware abstraction layer (HAL) integrations.
+- **Cinematic UI/UX & Web Development**: High-performance full-stack web applications using Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and GSAP micro-animations.
+- **Native Mobile Development**: Kotlin, Jetpack Compose, SQLite Room database architecture, offline-first architectures.
+- **Design Systems**: Typography engineering, layout math, fluid viewport scaling, dark mode tokens, and accessible interfaces.
+
+## Selected Works & Projects
+- **Titan**: High-performance Progressive Web App (PWA) built with Next.js, complex caching strategies, and atomic database transactions (https://github.com/rayyan-x95/Titan).
+- **EduCard**: Smart student identification and tracking ecosystem with encrypted credentials (https://github.com/rayyan-x95/EduCard).
+- **Habitate**: Offline-first Android habit tracker built natively with Jetpack Compose and Room DB (https://github.com/rayyan-x95/Habitate).
+- **Ninety5 Studio**: Creative digital product and systems design agency (https://www.ninety5.in).
+
+## Key Website Routes
+- Home & Overview: https://rayyan.ninety5.in/
+- About Biography: https://rayyan.ninety5.in/about
+- Selected Work: https://rayyan.ninety5.in/work
+- Digital Services: https://rayyan.ninety5.in/services
+- Blog & Insights: https://rayyan.ninety5.in/blogs
+- Labs Playground: https://rayyan.ninety5.in/labs
+- Hardware & Software (Uses): https://rayyan.ninety5.in/uses
+- Social Profiles Directory: https://rayyan.ninety5.in/links
+- Direct Inquiry Transmission: https://rayyan.ninety5.in/contact

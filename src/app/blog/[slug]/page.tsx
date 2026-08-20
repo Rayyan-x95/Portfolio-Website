@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `https://rayyan.ninety5.in/blog/${post.slug}`,
     },
     openGraph: {
-      title: post.title,
+      title: `${post.title} — Mohammed Rayyan`,
       description: post.excerpt,
       url: `https://rayyan.ninety5.in/blog/${post.slug}`,
       type: "article",
@@ -49,8 +49,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: `${post.title} — Mohammed Rayyan`,
       description: post.excerpt,
+      creator: "@rayyan_x95",
       images: ["/og-image.png"],
     },
   };
@@ -67,6 +68,8 @@ export default async function BlogPostPage({ params }: PageProps) {
   // Format ISO date for Schema
   const isoDate = post.date.includes("JUN") 
     ? `2026-06-${post.date.match(/\d+/)?.[0]?.padStart(2, '0') || '20'}`
+    : post.date.includes("FEB")
+    ? `2026-02-${post.date.match(/\d+/)?.[0]?.padStart(2, '0') || '10'}`
     : `2026-01-01`;
 
   const articleSchema = {
@@ -75,13 +78,23 @@ export default async function BlogPostPage({ params }: PageProps) {
     "headline": post.title,
     "description": post.excerpt,
     "datePublished": isoDate,
+    "dateModified": isoDate,
     "author": {
       "@type": "Person",
+      "@id": "https://rayyan.ninety5.in/#person",
       "name": "Mohammed Rayyan",
-      "url": "https://rayyan.ninety5.in"
+      "url": "https://rayyan.ninety5.in",
+      "sameAs": [
+        "https://github.com/rayyan-x95",
+        "https://www.linkedin.com/in/mohrayyan/",
+        "https://www.instagram.com/rayyan.x95",
+        "https://t.me/rayyan_x95",
+        "https://x.com/rayyan_x95"
+      ]
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://www.ninety5.in/#organization",
       "name": "Ninety5 Studio",
       "logo": {
         "@type": "ImageObject",

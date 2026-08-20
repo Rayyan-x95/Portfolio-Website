@@ -7,11 +7,11 @@ import { Metadata } from "next";
 import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Uses",
-  description: "A curated manifest of the hardware, software, and tools that Mohammed Rayyan uses in his daily systems engineering and UI/UX design workflow.",
+  title: "Hardware, Software & Workflow (Uses)",
+  description: "Curated workspace manifest of workstation hardware, Linux/AOSP toolchains, developer tools, and creative design software used by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95).",
   openGraph: {
-    title: "Uses | Mohammed Rayyan",
-    description: "A curated manifest of the hardware, software, and tools that Mohammed Rayyan uses in his daily systems engineering and UI/UX design workflow.",
+    title: "Uses — Hardware & Software Stack | Mohammed Rayyan",
+    description: "Hardware, software, and development tools that Mohammed Rayyan uses daily.",
     url: "https://rayyan.ninety5.in/uses",
     type: "website",
   },
@@ -40,9 +40,21 @@ export default function UsesPage() {
     ]
   };
 
+  const usesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "@id": "https://rayyan.ninety5.in/uses#itempage",
+    "name": "Mohammed Rayyan's Workspace & Tech Stack",
+    "url": "https://rayyan.ninety5.in/uses",
+    "mainEntity": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={usesSchema} />
       <PageHeader 
         title="Uses" 
         description="A curated manifest of the hardware, software, and everyday carry that I use to design and build products." 

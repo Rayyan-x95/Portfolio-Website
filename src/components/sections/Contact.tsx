@@ -15,9 +15,9 @@ export function Contact() {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const socials = [
-    { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95" },
-    { name: "LinkedIn", icon: Briefcase, url: "https://www.linkedin.com/in/mohrayyan/" },
     { name: "GitHub", icon: Terminal, url: "https://github.com/rayyan-x95" },
+    { name: "LinkedIn", icon: Briefcase, url: "https://www.linkedin.com/in/mohrayyan/" },
+    { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95" },
     { name: "Telegram", icon: Send, url: "https://t.me/rayyan_x95" },
   ];
 
@@ -287,7 +287,7 @@ export function Contact() {
                     key={social.name}
                     href={social.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="me noopener noreferrer"
                     aria-label={`Visit my ${social.name} profile`}
                     className="flex flex-col gap-8 p-8 bg-[#080808] border border-white/5 rounded-3xl hover:border-accent-primary transition-all duration-500 group/soc"
                   >

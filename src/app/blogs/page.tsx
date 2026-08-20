@@ -4,11 +4,11 @@ import { JsonLd } from "@/components/SEO/JsonLd";
 import { posts } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
-  title: "Blogs",
-  description: "Insights on artificial intelligence, systems architecture, design systems, and mobile ROM optimization by Mohammed Rayyan.",
+  title: "Blogs & Technical Insights",
+  description: "Engineering essays, architectural breakdowns, AI agentic patterns, and mobile ROM optimization guides by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95).",
   openGraph: {
-    title: "Blogs & Insights | Mohammed Rayyan",
-    description: "Insights on artificial intelligence, systems architecture, design systems, and mobile ROM optimization by Mohammed Rayyan.",
+    title: "Blogs & Technical Insights | Mohammed Rayyan",
+    description: "Engineering essays, architectural breakdowns, AI agentic patterns, and mobile ROM optimization guides by Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/blogs",
     type: "website",
   },
@@ -67,6 +67,7 @@ export default function BlogsPage() {
           "datePublished": isoDate,
           "author": {
             "@type": "Person",
+            "@id": "https://rayyan.ninety5.in/#person",
             "name": "Mohammed Rayyan"
           },
           "publisher": {

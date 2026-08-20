@@ -5,11 +5,11 @@ import { JsonLd } from "@/components/SEO/JsonLd";
 import { TerminalWrapper } from "@/components/sections/TerminalWrapper";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with Mohammed Rayyan for new projects, collaborations, or AOSP engineering inquiries.",
+  title: "Contact Mohammed Rayyan",
+  description: "Initiate transmission with Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95). Open for high-impact AOSP engineering, custom ROM optimizations, and cinematic product design collaborations.",
   openGraph: {
-    title: "Contact | Mohammed Rayyan",
-    description: "Get in touch with Mohammed Rayyan for new projects, collaborations, or AOSP engineering inquiries.",
+    title: "Contact Mohammed Rayyan | Direct Transmission",
+    description: "Get in touch with Mohammed Rayyan for new engineering projects, design systems, and digital product inquiries.",
     url: "https://rayyan.ninety5.in/contact",
     type: "website",
   },
@@ -38,9 +38,21 @@ export default function ContactPage() {
     ]
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://rayyan.ninety5.in/contact#contactpage",
+    "name": "Contact Mohammed Rayyan",
+    "url": "https://rayyan.ninety5.in/contact",
+    "mainEntity": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-32">
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={contactSchema} />
       <PageHeader 
         title="Let's Talk" 
         description="Have a project in mind or want to collaborate? I'm currently open to new opportunities." 

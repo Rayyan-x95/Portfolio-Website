@@ -7,10 +7,43 @@ import { Contact } from "@/components/sections/Contact";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FadeUp } from "@/components/ui/FadeUp";
+import { JsonLd } from "@/components/SEO/JsonLd";
 
 export default function Home() {
+  const homeFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Mohammed Rayyan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95) is a Creative Technologist, AOSP Kernel Developer, and UI/UX Designer based in Chennai, India. He is the founder of Ninety5 Studio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Mohammed Rayyan's primary skills and technologies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mohammed Rayyan specializes in Android Open Source Project (AOSP) development, Linux kernel tuning, Next.js 15, React 19, TypeScript, Kotlin, Jetpack Compose, and cinematic GSAP motion design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I find Mohammed Rayyan's social profiles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mohammed Rayyan's official verified profiles are on GitHub (https://github.com/rayyan-x95), LinkedIn (https://www.linkedin.com/in/mohrayyan/), Instagram (https://www.instagram.com/rayyan.x95), Telegram (https://t.me/rayyan_x95), and Twitter/X (https://x.com/rayyan_x95)."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="flex min-h-screen flex-col w-full selection:bg-accent-primary selection:text-black pb-24">
+      <JsonLd data={homeFaqSchema} />
       <Hero />
       <Stats />
       
@@ -39,3 +72,4 @@ export default function Home() {
     </main>
   );
 }
+

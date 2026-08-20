@@ -5,10 +5,10 @@ import { JsonLd } from "@/components/SEO/JsonLd";
 import { GithubActivity } from "@/components/sections/GithubActivity";
 
 export const metadata: Metadata = {
-  title: "Work",
-  description: "Curated portfolio of engineering projects, digital products, custom ROM optimizations, and design systems built by Mohammed Rayyan.",
+  title: "Selected Work & Engineering Projects",
+  description: "Curated portfolio of engineering projects, digital products, custom ROM optimizations, and design systems built by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95).",
   openGraph: {
-    title: "Selected Work | Mohammed Rayyan",
+    title: "Selected Work & Engineering Projects | Mohammed Rayyan",
     description: "Curated portfolio of engineering projects, digital products, custom ROM optimizations, and design systems built by Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/work",
     type: "website",
@@ -41,9 +41,16 @@ export default function WorkPage() {
   const portfolioSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    "@id": "https://rayyan.ninety5.in/work#portfolio",
     "name": "Mohammed Rayyan's Selected Works",
     "description": "A showcase of custom AOSP engineering, mobile ROM features, design systems, and web application developments by Mohammed Rayyan.",
     "url": "https://rayyan.ninety5.in/work",
+    "author": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    },
+    "creator": {
+      "@id": "https://rayyan.ninety5.in/#person"
+    },
     "numberOfItems": 10,
     "itemListElement": [
       {
