@@ -52,7 +52,16 @@ export function About() {
                   Based at the intersection of design and engineering, my work focuses on crafting digital products that don&apos;t just work—they perform with cinematic intent.
                 </p>
                 <p>
-                  As the Founder & Lead Designer of <span className="text-white font-medium">Ninety5 Studio</span>, I lead projects that challenge conventional UI patterns, leveraging my background in AOSP development to build interfaces that are as technically sound as they are visually striking.
+                  As the Founder & Lead Designer of{" "}
+                  <a
+                    href="https://www.ninety5.in"
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="text-white font-medium underline decoration-accent-primary/30 hover:decoration-accent-primary underline-offset-4 decoration-1 transition-all duration-300 hover:text-accent-primary"
+                  >
+                    Ninety5
+                  </a>
+                  , I lead projects that challenge conventional UI patterns, leveraging my background in AOSP development to build interfaces that are as technically sound as they are visually striking.
                 </p>
                 <p>
                   I believe that true minimalism isn&apos;t just about removing the unnecessary, but about engineering the essential to perfection.
@@ -67,8 +76,15 @@ export function About() {
                   <p className="text-white font-heading text-base font-bold uppercase tracking-tight">Chennai, India</p>
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Leadership</span>
-                  <p className="text-white font-heading text-base font-bold uppercase tracking-tight">Ninety5 Studio</p>
+                  <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Founder</span>
+                  <a
+                    href="https://www.ninety5.in"
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="text-white font-heading text-base font-bold uppercase tracking-tight hover:text-accent-primary transition-colors duration-300"
+                  >
+                    Ninety5
+                  </a>
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-accent-primary uppercase tracking-[0.3em] block mb-2">Specialty</span>

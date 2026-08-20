@@ -33,6 +33,7 @@ export function Footer() {
     {
       title: "Projects",
       links: [
+        { name: "Ninety5 Studio", href: "https://www.ninety5.in" },
         { name: "Titan PWA", href: "https://github.com/rayyan-x95/Titan" },
         { name: "EduCard App", href: "https://github.com/rayyan-x95/EduCard" },
         { name: "Habitate App", href: "https://github.com/rayyan-x95/Habitate" },
@@ -85,9 +86,20 @@ export function Footer() {
                       RAYYAN<span className="text-accent-primary">.</span>
                     </h3>
                   </Link>
-                  <p className="text-text-muted font-light text-sm leading-relaxed max-w-sm">
+                  <p className="text-text-muted font-light text-sm leading-relaxed max-w-sm mb-4">
                     Architecting the intersection of high-performance system engineering and cinematic UI design.
                   </p>
+                  {/* Ninety5 identity link */}
+                  <a
+                    href="https://www.ninety5.in"
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    aria-label="Visit Ninety5 — Mohammed Rayyan's studio"
+                    className="inline-flex items-center gap-2 text-[10px] font-mono text-text-muted uppercase tracking-widest hover:text-accent-primary transition-colors duration-300 group/n95"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-primary group-hover/n95:scale-150 transition-transform duration-300" />
+                    Founder · <span className="text-white">Ninety5.in</span>
+                  </a>
                 </div>
 
                 {/* Status Indicator */}

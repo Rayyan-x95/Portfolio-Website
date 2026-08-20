@@ -5,11 +5,11 @@ import { Metadata } from "next";
 import { JsonLd } from "@/components/SEO/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Mohammed Rayyan",
-  description: "Biography, background, and engineering philosophy of Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95) — Creative Technologist, AOSP Developer, and Lead at Ninety5 Studio.",
+  title: "About Mohammed Rayyan — Founder of Ninety5",
+  description: "Mohammed Rayyan — Founder of Ninety5 (ninety5.in), Creative Technologist, AOSP Kernel Developer & UI/UX Designer based in Chennai, India. Learn about his engineering philosophy, background, and approach to cinematic digital experiences.",
   openGraph: {
-    title: "About Mohammed Rayyan | Creative Technologist & Designer",
-    description: "Learn more about Mohammed Rayyan's journey as a Creative Technologist, AOSP systems architect, and design lead.",
+    title: "About Mohammed Rayyan | Founder of Ninety5 · Creative Technologist & Designer",
+    description: "Meet Mohammed Rayyan — Founder of Ninety5 (ninety5.in). AOSP systems architect and UI/UX designer bridging raw performance with cinematic design.",
     url: "https://rayyan.ninety5.in/about",
     type: "profile",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/profile.webp",
         width: 1200,
         height: 1600,
-        alt: "Mohammed Rayyan - Creative Technologist & Designer",
+        alt: "Mohammed Rayyan — Founder of Ninety5, Creative Technologist & Designer",
       }
     ]
   },
