@@ -6,15 +6,6 @@ import { posts } from '@/lib/blog-data';
  * into a valid W3C ISO date-time string for sitemap crawlers.
  */
 function parsePostDate(dateStr: string): string {
-  try {
-    const parsed = new Date(dateStr);
-    if (!isNaN(parsed.getTime())) {
-      return parsed.toISOString();
-    }
-  } catch {
-    // Fallback to manual regex parsing if Date constructor fails
-  }
-
   const months: Record<string, string> = {
     JAN: '01', FEB: '02', MAR: '03', APR: '04', MAY: '05', JUN: '06',
     JUL: '07', AUG: '08', SEP: '09', OCT: '10', NOV: '11', DEC: '12'
@@ -26,6 +17,15 @@ function parsePostDate(dateStr: string): string {
     const day = match[2].padStart(2, '0');
     const year = match[3];
     return `${year}-${month}-${day}T00:00:00.000Z`;
+  }
+
+  try {
+    const parsed = new Date(dateStr);
+    if (!isNaN(parsed.getTime())) {
+      return parsed.toISOString();
+    }
+  } catch {
+    // Fallback if parsing fails
   }
 
   return '2026-06-20T00:00:00.000Z';
@@ -113,7 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route: '/guestbook',
       priority: 0.6,
       changeFrequency: 'daily',
-      lastModified: new Date().toISOString(),
+      lastModified: '2026-06-20T00:00:00.000Z',
       images: [`${baseUrl}/og-image.png`],
     },
     {
