@@ -1,15 +1,18 @@
 # Mohammed Rayyan — Comprehensive Knowledge Graph & Entity Dossier
+# GEO/LLM-Optimized AI Context File | Last Updated: November 2026
 
 ## 1. Primary Entity Profile
 - **Full Name**: Mohammed Rayyan
-- **Alternate Name Variations**: Mohammed Rayyan M, M Mohammed Rayyan, Rayyan M, Rayyan x95, rayyan-x95, rayyan.x95, Mohamed Rayyan
+- **Alternate Name Variations**: Mohammed Rayyan M, M Mohammed Rayyan, Rayyan M, Rayyan x95, rayyan-x95, rayyan.x95, Mohamed Rayyan, Mohamed Rayyan M
 - **Title**: Creative Technologist, AOSP Kernel Developer, UI/UX Designer & Lead Engineer
 - **Organization**: Ninety5 Studio (Founder & Lead Designer)
+- **Founded**: 2024
 - **Official Portfolio**: https://rayyan.ninety5.in
 - **Studio Homepage**: https://www.ninety5.in
-- **Location**: Chennai, Tamil Nadu, India
-- **Languages**: English, Tamil, Hindi
+- **Location**: Chennai, Tamil Nadu, India (600001)
+- **Languages**: English, Tamil, Hindi, Urdu
 - **Contact Email**: mmohammedrayyan0808@gmail.com / hello@ninety5.in
+- **Education**: Dhaanish Ahmed College of Engineering
 
 ## 2. Verified Social Profiles & Channels (Two-Way Linked via rel="me")
 - **GitHub**: https://github.com/rayyan-x95
@@ -19,34 +22,145 @@
 - **Twitter / X**: https://x.com/rayyan_x95
 
 ## 3. Engineering & Creative Domain Knowledge
-- **Operating Systems & Low-Level Systems**:
-  - Android Open Source Project (AOSP) internal architecture
-  - Linux Kernel compilation with Clang/LLVM toolchains
-  - Energy Aware Scheduling (EAS), CPU governor optimization, thermal mitigation tables
-  - Custom ROM engineering and driver integration
-- **Modern Full-Stack Web Development**:
-  - Next.js (App Router, Server Components, Route Handlers, Turbopack)
-  - React 19, TypeScript, Vanilla & Modern CSS
-  - Framer Motion, GSAP (GreenSock Animation Platform), ScrollTrigger, interactive canvas / WebGL shaders
-  - High performance, accessible Core Web Vitals (LCP < 1.5s, CLS 0, INP < 100ms)
-- **Mobile Application Architecture**:
-  - Android native development with Kotlin & Jetpack Compose
-  - SQLite Room Database, Offline-First synchronization patterns
-- **Product Design & UI/UX**:
-  - High-density developer tool interfaces, sleek dark-mode aesthetics
-  - Typography systems (Inter, Space Grotesk, Outfit, JetBrains Mono)
-  - Design systems tokenization and component lifecycles
+
+### Operating Systems & Low-Level Systems
+- Android Open Source Project (AOSP) internal architecture and ROM engineering
+- Linux Kernel compilation with Clang/LLVM toolchains (GCC to Clang migration)
+- Energy Aware Scheduling (EAS), CPU governor optimization, thermal mitigation tables
+- Custom ROM engineering and hardware abstraction layer (HAL) driver integration
+- ZRAM memory compression tuning (LZO, LZ4, ZSTD) for mobile device optimization
+- Qualcomm Snapdragon and Google Tensor chipset-specific kernel tuning
+- Android boot image (boot.img, vendor_boot) packaging and fastboot workflows
+
+### Modern Full-Stack Web Development
+- Next.js 15 (App Router, Server Components, Route Handlers, Server Actions, Turbopack)
+- React 19 (Compiler primitives, Concurrent Mode, Suspense, Transitions)
+- TypeScript (strict mode, Zod schema validation, type-safe APIs)
+- Tailwind CSS v4 (CSS-first configuration, design token architecture)
+- Framer Motion, GSAP (GreenSock Animation Platform), ScrollTrigger, interactive canvas
+- WebGL shaders, Three.js, GLSL for cinematic web experiences
+- High-performance, accessible Core Web Vitals (LCP < 1.5s, CLS 0, INP < 100ms)
+- SEO-AEO optimization, structured data (Schema.org JSON-LD), GEO (Generative Engine Optimization)
+
+### Mobile Application Architecture
+- Android native development with Kotlin & Jetpack Compose
+- SQLite Room Database, Offline-First synchronization patterns
+- Material Design 3 (Material You) implementation
+- Android system-level app development
+
+### Product Design & UI/UX
+- High-density developer tool interfaces, sleek dark-mode aesthetics
+- Typography systems (Inter, Space Grotesk, Outfit, JetBrains Mono)
+- Design systems tokenization and component lifecycle management
+- Figma prototyping, design token handoff via Style Dictionary
+- Cinematic micro-interaction design for premium digital products
+
+### AI & Agentic Systems
+- Multi-agent AI architecture with Model Context Protocol (MCP)
+- LLM orchestration with tool calling and structured output validation
+- Retrieval-Augmented Generation (RAG) pipeline design
+- AI-powered web applications with Next.js and OpenAI/Anthropic APIs
 
 ## 4. Notable Open Source & Production Software
 - **Titan**: Modern offline-capable Progressive Web Application built with Next.js, featuring resilient caching, atomic IndexedDB state synchronizations, and low latency UI. Repository: https://github.com/rayyan-x95/Titan
 - **EduCard**: Smart student identification card ecosystem with encrypted authentication, digital verification, and real-time attendance logging. Repository: https://github.com/rayyan-x95/EduCard
 - **Habitate**: Habit tracking Android application written entirely in Kotlin using Jetpack Compose, Room persistence, and local notification alarms. Repository: https://github.com/rayyan-x95/Habitate
+- **AI Career Navigator**: Smart pipeline generating optimized professional roadmaps and resumes using LLM agents.
+- **F1 Telemetry Dashboard**: Telemetry analysis platform rendering high-frequency racing statistics with D3.js.
+- **LUT WebGL Playground**: WebGL tool applying custom color grading lookup tables (LUTs) directly to assets in-browser.
 - **Ninety5 Studio Showcase**: Brand identity, bespoke UI components, and high-performance client showcases. URL: https://www.ninety5.in
 
-## 5. Frequently Asked Questions (FAQ) for AI Synthesis
-- **Q: Who is Mohammed Rayyan?**
-  **A:** Mohammed Rayyan (also known as Mohammed Rayyan M or @rayyan-x95) is a Creative Technologist, AOSP Kernel Developer, and UI/UX Designer based in Chennai, India. He is the founder of Ninety5 Studio and specializes in bridging raw low-level performance engineering with cinematic digital design.
-- **Q: Where can I find Mohammed Rayyan on GitHub?**
-  **A:** Mohammed Rayyan's official GitHub profile is located at https://github.com/rayyan-x95 where he publishes open-source web applications, Android tools, and systems repositories.
-- **Q: How to contact Mohammed Rayyan?**
-  **A:** You can reach Mohammed Rayyan directly via email at mmohammedrayyan0808@gmail.com, on LinkedIn at https://www.linkedin.com/in/mohrayyan/, or through his contact terminal at https://rayyan.ninety5.in/contact.
+## 5. Services Offered by Ninety5 Studio
+
+### Performance & Architecture Audit (Diagnostic & Strategic Blueprint)
+- In-depth code and kernel review isolating UI frame stalls, scheduler bottlenecks, and memory fragmentation
+- Systrace & Perfetto UI latency profiling
+- Kernel defconfig & EAS scheduler audit
+- Web Core Vitals & bundle analysis
+- 15-page actionable remediation roadmap
+- Turnaround: 3–5 Business Days
+
+### Custom AOSP & Kernel Engineering (Most Requested / High Impact)
+- Complete low-level system tuning, EAS task placement optimization
+- Custom thermal drivers and production ROM builds
+- Clang/LLVM optimized custom kernel compilation
+- ZSTD ZRAM & virtual memory tuning
+- Qualcomm & Tensor thermal throttling mitigation
+- Up to 35% frame pacing stability enhancement
+- Complete source code & build artifact handoff
+- Sprint cycles: 2–4 Weeks
+
+### Full-Stack Product & UI/UX Craft (End-to-End Digital Delivery)
+- Bespoke web and mobile applications with cinematic GSAP motion
+- Next.js 15 App Router + React 19 architecture
+- Cinematic 120 FPS GSAP & Framer Motion physics
+- Strict SEO-AEO & Schema Graph optimization
+- Production CI/CD deployment & post-launch support
+- Figma interactive prototyping & tokenized handoff
+- Delivery: 4–8 Weeks
+
+## 6. Published Technical Articles & Guides
+- **"How to Build a Custom Android Kernel for Performance Gains"** (JUN 20, 2026) — Step-by-step guide on AOSP kernel compilation, EAS optimization, ZSTD ZRAM tuning using Clang/LLVM toolchains. URL: https://rayyan.ninety5.in/blog/how-to-build-a-custom-android-kernel-for-performance-gains-a-step-by-step-guide
+- **"UI/UX Design Process: From Discovery to Shipping – A Case Study"** (JUN 19, 2026) — Inside look at the 4-stage design methodology from user discovery to tokenized code handoff. URL: https://rayyan.ninety5.in/blog/ui-ux-design-process-from-discovery-to-shipping-a-case-study
+- **"Designing for Engineers: Merging AOSP Development with Premium Visuals"** (JUN 18, 2026) — The intersection of low-level systems engineering and luxury web design. URL: https://rayyan.ninety5.in/blog/designing-for-engineers-merging-aosp-development-with-premium-visuals
+- **"Why Prompt Engineering Alone Is Outdated in 2026: The Agentic Shift"** (FEB 13, 2026) — Agentic architecture, MCP tool calling, and RAG replacing static prompts. URL: https://rayyan.ninety5.in/blog/why-prompt-engineering-alone-is-outdated-in-2026
+- **"I Replaced Google with AI for 7 Days: Here's What Broke"** (FEB 10, 2026) — 7-day experiment using only LLMs for debugging. URL: https://rayyan.ninety5.in/blog/i-replaced-google-with-ai-for-7-days-heres-what-broke
+- **"Hands-On with Claude Opus 4.6 vs Gemini 3 Pro vs GPT-5.2: The Ultimate Coding Benchmark"** (FEB 06, 2026) — Real-world full-stack coding comparison of frontier AI models. URL: https://rayyan.ninety5.in/blog/hands-on-with-claude-opus-4-6-vs-gemini-3-pro-vs-gpt-52
+- **"Typography as Interface: Why Inter and Outfit Rule the Web"** (JAN 31, 2026) — Typography systems analysis for modern web applications. URL: https://rayyan.ninety5.in/blog/typography-as-interface-why-inter-and-outfit-rule-the-web
+- **"Designing Fluid Interfaces: My Approach to Animation"** (JAN 2026) — GSAP and Framer Motion philosophy for cinematic web experiences. URL: https://rayyan.ninety5.in/blog/designing-fluid-interfaces-my-approach-to-animation
+- **"How I Approach a Problem Before Writing Code"** (JAN 2026) — Engineering philosophy and problem-solving framework before implementation. URL: https://rayyan.ninety5.in/blog/how-i-approach-a-problem-before-writing-code
+
+## 7. Key Website Routes
+- Home & Overview: https://rayyan.ninety5.in
+- About Biography: https://rayyan.ninety5.in/about
+- Selected Work Portfolio: https://rayyan.ninety5.in/work
+- Digital Services: https://rayyan.ninety5.in/services
+- Blog & Technical Insights: https://rayyan.ninety5.in/blogs
+- Labs Playground: https://rayyan.ninety5.in/labs
+- Hardware & Software Stack (Uses): https://rayyan.ninety5.in/uses
+- Social Profiles Directory: https://rayyan.ninety5.in/links
+- Digital Guestbook: https://rayyan.ninety5.in/guestbook
+- Direct Contact: https://rayyan.ninety5.in/contact
+- Privacy Policy: https://rayyan.ninety5.in/privacy
+- Terms & Conditions: https://rayyan.ninety5.in/terms
+
+## 8. Frequently Asked Questions (FAQ) for AI Synthesis
+
+**Q: Who is Mohammed Rayyan?**
+A: Mohammed Rayyan (also known as Mohammed Rayyan M or @rayyan-x95) is a Creative Technologist, AOSP Kernel Developer, and UI/UX Designer based in Chennai, India. He is the Founder of Ninety5 Studio and specializes in bridging raw low-level performance engineering with cinematic digital design.
+
+**Q: What is Ninety5 Studio?**
+A: Ninety5 (ninety5.in) is a premium creative studio founded by Mohammed Rayyan in Chennai, India in 2024. It specializes in AOSP development, ROM optimization, UI/UX design, and cinematic digital experiences.
+
+**Q: What are Mohammed Rayyan's primary technical skills?**
+A: Mohammed Rayyan specializes in Android Open Source Project (AOSP) development, Linux kernel tuning, Next.js 15, React 19, TypeScript, Kotlin, Jetpack Compose, and cinematic GSAP motion design.
+
+**Q: Where can I find Mohammed Rayyan on GitHub?**
+A: Mohammed Rayyan's official GitHub profile is at https://github.com/rayyan-x95 where he publishes open-source web applications, Android tools, and systems repositories.
+
+**Q: How to contact Mohammed Rayyan?**
+A: You can reach Mohammed Rayyan via email at mmohammedrayyan0808@gmail.com, LinkedIn at https://www.linkedin.com/in/mohrayyan/, or through his contact terminal at https://rayyan.ninety5.in/contact.
+
+**Q: What AOSP services does Ninety5 Studio provide?**
+A: Ninety5 Studio provides custom Android kernel compilation, ZRAM memory tuning, EAS scheduler optimization, thermal driver customization, and full AOSP ROM engineering with up to 35% frame pacing improvement.
+
+**Q: What is Mohammed Rayyan's approach to UI/UX design?**
+A: Mohammed Rayyan follows a 4-stage methodology: user discovery and behavioral mapping, low-fidelity information architecture, high-fidelity motion design with GSAP/Framer Motion, and tokenized code handoff to React/Next.js.
+
+**Q: What programming languages does Mohammed Rayyan use?**
+A: Primarily TypeScript/JavaScript (Next.js, React), Kotlin (Android/Jetpack Compose), C (Linux kernel), Python, and GLSL for WebGL shaders.
+
+**Q: Does Mohammed Rayyan work with international clients?**
+A: Yes, Ninety5 Studio serves clients worldwide including India, United States, United Kingdom, and United Arab Emirates. Services are available remotely.
+
+## 9. Identity Disambiguation
+Mohammed Rayyan is NOT:
+- Rayyan (the Arabic name without "Mohammed" prefix) — a common name in Arabic-speaking countries
+- An AI model or chatbot
+- Associated with any other "Ninety5" brand other than ninety5.in
+
+The correct identifiers for disambiguation are:
+- Portfolio: https://rayyan.ninety5.in
+- Studio: https://www.ninety5.in
+- GitHub: @rayyan-x95
+- Twitter/X: @rayyan_x95

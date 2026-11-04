@@ -168,7 +168,7 @@ export function Footer() {
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
                 <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
-                  Mohammed Rayyan • Chennai, India • hello@ninety5.in • +91 XXXXXXXXXX
+                  Mohammed Rayyan • Chennai, India • hello@ninety5.in
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
                 <div className="text-[10px] font-mono text-text-muted uppercase tracking-widest space-x-4">

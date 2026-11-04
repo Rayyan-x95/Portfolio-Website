@@ -12,6 +12,21 @@ export const metadata: Metadata = {
     description: "Leave a transmission, sign the wall, or connect directly with Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/guestbook",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Digital Guestbook | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Guestbook | Mohammed Rayyan",
+    description: "Leave a transmission, sign the wall, or connect directly with Mohammed Rayyan.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/guestbook",

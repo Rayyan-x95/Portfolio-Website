@@ -12,6 +12,21 @@ export const metadata: Metadata = {
     description: "Curated portfolio of engineering projects, digital products, custom ROM optimizations, and design systems built by Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/work",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Selected Work & Engineering Projects | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Selected Work & Engineering Projects | Mohammed Rayyan",
+    description: "Curated portfolio of engineering projects, digital products, custom ROM optimizations, and design systems built by Mohammed Rayyan.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/work",

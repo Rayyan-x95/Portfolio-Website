@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     description: "Ninety5 Studio's privacy policy and data handling protocols.",
     url: "https://rayyan.ninety5.in/privacy",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Privacy Policy | Ninety5 Studio",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Ninety5 Studio",
+    description: "Ninety5 Studio's privacy policy and data handling protocols.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/privacy",

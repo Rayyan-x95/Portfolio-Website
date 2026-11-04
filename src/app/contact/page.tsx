@@ -12,6 +12,21 @@ export const metadata: Metadata = {
     description: "Get in touch with Mohammed Rayyan for new engineering projects, design systems, and digital product inquiries.",
     url: "https://rayyan.ninety5.in/contact",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Contact Mohammed Rayyan — Ninety5 Studio",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Mohammed Rayyan | Direct Transmission",
+    description: "Get in touch with Mohammed Rayyan for new engineering projects, design systems, and digital product inquiries.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/contact",

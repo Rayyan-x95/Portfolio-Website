@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -93,12 +93,20 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://rayyan.ninety5.in/",
+    canonical: "https://rayyan.ninety5.in",
   },
+  manifest: "/manifest.json",
+  category: "technology",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "",
-  }
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -144,7 +152,7 @@ export default function RootLayout({
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "Dhaanish Ahmed College of Engineering",
-      "url": "https://dhaanish.com"
+      "url": "https://dhaanishchennai.in"
     },
     "worksFor": {
       "@type": "Organization",

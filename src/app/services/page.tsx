@@ -28,7 +28,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/services",
-  }
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services & Engineering Solutions | Mohammed Rayyan",
+    description: "AOSP ROM engineering, mobile systems optimization, design systems, and modern Next.js development by Mohammed Rayyan.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
+  },
 };
 
 const engagementTiers = [

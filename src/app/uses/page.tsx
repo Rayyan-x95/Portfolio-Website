@@ -14,6 +14,21 @@ export const metadata: Metadata = {
     description: "Hardware, software, and development tools that Mohammed Rayyan uses daily.",
     url: "https://rayyan.ninety5.in/uses",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Hardware & Software Stack | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uses — Hardware & Software Stack | Mohammed Rayyan",
+    description: "Hardware, software, and development tools that Mohammed Rayyan uses daily.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/uses",

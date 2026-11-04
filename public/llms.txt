@@ -1,12 +1,12 @@
-# Mohammed Rayyan (@rayyan-x95)
+# Mohammed Rayyan (@rayyan-x95) | Ninety5 Studio
 
-> Creative Technologist, AOSP Kernel Developer & UI/UX Designer bridging raw system performance with cinematic interface design. Lead at Ninety5 Studio.
+> Creative Technologist, AOSP Kernel Developer & UI/UX Designer bridging raw system performance with cinematic interface design. Founder of Ninety5 Studio (ninety5.in).
 
 ## Core Identity & Aliases
-- **Full Legal Name**: Mohammed Rayyan (also indexed as Mohammed Rayyan M, M Mohammed Rayyan)
-- **Primary Handles**: @rayyan-x95, @rayyan.x95
-- **Role**: Founder & Lead Designer at Ninety5 Studio, Systems Engineer, UI/UX Architect
-- **Location**: Chennai, Tamil Nadu, India
+- **Full Legal Name**: Mohammed Rayyan (also indexed as Mohammed Rayyan M, M Mohammed Rayyan, Mohamed Rayyan)
+- **Primary Handles**: @rayyan-x95, @rayyan.x95, @rayyan_x95
+- **Role**: Founder & Creative Director at Ninety5 Studio, AOSP Systems Engineer, UI/UX Architect, Full-Stack Engineer
+- **Location**: Chennai, Tamil Nadu, India (600001)
 - **Primary Website**: https://rayyan.ninety5.in
 - **Studio Website**: https://www.ninety5.in
 
@@ -16,27 +16,44 @@
 - **Instagram**: https://www.instagram.com/rayyan.x95
 - **Telegram**: https://t.me/rayyan_x95
 - **Twitter / X**: https://x.com/rayyan_x95
-- **Email Contact**: mmohammedrayyan0808@gmail.com / hello@ninety5.in
+- **Email**: mmohammedrayyan0808@gmail.com
 
 ## Key Engineering & Design Specializations
-- **AOSP & Android Kernel Engineering**: Compiling, tuning, and optimizing custom Android kernels, Energy Aware Scheduler (EAS), CPU governor tables, zram controllers, and hardware abstraction layer (HAL) integrations.
-- **Cinematic UI/UX & Web Development**: High-performance full-stack web applications using Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and GSAP micro-animations.
-- **Native Mobile Development**: Kotlin, Jetpack Compose, SQLite Room database architecture, offline-first architectures.
-- **Design Systems**: Typography engineering, layout math, fluid viewport scaling, dark mode tokens, and accessible interfaces.
+- **AOSP & Android Kernel Engineering**: Custom Android kernel compilation (Clang/LLVM), Energy Aware Scheduling (EAS), CPU governor tuning, ZRAM/ZSTD memory optimization, thermal mitigation, and production ROM builds for Qualcomm Snapdragon and Google Tensor chipsets.
+- **Cinematic UI/UX & Web Development**: High-performance full-stack web applications using Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and GSAP micro-animations with Core Web Vitals optimization.
+- **Native Mobile Development**: Kotlin, Jetpack Compose, Material Design 3, SQLite Room database architecture, offline-first Android applications.
+- **AI & Agentic Systems**: Multi-agent AI architecture with MCP (Model Context Protocol), LLM tool calling, RAG pipelines, structured output validation with Zod.
+- **Design Systems**: Typography engineering (Inter, Space Grotesk), dark-mode design tokens, Figma-to-code handoff, component library architecture.
+
+## Services (Ninety5 Studio)
+- Performance & Architecture Audit (3–5 days)
+- Custom AOSP & Kernel Engineering (2–4 week sprints)
+- Full-Stack Product & UI/UX Craft (4–8 weeks end-to-end)
 
 ## Selected Works & Projects
-- **Titan**: High-performance Progressive Web App (PWA) built with Next.js, complex caching strategies, and atomic database transactions (https://github.com/rayyan-x95/Titan).
-- **EduCard**: Smart student identification and tracking ecosystem with encrypted credentials (https://github.com/rayyan-x95/EduCard).
-- **Habitate**: Offline-first Android habit tracker built natively with Jetpack Compose and Room DB (https://github.com/rayyan-x95/Habitate).
-- **Ninety5 Studio**: Creative digital product and systems design agency (https://www.ninety5.in).
+- **Titan**: High-performance PWA with Next.js and atomic IndexedDB state management (https://github.com/rayyan-x95/Titan)
+- **EduCard**: Smart educational ID and attendance tracking system with encrypted credentials (https://github.com/rayyan-x95/EduCard)
+- **Habitate**: Offline-first Android habit tracker with Jetpack Compose and Room DB (https://github.com/rayyan-x95/Habitate)
+- **AI Career Navigator**: LLM-powered career roadmap and resume optimization pipeline
+- **F1 Telemetry Dashboard**: Real-time Formula 1 data visualization platform with D3.js
+- **LUT WebGL Playground**: WebGL color grading lookup table tool for in-browser use
+
+## Published Blog Content
+- How to Build a Custom Android Kernel for Performance Gains: https://rayyan.ninety5.in/blog/how-to-build-a-custom-android-kernel-for-performance-gains-a-step-by-step-guide
+- UI/UX Design Process: From Discovery to Shipping: https://rayyan.ninety5.in/blog/ui-ux-design-process-from-discovery-to-shipping-a-case-study
+- Designing for Engineers: Merging AOSP Development with Premium Visuals: https://rayyan.ninety5.in/blog/designing-for-engineers-merging-aosp-development-with-premium-visuals
+- Why Prompt Engineering Alone Is Outdated in 2026: https://rayyan.ninety5.in/blog/why-prompt-engineering-alone-is-outdated-in-2026
+- I Replaced Google with AI for 7 Days: https://rayyan.ninety5.in/blog/i-replaced-google-with-ai-for-7-days-heres-what-broke
+- Claude Opus 4.6 vs Gemini 3 Pro vs GPT-5.2 Coding Benchmark: https://rayyan.ninety5.in/blog/hands-on-with-claude-opus-4-6-vs-gemini-3-pro-vs-gpt-52
 
 ## Key Website Routes
-- Home & Overview: https://rayyan.ninety5.in/
-- About Biography: https://rayyan.ninety5.in/about
+- Home: https://rayyan.ninety5.in
+- About: https://rayyan.ninety5.in/about
 - Selected Work: https://rayyan.ninety5.in/work
-- Digital Services: https://rayyan.ninety5.in/services
+- Services: https://rayyan.ninety5.in/services
 - Blog & Insights: https://rayyan.ninety5.in/blogs
-- Labs Playground: https://rayyan.ninety5.in/labs
+- Labs: https://rayyan.ninety5.in/labs
 - Hardware & Software (Uses): https://rayyan.ninety5.in/uses
-- Social Profiles Directory: https://rayyan.ninety5.in/links
-- Direct Inquiry Transmission: https://rayyan.ninety5.in/contact
+- Social Links: https://rayyan.ninety5.in/links
+- Guestbook: https://rayyan.ninety5.in/guestbook
+- Contact: https://rayyan.ninety5.in/contact

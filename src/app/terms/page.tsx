@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     description: "The operational framework and terms of service for Ninety5 Studio.",
     url: "https://rayyan.ninety5.in/terms",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Terms & Conditions | Ninety5 Studio",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | Ninety5 Studio",
+    description: "The operational framework and terms of service for Ninety5 Studio.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/terms",

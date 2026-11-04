@@ -12,6 +12,21 @@ export const metadata: Metadata = {
     description: "Experimental research playground featuring PWA utilities, mobile applications, and WebGL prototypes.",
     url: "https://rayyan.ninety5.in/labs",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Labs & Experimental Prototypes | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Labs & Experimental Prototypes | Mohammed Rayyan",
+    description: "Experimental research playground featuring PWA utilities, mobile applications, and WebGL prototypes.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/labs",

@@ -14,12 +14,19 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/profile.webp",
+        url: "https://rayyan.ninety5.in/profile.webp",
         width: 1200,
         height: 1600,
         alt: "Mohammed Rayyan — Founder of Ninety5, Creative Technologist & Designer",
       }
     ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Mohammed Rayyan | Founder of Ninety5",
+    description: "AOSP systems architect, UI/UX designer, and Founder of Ninety5 (ninety5.in). Bridging raw performance with cinematic design.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/profile.webp"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/about",

@@ -26,8 +26,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  // Convert "JUN 20, 2026" → ISO date for OG publishedTime
+  const months: Record<string, string> = {
+    JAN: '01', FEB: '02', MAR: '03', APR: '04', MAY: '05', JUN: '06',
+    JUL: '07', AUG: '08', SEP: '09', OCT: '10', NOV: '11', DEC: '12'
+  };
+  const match = post.date.match(/([A-Za-z]+)\s+(\d+),\s+(\d{4})/);
+  const isoPublishedTime = match
+    ? `${match[3]}-${months[match[1].toUpperCase()] || '01'}-${match[2].padStart(2, '0')}T00:00:00.000Z`
+    : new Date().toISOString();
+
+  const ogImage = "https://rayyan.ninety5.in/og-image.png";
+
   return {
-    title: `${post.title} | Technical Guide`,
+    title: post.title,
     description: post.excerpt,
     keywords: [...post.tags, "Mohammed Rayyan", "AOSP Development", "UI UX Engineering", "Ninety5 Studio"],
     alternates: {
@@ -38,12 +50,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.excerpt,
       url: `https://rayyan.ninety5.in/blog/${post.slug}`,
       type: "article",
-      publishedTime: post.date,
+      publishedTime: isoPublishedTime,
       authors: ["Mohammed Rayyan"],
       tags: post.tags,
       images: [
         {
-          url: "/og-image.png",
+          url: ogImage,
           width: 1024,
           height: 682,
           alt: post.title,
@@ -55,7 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${post.title} — Mohammed Rayyan`,
       description: post.excerpt,
       creator: "@rayyan_x95",
-      images: ["/og-image.png"],
+      images: [ogImage],
     },
   };
 }
@@ -123,6 +135,12 @@ export default async function BlogPostPage({ params }: PageProps) {
     "@id": `https://rayyan.ninety5.in/blog/${post.slug}#article`,
     "headline": post.title,
     "description": post.excerpt,
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://rayyan.ninety5.in/og-image.png",
+      "width": 1024,
+      "height": 682
+    },
     "inLanguage": "en-US",
     "datePublished": isoDate,
     "dateModified": isoDate,

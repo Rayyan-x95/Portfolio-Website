@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     description: "Engineering essays, architectural breakdowns, AI agentic patterns, and mobile ROM optimization guides by Mohammed Rayyan.",
     url: "https://rayyan.ninety5.in/blogs",
     type: "website",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/og-image.png",
+        width: 1024,
+        height: 682,
+        alt: "Blogs & Technical Insights | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blogs & Technical Insights | Mohammed Rayyan",
+    description: "Engineering essays, architectural breakdowns, AI agentic patterns, and mobile ROM optimization guides by Mohammed Rayyan.",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/og-image.png"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/blogs",

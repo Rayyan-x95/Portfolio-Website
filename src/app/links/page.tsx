@@ -20,6 +20,21 @@ export const metadata: Metadata = {
     description: "Verified official profiles and social media directory for Mohammed Rayyan (@rayyan-x95).",
     url: "https://rayyan.ninety5.in/links",
     type: "profile",
+    images: [
+      {
+        url: "https://rayyan.ninety5.in/profile.webp",
+        width: 1200,
+        height: 1600,
+        alt: "Official Links & Profiles | Mohammed Rayyan",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Official Links & Profiles | Mohammed Rayyan",
+    description: "Verified official profiles and social media directory for Mohammed Rayyan (@rayyan-x95).",
+    creator: "@rayyan_x95",
+    images: ["https://rayyan.ninety5.in/profile.webp"],
   },
   alternates: {
     canonical: "https://rayyan.ninety5.in/links",
