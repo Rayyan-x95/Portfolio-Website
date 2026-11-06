@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/ui/Marquee";
 import { Stats } from "@/components/sections/Stats";
 import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Capability } from "@/components/sections/Capability";
@@ -50,6 +51,7 @@ export default function Home() {
     <main className="w-full bg-paper text-ink">
       <JsonLd data={homeFaqSchema} />
       <Hero />
+      <Marquee />
       <Stats />
       <WorkIndex />
       <Capability />

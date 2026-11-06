@@ -10,17 +10,17 @@ const facts = [
 
 export function AboutPreview() {
   return (
-    <section className="bg-ink px-4 py-16 text-paper md:px-8 md:py-24">
+    <section className="bg-paper-elevated px-4 py-16 text-ink md:px-8 md:py-24">
       <div className="mx-auto max-w-[1600px]">
-        <div className="flex items-end justify-between gap-4 border-t border-paper/25 pt-3">
-          <div className="flex items-baseline gap-4 md:gap-6">
-            <span className="mono-label text-signal">03</span>
-            <h2 className="font-heading text-lg font-black uppercase tracking-tight md:text-xl">
+        <div className="flex items-end justify-between gap-4 pt-3">
+          <div className="flex items-center gap-4 md:gap-6">
+            <span className="mono-label rounded-full border-2 border-ink bg-signal-pink px-3 py-1 text-ink shadow-[3px_3px_0_rgba(0,0,0,.55)]">03</span>
+            <h2 className="font-heading text-xl font-black uppercase tracking-tight md:text-2xl">
               Operator
             </h2>
           </div>
-          <span className="mono-label hidden text-paper/50 sm:block">
-            The human
+          <span className="mono-label hidden rounded-full border border-ink/40 px-3 py-1 text-muted sm:block">
+            The human ✦
           </span>
         </div>
 
@@ -31,17 +31,17 @@ export function AboutPreview() {
             </p>
 
             <div className="mt-8 grid max-w-3xl grid-cols-1 gap-8 md:mt-10 md:grid-cols-2">
-              <p className="text-base leading-[1.6] text-paper/70">
+              <p className="rounded-2xl border-2 border-ink/20 bg-paper p-5 text-base leading-[1.6] text-ink/80">
                 I focus on the intersection of system-level performance and visual
                 storytelling. From custom Android kernels to high-end design
                 systems, the &quot;how&quot; gets as much attention as the
                 &quot;what&quot;.
               </p>
 
-              <dl className="mono-label divide-y divide-paper/20 border-y border-paper/20">
+              <dl className="mono-label divide-y divide-ink/15 rounded-2xl border-2 border-ink/20 bg-paper p-4">
                 {facts.map((fact) => (
                   <div key={fact.label} className="flex justify-between gap-4 py-2.5">
-                    <dt className="text-paper/50">{fact.label}</dt>
+                    <dt className="text-muted">{fact.label}</dt>
                     <dd className="text-right">{fact.value}</dd>
                   </div>
                 ))}
@@ -50,7 +50,7 @@ export function AboutPreview() {
 
             <Link
               href="/about"
-              className="mono-label group mt-8 inline-flex items-center gap-3 border border-paper/40 px-5 py-3.5 transition-colors hover:bg-paper hover:text-ink"
+              className="mono-label btn-pop group mt-8 inline-flex items-center gap-3 bg-signal px-6 py-4 text-ink"
             >
               Read the full profile
               <span
@@ -62,8 +62,8 @@ export function AboutPreview() {
             </Link>
           </div>
 
-          <figure className="col-span-12 lg:col-span-4 lg:pl-10">
-            <div className="relative aspect-[3/4] overflow-hidden border border-paper/30">
+          <figure className="col-span-12 rotate-2 lg:col-span-4 lg:pl-10">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border-2 border-ink shadow-[8px_8px_0_rgba(0,0,0,.55)] bg-paper-elevated">
               <Image
                 src="/profile.webp"
                 alt="Mohammed Rayyan, founder of Ninety5, photographed in the hills near Chennai"

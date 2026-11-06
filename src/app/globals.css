@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1B1B18;
-  --foreground: #F2F1EC;
-  --surface: #232320;
-  --surface-hover: #2B2B27;
-  --accent-primary: #E8540B;
-  --accent-secondary: #E8540B;
-  --accent-tertiary: #F2F1EC;
-  --text-muted: #A6A398;
-  --color-brand-orange: var(--accent-secondary);
+  --background: #07061A;
+  --foreground: #F5F3FF;
+  --surface: #14122E;
+  --surface-hover: #1D1A42;
+  --accent-primary: #FFD23F;
+  --accent-secondary: #FF4E6A;
+  --accent-tertiary: #3BFFB0;
+  --text-muted: #B8B2D9;
+  --color-brand-orange: var(--accent-primary);
 
-  /* Paper dossier palette */
-  --paper: #F2F1EC;
-  --ink: #141414;
-  --signal: #E8540B;
-  --muted: #6E6C64;
+  /* Arcade dark palette */
+  --paper: #0F0E22;
+  --paper-elevated: #17142F;
+  --ink: #F5F3FF;
+  --signal: #FFD23F;
+  --signal-pink: #FF4E6A;
+  --signal-mint: #3BFFB0;
+  --signal-violet: #8B5CF6;
+  --muted: #B8B2D9;
 }
 
 @theme inline {
@@ -28,25 +32,71 @@
   --color-accent-tertiary: var(--accent-tertiary);
   --color-text-muted: var(--text-muted);
   --color-paper: var(--paper);
+  --color-paper-elevated: var(--paper-elevated);
   --color-ink: var(--ink);
   --color-signal: var(--signal);
+  --color-signal-pink: var(--signal-pink);
+  --color-signal-mint: var(--signal-mint);
+  --color-signal-violet: var(--signal-violet);
   --color-muted: var(--muted);
   --font-sans: var(--font-archivo);
   --font-mono: var(--font-jetbrains);
-  --font-heading: var(--font-archivo);
+  --font-heading: var(--font-fredoka);
 }
 
 @layer base {
-  /* Identity rule: hard edges only. No pills, no rounded cards. */
-  *,
-  *::before,
-  *::after {
-    border-radius: 0 !important;
+  *, *::before, *::after {
+    border-radius: 0;
   }
 }
 
+/* Arcade fun utilities */
+@layer utilities {
+  .arcade-card {
+    border-radius: 1.5rem;
+    border: 2px solid color-mix(in srgb, var(--ink) 14%, transparent);
+    background: var(--paper-elevated);
+    box-shadow: 0 12px 32px rgba(0,0,0,.35);
+  }
+  .sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    border-radius: 9999px;
+    border: 2px solid var(--ink);
+    padding: .4rem .9rem;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 rgba(0,0,0,.55);
+    transform: rotate(-2deg);
+  }
+  .btn-pop {
+    border-radius: 9999px !important;
+    border: 2px solid var(--ink) !important;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.55) !important;
+    transition: transform .16s ease, box-shadow .16s ease !important;
+  }
+  .btn-pop:hover { transform: translate(-2px,-2px) rotate(-1deg) !important; box-shadow: 8px 8px 0 rgba(0,0,0,.55) !important; }
+  .btn-pop:active { transform: translate(2px,2px) !important; box-shadow: 2px 2px 0 rgba(0,0,0,.55) !important; }
+  .animate-marquee { animation: marquee 22s linear infinite; }
+  .animate-floaty { animation: floaty 5s ease-in-out infinite; }
+  .animate-wiggle { animation: wiggle 2.4s ease-in-out infinite; }
+  .animate-bob { animation: bob 1.4s ease-in-out infinite; }
+}
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(var(--tilt,0deg)); } 50% { transform: translateY(-10px) rotate(var(--tilt,0deg)); } }
+@keyframes wiggle { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
 body {
-  background: var(--background);
+  background:
+    radial-gradient(1100px 500px at 15% -10%, rgba(255, 210, 63, .14), transparent 60%),
+    radial-gradient(900px 480px at 110% 10%, rgba(255, 78, 106, .16), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(139, 92, 246, .18), transparent 65%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
