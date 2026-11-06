@@ -1,65 +1,82 @@
-"use client";
-
 import Image from "next/image";
-import { FadeUp } from "@/components/ui/FadeUp";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
+const facts = [
+  { label: "Role", value: "Founder, Ninety5" },
+  { label: "Base", value: "Chennai, India" },
+  { label: "Focus", value: "AOSP + Interface" },
+  { label: "Status", value: "Open to select work" },
+];
 
 export function AboutPreview() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-6 relative border-y border-white/5 bg-[#050505] overflow-hidden">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 items-start">
-          
-          {/* Sticky Header Left */}
-          <div className="md:col-span-5 md:sticky md:top-32">
-            <FadeUp>
-              <h2 className="font-heading text-fluid-title font-bold uppercase tracking-tighter text-white mb-8">
-                The <br />
-                <span className="text-accent-primary">Philosophy</span>
-              </h2>
-              <div className="w-20 h-[1px] bg-accent-primary mb-8" />
-              <Link href="/about" className="group inline-flex items-center gap-4 text-white font-mono text-xs tracking-[0.3em] uppercase hover:text-accent-secondary transition-colors duration-500">
-                Explore About
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
-              </Link>
-            </FadeUp>
+    <section className="bg-ink px-4 py-16 text-paper md:px-8 md:py-24">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="flex items-end justify-between gap-4 border-t border-paper/25 pt-3">
+          <div className="flex items-baseline gap-4 md:gap-6">
+            <span className="mono-label text-signal">03</span>
+            <h2 className="font-heading text-lg font-black uppercase tracking-tight md:text-xl">
+              Operator
+            </h2>
+          </div>
+          <span className="mono-label hidden text-paper/50 sm:block">
+            The human
+          </span>
+        </div>
+
+        <div className="mt-10 grid grid-cols-12 items-start gap-8 md:mt-14 md:gap-10">
+          <div className="col-span-12 lg:col-span-8">
+            <p className="font-heading text-[clamp(2rem,5vw,4.5rem)] font-black uppercase leading-[0.95] tracking-[-0.03em]">
+              The same hands write the kernel and the interface.
+            </p>
+
+            <div className="mt-8 grid max-w-3xl grid-cols-1 gap-8 md:mt-10 md:grid-cols-2">
+              <p className="text-base leading-[1.6] text-paper/70">
+                I focus on the intersection of system-level performance and visual
+                storytelling. From custom Android kernels to high-end design
+                systems, the &quot;how&quot; gets as much attention as the
+                &quot;what&quot;.
+              </p>
+
+              <dl className="mono-label divide-y divide-paper/20 border-y border-paper/20">
+                {facts.map((fact) => (
+                  <div key={fact.label} className="flex justify-between gap-4 py-2.5">
+                    <dt className="text-paper/50">{fact.label}</dt>
+                    <dd className="text-right">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            <Link
+              href="/about"
+              className="mono-label group mt-8 inline-flex items-center gap-3 border border-paper/40 px-5 py-3.5 transition-colors hover:bg-paper hover:text-ink"
+            >
+              Read the full profile
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-150 group-hover:translate-x-1"
+              >
+                ↗
+              </span>
+            </Link>
           </div>
 
-          {/* Scrolling Content Right */}
-          <div className="md:col-span-6 md:col-start-7 space-y-8 md:space-y-16 max-w-[460px]">
-            <FadeUp delay={0.2}>
-              <div className="relative aspect-[3/4] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-[#0a0a0a] border border-white/5 group mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 via-transparent to-accent-secondary/20 opacity-30 group-hover:opacity-40 transition-opacity duration-1000 z-10" />
-                <Image 
-                  src="/profile.webp" 
-                  alt="Mohammed Rayyan"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
-                />
-              </div>
-              <p className="text-xl md:text-2xl font-light text-white leading-relaxed mb-6">
-                I focus on the intersection of system-level performance and visual storytelling.
-              </p>
-              <p className="text-lg md:text-xl font-light text-text-muted leading-relaxed">
-                From building custom Android kernels to crafting high-end design systems, I believe that great digital products are built when the &quot;how&quot; is as beautiful as the &quot;what&quot;.
-              </p>
-            </FadeUp>
-            
-            <FadeUp delay={0.3}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5">
-                  <span className="block text-2xl font-heading font-bold text-white mb-2 italic">Minimal.</span>
-                  <span className="text-[10px] font-mono text-text-muted uppercase tracking-widest">Aesthetic Core</span>
-                </div>
-                <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5">
-                  <span className="block text-2xl font-heading font-bold text-white mb-2 italic">Intelligent.</span>
-                  <span className="text-[10px] font-mono text-text-muted uppercase tracking-widest">Engineered Flow</span>
-                </div>
-              </div>
-            </FadeUp>
-          </div>
+          <figure className="col-span-12 lg:col-span-4 lg:pl-10">
+            <div className="relative aspect-[3/4] overflow-hidden border border-paper/30">
+              <Image
+                src="/profile.webp"
+                alt="Mohammed Rayyan, founder of Ninety5, photographed in the hills near Chennai"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover grayscale contrast-125"
+              />
+            </div>
+            <figcaption className="mono-label mt-2 flex justify-between gap-4 text-paper/50">
+              <span>Fig. 01 — M. Rayyan</span>
+              <span>Chennai, IN</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

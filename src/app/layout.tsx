@@ -1,5 +1,5 @@
 ﻿import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/ui/Navbar";
@@ -9,49 +9,23 @@ import { SideScrollbar } from "@/components/ui/SideScrollbar";
 import { JsonLd } from "@/components/SEO/JsonLd";
 import { PageTransition } from "@/components/ui/PageTransition";
 
-const inter = Inter({
-  variable: "--font-inter",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-heading",
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rayyan.ninety5.in"),
   title: {
-    default: "Mohammed Rayyan — Founder of Ninety5 | Creative Technologist, AOSP Developer & Designer",
+    default: "Mohammed Rayyan | Founder, Ninety5 Studio — Chennai",
     template: "%s | Mohammed Rayyan"
   },
-  description: "Mohammed Rayyan (M Mohammed Rayyan / @rayyan-x95) — Founder of Ninety5 (ninety5.in). Creative Technologist, AOSP Kernel Developer & UI/UX Designer in Chennai, India. Bridging raw systems performance with cinematic web experiences.",
-  keywords: [
-    "Mohammed Rayyan",
-    "Mohammed Rayyan M",
-    "M Mohammed Rayyan",
-    "Rayyan M",
-    "Rayyan x95",
-    "rayyan-x95",
-    "rayyan.x95",
-    "Mohammed Rayyan Chennai",
-    "Founder Ninety5",
-    "Ninety5 Founder",
-    "Ninety5 Studio",
-    "ninety5.in",
-    "Creative Technologist",
-    "AOSP Developer",
-    "ROM Developer Chennai",
-    "Android Systems Architect",
-    "Custom ROM Developer India",
-    "UI/UX Designer and Engineer",
-    "Next.js Developer Portfolio",
-    "Full-Stack Engineer Portfolio",
-    "Fluid Interfaces Design",
-    "Jetpack Compose Developer",
-    "GSAP Web Animations",
-    "Linux Kernel Developer"
-  ],
+  description: "Mohammed Rayyan, Founder of Ninety5 (Chennai) — AOSP kernel engineer & Next.js designer. 100+ projects, cinematic UI/UX. Open for Q4 2026 projects.",
   authors: [
     { name: "Mohammed Rayyan", url: "https://rayyan.ninety5.in" },
     { name: "Mohammed Rayyan", url: "https://www.ninety5.in" }
@@ -60,11 +34,11 @@ export const metadata: Metadata = {
   publisher: "Ninety5",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://rayyan.ninety5.in/",
     siteName: "Mohammed Rayyan — Founder of Ninety5",
-    title: "Mohammed Rayyan | Founder of Ninety5 · Creative Technologist & Designer",
-    description: "Official portfolio of Mohammed Rayyan — Founder of Ninety5 (ninety5.in). AOSP systems architect & UI/UX designer bridging raw performance with cinematic web experiences.",
+    title: "Mohammed Rayyan | Founder, Ninety5 Studio — Chennai",
+    description: "Mohammed Rayyan, Founder of Ninety5 (Chennai) — AOSP kernel engineer & Next.js designer. Cinematic UI/UX for startups.",
     images: [
       {
         url: "/og-image.png",
@@ -76,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammed Rayyan | Founder of Ninety5 · Designer & Technologist",
-    description: "Founder of Ninety5 (ninety5.in). AOSP systems architect & UI/UX designer bridging raw performance with cinematic web experiences.",
+    title: "Mohammed Rayyan | Founder, Ninety5 Studio — Chennai",
+    description: "Founder of Ninety5 (Chennai). AOSP kernel engineer & Next.js designer. Cinematic UI/UX for startups.",
     creator: "@rayyan_x95",
     images: ["/og-image.png"]
   },
@@ -106,7 +80,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000",
+  themeColor: "#1B1B18",
 };
 
 export default function RootLayout({
@@ -134,7 +108,7 @@ export default function RootLayout({
     ],
     "url": "https://rayyan.ninety5.in",
     "image": "https://rayyan.ninety5.in/profile.webp",
-    "email": "mmohammedrayyan0808@gmail.com",
+    "email": "rayyan@ninety5.in",
     "gender": "Male",
     "nationality": "Indian",
     "sameAs": [
@@ -207,7 +181,7 @@ export default function RootLayout({
     "logo": "https://rayyan.ninety5.in/profile.webp",
     "image": "https://rayyan.ninety5.in/profile.webp",
     "description": "Ninety5 (ninety5.in) is a premium creative studio founded by Mohammed Rayyan in Chennai, India. Specialising in AOSP development, ROM optimisation, UI/UX design, and cinematic digital experiences.",
-    "email": "mmohammedrayyan0808@gmail.com",
+    "email": "rayyan@ninety5.in",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Chennai Central",
@@ -243,7 +217,7 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "mmohammedrayyan0808@gmail.com",
+      "email": "rayyan@ninety5.in",
       "url": "https://rayyan.ninety5.in/contact",
       "availableLanguage": ["English", "Tamil", "Hindi", "Urdu"]
     }
@@ -280,9 +254,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${archivo.variable} ${jetbrains.variable} antialiased`}
     >
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white antialiased`}>
+      <body className={`${archivo.variable} ${jetbrains.variable} font-sans bg-background text-foreground antialiased`}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <PageTransition />
         <JsonLd data={personSchema} />

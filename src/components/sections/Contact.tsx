@@ -14,6 +14,8 @@ export function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
+  // shortcut: single entry keeps all named bots allowed; add api/tmp disallow for named groups when needed
+  const avail = new Date().toLocaleString('en-IN', { month: 'short', year: 'numeric' }).toUpperCase() + '_OPEN';
   const socials = [
     { name: "GitHub", icon: Terminal, url: "https://github.com/rayyan-x95" },
     { name: "LinkedIn", icon: Briefcase, url: "https://www.linkedin.com/in/mohrayyan/" },
@@ -267,7 +269,7 @@ export function Contact() {
 
                 <div className="space-y-6">
                   {[
-                    { label: "AVAILABILITY", value: "Q2_OPEN", color: "text-accent-primary" },
+                    { label: "AVAILABILITY", value: avail, color: "text-accent-primary" },
                     { label: "LOCATION", value: "CHENNAI, IN", color: "text-white" },
                     { label: "TIMEZONE", value: "GMT +5:30", color: "text-white/60" },
                     { label: "CURRENT_MODE", value: "ARCHITECTING", color: "text-accent-secondary" }
@@ -310,7 +312,7 @@ export function Contact() {
                 <div className="text-[10px] font-mono text-text-muted uppercase tracking-wider space-y-1">
                   <p className="font-bold text-accent-secondary">{"// Local_Contact_NAP"}</p>
                   <p className="text-white">Mohammed Rayyan • Chennai, India</p>
-                  <p className="text-white">hello@ninety5.in • +91 XXXXXXXXXX</p>
+                  <p className="text-white">rayyan@ninety5.in • +91 63696 12671</p>
                 </div>
                 
                 <a 

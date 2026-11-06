@@ -13,6 +13,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: '/api/',
       },
       {
         userAgent: [
@@ -25,17 +26,22 @@ export default function robots(): MetadataRoute.Robots {
           'Baiduspider',
           'Slurp',
 
-          // Frontier AI & Generative Search Crawlers (GEO / LLM Ingestion)
+          // Frontier AI & Generative Search Crawlers (GEO / LLM Ingestion) — discovery, not training
           'GPTBot',
+          'OAI-SearchBot',
           'ChatGPT-User',
           'PerplexityBot',
+          'Perplexity-User',
           'ClaudeBot',
+          'Claude-SearchBot',
           'Claude-Web',
           'anthropic-ai',
           'Google-Extended',
           'Amazonbot',
           'cohere-ai',
           'Meta-ExternalAgent',
+          'meta-webindexer',
+          'meta-externalfetcher',
           'Bytespider',
 
           // Social Link Expansion & Rich Snippet Bots

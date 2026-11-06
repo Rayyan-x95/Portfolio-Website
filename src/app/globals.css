@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090909;
-  --foreground: #F5F5F5;
-  --surface: #171717;
-  --surface-hover: #1D1D1D;
-  --accent-primary: #3ABEF9;
-  --accent-secondary: #FF8F00;
-  --accent-tertiary: #FFFFFF;
-  --text-muted: #A1A1AA;
+  --background: #1B1B18;
+  --foreground: #F2F1EC;
+  --surface: #232320;
+  --surface-hover: #2B2B27;
+  --accent-primary: #E8540B;
+  --accent-secondary: #E8540B;
+  --accent-tertiary: #F2F1EC;
+  --text-muted: #A6A398;
   --color-brand-orange: var(--accent-secondary);
+
+  /* Paper dossier palette */
+  --paper: #F2F1EC;
+  --ink: #141414;
+  --signal: #E8540B;
+  --muted: #6E6C64;
 }
 
 @theme inline {
@@ -21,9 +27,22 @@
   --color-accent-secondary: var(--accent-secondary);
   --color-accent-tertiary: var(--accent-tertiary);
   --color-text-muted: var(--text-muted);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-heading);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-signal: var(--signal);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-jetbrains);
+  --font-heading: var(--font-archivo);
+}
+
+@layer base {
+  /* Identity rule: hard edges only. No pills, no rounded cards. */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
 }
 
 body {
@@ -36,35 +55,29 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 9999;
-  filter: contrast(150%) brightness(150%);
-}
-
 /* Fluid Typography Utilities */
 @layer utilities {
   .text-fluid-huge {
-    font-size: clamp(3rem, 10vw, 8.5rem);
-    line-height: 0.85;
+    font-size: clamp(3.25rem, 11vw, 10rem);
+    line-height: 0.86;
   }
   
   .text-fluid-title {
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    line-height: 1;
+    font-size: clamp(2.5rem, 8vw, 6.5rem);
+    line-height: 0.92;
   }
 
   .section-padding {
     padding-top: clamp(4rem, 10vh, 8rem);
     padding-bottom: clamp(4rem, 10vh, 8rem);
+  }
+
+  .mono-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 }
 
@@ -150,7 +163,7 @@ body::before {
 }
 
 .blog-content blockquote {
-  background: rgba(58, 190, 249, 0.04);
+  background: rgba(232, 84, 11, 0.06);
   border-left: 4px solid var(--accent-primary);
   border-radius: 0 1rem 1rem 0;
   padding: 1.5rem 1.75rem;
@@ -199,7 +212,7 @@ body::before {
   font-family: var(--font-mono), monospace;
   font-size: 0.875rem;
   background: rgba(255, 255, 255, 0.07);
-  color: #3ABEF9;
+  color: var(--accent-primary);
   padding: 0.2rem 0.45rem;
   border-radius: 0.35rem;
 }
