@@ -12,7 +12,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt', '/pricing.md'],
+        disallow: ['/api/', '/tmp/'],
       },
       {
         userAgent: [
@@ -25,18 +26,25 @@ export default function robots(): MetadataRoute.Robots {
           'Baiduspider',
           'Slurp',
 
-          // Frontier AI & Generative Search Crawlers (GEO / LLM Ingestion)
-          'GPTBot',
-          'ChatGPT-User',
+          // AI search discovery (allow for citations — discovery is not training)
+          'OAI-SearchBot',
+          'Claude-SearchBot',
           'PerplexityBot',
-          'ClaudeBot',
-          'Claude-Web',
-          'anthropic-ai',
+          'Perplexity-User',
+          'ChatGPT-User',
+          'meta-webindexer',
+          'meta-externalfetcher',
           'Google-Extended',
           'Amazonbot',
           'cohere-ai',
-          'Meta-ExternalAgent',
           'Bytespider',
+
+          // Potential model-training crawlers (allowed: no training opt-out intended)
+          'GPTBot',
+          'ClaudeBot',
+          'Claude-Web',
+          'anthropic-ai',
+          'Meta-ExternalAgent',
 
           // Social Link Expansion & Rich Snippet Bots
           'Twitterbot',
@@ -48,6 +56,7 @@ export default function robots(): MetadataRoute.Robots {
           'WhatsApp'
         ],
         allow: '/',
+        disallow: ['/api/', '/tmp/'],
       }
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

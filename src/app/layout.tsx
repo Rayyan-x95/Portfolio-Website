@@ -22,36 +22,10 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rayyan.ninety5.in"),
   title: {
-    default: "Mohammed Rayyan — Founder of Ninety5 | Creative Technologist, AOSP Developer & Designer",
+    default: "Mohammed Rayyan — Founder, Ninety5 Studio",
     template: "%s | Mohammed Rayyan"
   },
-  description: "Mohammed Rayyan (M Mohammed Rayyan / @rayyan-x95) — Founder of Ninety5 (ninety5.in). Creative Technologist, AOSP Kernel Developer & UI/UX Designer in Chennai, India. Bridging raw systems performance with cinematic web experiences.",
-  keywords: [
-    "Mohammed Rayyan",
-    "Mohammed Rayyan M",
-    "M Mohammed Rayyan",
-    "Rayyan M",
-    "Rayyan x95",
-    "rayyan-x95",
-    "rayyan.x95",
-    "Mohammed Rayyan Chennai",
-    "Founder Ninety5",
-    "Ninety5 Founder",
-    "Ninety5 Studio",
-    "ninety5.in",
-    "Creative Technologist",
-    "AOSP Developer",
-    "ROM Developer Chennai",
-    "Android Systems Architect",
-    "Custom ROM Developer India",
-    "UI/UX Designer and Engineer",
-    "Next.js Developer Portfolio",
-    "Full-Stack Engineer Portfolio",
-    "Fluid Interfaces Design",
-    "Jetpack Compose Developer",
-    "GSAP Web Animations",
-    "Linux Kernel Developer"
-  ],
+  description: "Founder of Ninety5 (Chennai) — AOSP kernel engineer & Next.js designer. 100+ projects, cinematic UI/UX. Open for Q4 2026 projects.",
   authors: [
     { name: "Mohammed Rayyan", url: "https://rayyan.ninety5.in" },
     { name: "Mohammed Rayyan", url: "https://www.ninety5.in" }
@@ -60,7 +34,7 @@ export const metadata: Metadata = {
   publisher: "Ninety5",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://rayyan.ninety5.in/",
     siteName: "Mohammed Rayyan — Founder of Ninety5",
     title: "Mohammed Rayyan | Founder of Ninety5 · Creative Technologist & Designer",
@@ -134,7 +108,8 @@ export default function RootLayout({
     ],
     "url": "https://rayyan.ninety5.in",
     "image": "https://rayyan.ninety5.in/profile.webp",
-    "email": "mmohammedrayyan0808@gmail.com",
+    "email": "rayyan@ninety5.in",
+    "telephone": "+91 63696 12671",
     "gender": "Male",
     "nationality": "Indian",
     "sameAs": [
@@ -207,7 +182,8 @@ export default function RootLayout({
     "logo": "https://rayyan.ninety5.in/profile.webp",
     "image": "https://rayyan.ninety5.in/profile.webp",
     "description": "Ninety5 (ninety5.in) is a premium creative studio founded by Mohammed Rayyan in Chennai, India. Specialising in AOSP development, ROM optimisation, UI/UX design, and cinematic digital experiences.",
-    "email": "mmohammedrayyan0808@gmail.com",
+    "email": "rayyan@ninety5.in",
+    "telephone": "+91 63696 12671",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Chennai Central",
@@ -243,7 +219,8 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "mmohammedrayyan0808@gmail.com",
+      "email": "rayyan@ninety5.in",
+      "telephone": "+91 63696 12671",
       "url": "https://rayyan.ninety5.in/contact",
       "availableLanguage": ["English", "Tamil", "Hindi", "Urdu"]
     }
@@ -263,7 +240,7 @@ export default function RootLayout({
     "author": {
       "@id": "https://rayyan.ninety5.in/#person"
     },
-    "inLanguage": "en-US"
+    "inLanguage": "en-IN"
   };
 
   const profilePageSchema = {

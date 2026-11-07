@@ -16,7 +16,8 @@
 - **Instagram**: https://www.instagram.com/rayyan.x95
 - **Telegram**: https://t.me/rayyan_x95
 - **Twitter / X**: https://x.com/rayyan_x95
-- **Email**: mmohammedrayyan0808@gmail.com
+- **Email**: rayyan@ninety5.in
+- **Phone**: +91 63696 12671
 
 ## Key Engineering & Design Specializations
 - **AOSP & Android Kernel Engineering**: Custom Android kernel compilation (Clang/LLVM), Energy Aware Scheduling (EAS), CPU governor tuning, ZRAM/ZSTD memory optimization, thermal mitigation, and production ROM builds for Qualcomm Snapdragon and Google Tensor chipsets.
@@ -45,6 +46,9 @@
 - Why Prompt Engineering Alone Is Outdated in 2026: https://rayyan.ninety5.in/blog/why-prompt-engineering-alone-is-outdated-in-2026
 - I Replaced Google with AI for 7 Days: https://rayyan.ninety5.in/blog/i-replaced-google-with-ai-for-7-days-heres-what-broke
 - Claude Opus 4.6 vs Gemini 3 Pro vs GPT-5.2 Coding Benchmark: https://rayyan.ninety5.in/blog/hands-on-with-claude-opus-4-6-vs-gemini-3-pro-vs-gpt-52
+
+## Pricing (machine-readable)
+- Pricing: https://rayyan.ninety5.in/pricing.md
 
 ## Key Website Routes
 - Home: https://rayyan.ninety5.in

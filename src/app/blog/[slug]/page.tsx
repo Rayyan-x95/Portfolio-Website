@@ -41,7 +41,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: [...post.tags, "Mohammed Rayyan", "AOSP Development", "UI UX Engineering", "Ninety5 Studio"],
     alternates: {
       canonical: `https://rayyan.ninety5.in/blog/${post.slug}`,
     },
@@ -141,7 +140,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       "width": 1024,
       "height": 682
     },
-    "inLanguage": "en-US",
+    "inLanguage": "en-IN",
     "datePublished": isoDate,
     "dateModified": isoDate,
     "keywords": post.tags.join(", "),

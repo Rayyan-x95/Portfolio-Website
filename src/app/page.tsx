@@ -58,9 +58,9 @@ export default function Home() {
       <div className="pt-24 relative">
         <div className="container mx-auto max-w-7xl px-4 md:px-6 mb-12">
           <FadeUp>
-            <h2 className="font-heading text-sm font-medium tracking-[0.2em] text-text-muted uppercase">
+            <p className="font-heading text-sm font-medium tracking-[0.2em] text-text-muted uppercase">
               {"// Selected Work"}
-            </h2>
+            </p>
           </FadeUp>
         </div>
         <WorksSection limit={4} />
@@ -76,6 +76,28 @@ export default function Home() {
 
       <AboutPreview />
       <ServicesPreview />
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-black">
+        <div className="container mx-auto max-w-4xl">
+          <FadeUp>
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-8">Frequently Asked Questions</h2>
+          </FadeUp>
+          <dl className="space-y-8">
+            {[
+              ["Who is Mohammed Rayyan?", "Mohammed Rayyan (M Mohammed Rayyan / @rayyan-x95) is the Founder of Ninety5 (ninety5.in), a Creative Technologist, AOSP Kernel Developer, and UI/UX Designer based in Chennai, India."],
+              ["What is Ninety5 and who founded it?", "Ninety5 (ninety5.in) is a premium creative studio founded by Mohammed Rayyan in Chennai, India. It specialises in AOSP development, ROM optimisation, UI/UX design, and cinematic digital experiences."],
+              ["What are Mohammed Rayyan's primary skills and technologies?", "Android Open Source Project (AOSP) development, Linux kernel tuning, Next.js 15, React 19, TypeScript, Kotlin, Jetpack Compose, and cinematic GSAP motion design."],
+              ["Where can I find Mohammed Rayyan's social profiles?", "GitHub (https://github.com/rayyan-x95), LinkedIn (https://www.linkedin.com/in/mohrayyan/), Instagram (https://www.instagram.com/rayyan.x95), Telegram (https://t.me/rayyan_x95), Twitter/X (https://x.com/rayyan_x95), and his studio at https://www.ninety5.in."],
+            ].map(([q, a]) => (
+              <FadeUp key={q}>
+                <div>
+                  <dt className="text-lg font-heading font-bold text-white">{q}</dt>
+                  <dd className="mt-2 text-text-muted leading-relaxed">{a}</dd>
+                </div>
+              </FadeUp>
+            ))}
+          </dl>
+        </div>
+      </section>
       <Contact />
     </main>
   );

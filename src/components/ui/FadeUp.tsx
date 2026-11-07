@@ -1,13 +1,6 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-}
+import { ReactNode, useEffect, useRef } from "react";
 
 interface FadeUpProps {
   children: ReactNode;
@@ -16,43 +9,40 @@ interface FadeUpProps {
   yOffset?: number;
 }
 
+// ScrollTrigger/GSAP measurements went stale as images/fonts shifted layout,
+// leaving wrappers stuck at opacity:0 (invisible content). IntersectionObserver
+// observes real visibility, so reveals can't get stuck. SSR renders visible;
+// the effect hides then reveals — progressive enhancement.
 export function FadeUp({ children, delay = 0, className, yOffset = 24 }: FadeUpProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (!containerRef.current) return;
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      gsap.set(containerRef.current, { opacity: 1, y: 0, scale: 1 });
-      return;
-    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    gsap.fromTo(
-      containerRef.current,
-      { 
-        opacity: 0, 
-        y: yOffset,
-        scale: 0.96,
+    el.classList.add("fadeup-pending");
+    el.style.transitionDelay = `${delay}s`;
+    el.style.setProperty("--fadeup-y", `${yOffset}px`);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fadeup-in");
+            io.unobserve(entry.target);
+          }
+        });
       },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1.2,
-        delay: delay,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top bottom-=80",
-          once: true,
-        }
-      }
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.01 }
     );
-  }, { scope: containerRef, dependencies: [delay, yOffset] });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [delay, yOffset]);
 
   return (
-    <div ref={containerRef} className={className} style={{ opacity: 0 }}>
+    <div ref={containerRef} className={className}>
       {children}
     </div>
   );

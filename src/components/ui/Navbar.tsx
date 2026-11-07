@@ -72,7 +72,7 @@ export function Navbar() {
               style={{ scale: logoScale }}
               className="flex items-center gap-6 mix-blend-difference origin-left"
             >
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" className="flex min-h-[44px] items-center gap-3 group">
                 <span className="font-heading text-xl md:text-2xl font-black uppercase tracking-tighter text-white">
                   RAYYAN<span className="text-accent-primary">.</span>
                 </span>
@@ -110,7 +110,7 @@ export function Navbar() {
                       key={link.name}
                       href={link.href}
                       onMouseEnter={() => setHoveredLink(link.name)}
-                      className={`relative px-4 lg:px-6 py-2.5 rounded-full text-[10px] lg:text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-500 ${
+                      className={`relative inline-flex min-h-[44px] items-center px-4 lg:px-6 py-2.5 rounded-full text-[10px] lg:text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-500 ${
                         isActive ? "text-black" : "text-white/60 hover:text-white"
                       }`}
                     >
@@ -138,7 +138,7 @@ export function Navbar() {
                   <button
                     onClick={() => setIsMoreOpen(!isMoreOpen)}
                     onMouseEnter={() => setHoveredLink("More")}
-                    className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-500 relative ${
+                    className={`flex min-h-[44px] items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-500 relative ${
                       isMoreOpen ? "text-black bg-white" : "text-white/60 hover:text-white"
                     }`}
                   >
@@ -208,7 +208,7 @@ export function Navbar() {
                 <div className="h-6 w-[1px] bg-white/10 mx-2" />
                 <Link 
                   href="/contact"
-                  className="px-6 py-2.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-bold text-white uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                  className="inline-flex min-h-[44px] items-center px-6 py-2.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-bold text-white uppercase tracking-widest hover:bg-white hover:text-black transition-all"
                 >
                   Book a Call
                 </Link>
@@ -221,7 +221,7 @@ export function Navbar() {
             <div className="mix-blend-difference flex items-center gap-2">
               <button 
                 onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
-                className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:rotate-90 transition-all"
+                className="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:rotate-90 transition-all"
               >
                 <CommandIcon className="w-4 h-4" />
               </button>
@@ -229,7 +229,7 @@ export function Navbar() {
               {/* Mobile Burger Toggle */}
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/40 hover:text-white transition-all"
+                className="md:hidden w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/40 hover:text-white transition-all"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>

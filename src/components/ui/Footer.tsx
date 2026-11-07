@@ -81,7 +81,7 @@ export function Footer() {
               {/* Brand & Status Column */}
               <div className="lg:col-span-4 flex flex-col items-start justify-between">
                 <div>
-                  <Link href="/" className="group inline-block mb-6">
+                  <Link href="/" className="group inline-flex min-h-[44px] items-center mb-6">
                     <h3 className="font-heading text-3xl font-extrabold tracking-tighter text-white uppercase group-hover:text-accent-primary transition-colors duration-500">
                       RAYYAN<span className="text-accent-primary">.</span>
                     </h3>
@@ -95,7 +95,7 @@ export function Footer() {
                     target="_blank"
                     rel="me noopener noreferrer"
                     aria-label="Visit Ninety5 — Mohammed Rayyan's studio"
-                    className="inline-flex items-center gap-2 text-[10px] font-mono text-text-muted uppercase tracking-widest hover:text-accent-primary transition-colors duration-300 group/n95"
+                    className="inline-flex min-h-[44px] items-center gap-2 text-xs font-mono text-text-muted uppercase tracking-widest hover:text-accent-primary transition-colors duration-300 group/n95"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-primary group-hover/n95:scale-150 transition-transform duration-300" />
                     Founder · <span className="text-white">Ninety5.in</span>
@@ -109,8 +109,8 @@ export function Footer() {
                     <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-accent-primary"></span>
                   </div>
                   <div className="flex flex-col text-left">
-                    <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest leading-none">System Status</span>
-                    <span className="text-[10px] font-mono text-white uppercase tracking-wider font-bold mt-1">Ready for projects</span>
+                    <span className="text-xs font-mono text-white/30 uppercase tracking-widest leading-none">System Status</span>
+                    <span className="text-xs font-mono text-white uppercase tracking-wider font-bold mt-1">Ready for projects</span>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export function Footer() {
               <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                 {categories.map((cat) => (
                   <div key={cat.title}>
-                    <h4 className="font-heading text-[10px] font-black uppercase tracking-[0.3em] text-text-muted mb-6">
+                    <h4 className="font-heading text-xs font-black uppercase tracking-[0.3em] text-text-muted mb-6">
                       {cat.title}
                     </h4>
                     <ul className="space-y-3">
@@ -134,7 +134,7 @@ export function Footer() {
                                 target="_blank"
                                 rel="me noopener noreferrer"
                                 aria-label={`Open ${link.name} in a new tab`}
-                                className="group/link inline-flex items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
+                                className="group/link inline-flex min-h-[44px] items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
                               >
                                 {link.name}
                                 <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" aria-hidden="true" />
@@ -147,7 +147,7 @@ export function Footer() {
                           <li key={link.name}>
                             <Link 
                               href={link.href}
-                              className="group/link inline-flex items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
+                              className="group/link inline-flex min-h-[44px] items-center gap-1.5 text-white/50 hover:text-accent-primary transition-colors duration-300 font-heading text-sm uppercase tracking-tight font-medium"
                             >
                               {link.name}
                             </Link>
@@ -163,24 +163,24 @@ export function Footer() {
             {/* Bottom Row: Metadata & Scroll to Top */}
             <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
+                <p className="text-xs font-mono text-text-muted uppercase tracking-widest">
                   © {currentYear} Ninety5 Studio
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
-                <p className="text-[10px] font-mono text-text-muted uppercase tracking-widest">
+                <p className="text-xs font-mono text-text-muted uppercase tracking-widest">
                   Mohammed Rayyan • Chennai, India • hello@ninety5.in
                 </p>
                 <div className="hidden md:block w-1 h-1 bg-white/10 rounded-full" />
-                <div className="text-[10px] font-mono text-text-muted uppercase tracking-widest space-x-4">
-                  <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+                <div className="text-xs font-mono text-text-muted uppercase tracking-widest space-x-4">
+                  <Link href="/privacy" className="inline-block min-h-[44px] content-center hover:text-white transition-colors">Privacy</Link>
                   <span>•</span>
-                  <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+                  <Link href="/terms" className="inline-block min-h-[44px] content-center hover:text-white transition-colors">Terms</Link>
                 </div>
               </div>
 
               <button 
                 onClick={handleScrollToTop}
-                className="group/totop flex items-center gap-2 border border-white/10 hover:border-accent-primary rounded-full px-5 py-3 text-[10px] font-mono text-white/40 hover:text-accent-primary transition-all duration-300 uppercase tracking-widest"
+                className="group/totop flex min-h-[44px] items-center gap-2 border border-white/10 hover:border-accent-primary rounded-full px-5 py-3 text-xs font-mono text-white/40 hover:text-accent-primary transition-all duration-300 uppercase tracking-widest"
               >
                 Back to top 
                 <ArrowUp className="w-3.5 h-3.5 group-hover/totop:-translate-y-0.5 transition-transform duration-300" aria-hidden="true" />
@@ -192,3 +192,4 @@ export function Footer() {
     </footer>
   );
 }
+

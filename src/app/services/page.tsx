@@ -8,18 +8,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services & Engineering Solutions",
-  description: "Comprehensive engineering and product design solutions by Mohammed Rayyan (Mohammed Rayyan M / @rayyan-x95): AOSP ROM engineering, Linux kernel tuning, custom UI/UX design systems, and Next.js full-stack development.",
-  keywords: [
-    "AOSP ROM Engineering",
-    "Android Kernel Optimization",
-    "Custom ROM Developer Chennai",
-    "UI UX Design Systems",
-    "Next.js Development",
-    "Full-Stack Engineer",
-    "Creative Technologist",
-    "Mohammed Rayyan",
-    "Ninety5 Studio"
-  ],
+  description: "AOSP ROM engineering, Linux kernel tuning, UI/UX design systems, and Next.js full-stack development. Custom work — request a proposal.",
   openGraph: {
     title: "Services & Engineering Solutions | Mohammed Rayyan",
     description: "AOSP ROM engineering, mobile systems optimization, design systems, and modern Next.js development by Mohammed Rayyan.",

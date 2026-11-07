@@ -19,7 +19,7 @@ export function AboutPreview() {
                 <span className="text-accent-primary">Philosophy</span>
               </h2>
               <div className="w-20 h-[1px] bg-accent-primary mb-8" />
-              <Link href="/about" className="group inline-flex items-center gap-4 text-white font-mono text-xs tracking-[0.3em] uppercase hover:text-accent-secondary transition-colors duration-500">
+              <Link href="/about" className="group inline-flex min-h-[44px] items-center gap-4 text-white font-mono text-xs tracking-[0.3em] uppercase hover:text-accent-secondary transition-colors duration-500">
                 Explore About
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
               </Link>
