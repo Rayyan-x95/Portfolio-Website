@@ -105,7 +105,7 @@ function SoftwareCard({ tool, index }: { tool: typeof tools[0]; index: number })
         <div
           className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
-            background: `radial-gradient(180px circle at ${coords.x}px ${coords.y}px, rgba(232, 84, 11, 0.05), transparent 80%)`,
+            background: `radial-gradient(180px circle at ${coords.x}px ${coords.y}px, rgba(58, 190, 249, 0.05), transparent 80%)`,
           }}
         />
         

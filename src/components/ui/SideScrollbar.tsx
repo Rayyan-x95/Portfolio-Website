@@ -42,16 +42,17 @@ export function SideScrollbar() {
   if (!isClient || windowHeight === 0) return null;
 
   return (
-    <div className="fixed right-3 top-12 bottom-12 w-1 z-[120] pointer-events-none hidden md:block">
+    <div className="fixed right-3 top-12 bottom-12 w-1.5 z-[120] pointer-events-none hidden md:block">
       {/* Track */}
-      <div className="absolute inset-0 bg-white/10">
+      <div className="absolute inset-0 bg-white/5 rounded-full">
         {/* Fill/Thumb */}
         <motion.div
           style={{ 
             height: 100, 
+            background: "linear-gradient(to bottom, #3ABEF9, #FF8F00)",
             y: translateY
           }}
-          className="w-full bg-signal"
+          className="w-full rounded-full shadow-[0_0_20px_rgba(58,190,249,0.2)] transition-shadow duration-500"
         />
       </div>
     </div>

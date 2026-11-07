@@ -16,7 +16,7 @@
 - **Instagram**: https://www.instagram.com/rayyan.x95
 - **Telegram**: https://t.me/rayyan_x95
 - **Twitter / X**: https://x.com/rayyan_x95
-- **Email**: rayyan@ninety5.in
+- **Email**: mmohammedrayyan0808@gmail.com
 
 ## Key Engineering & Design Specializations
 - **AOSP & Android Kernel Engineering**: Custom Android kernel compilation (Clang/LLVM), Energy Aware Scheduling (EAS), CPU governor tuning, ZRAM/ZSTD memory optimization, thermal mitigation, and production ROM builds for Qualcomm Snapdragon and Google Tensor chipsets.

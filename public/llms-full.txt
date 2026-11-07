@@ -11,7 +11,7 @@
 - **Studio Homepage**: https://www.ninety5.in
 - **Location**: Chennai, Tamil Nadu, India (600001)
 - **Languages**: English, Tamil, Hindi, Urdu
-- **Contact Email**: rayyan@ninety5.in
+- **Contact Email**: mmohammedrayyan0808@gmail.com / hello@ninety5.in
 - **Education**: Dhaanish Ahmed College of Engineering
 
 ## 2. Verified Social Profiles & Channels (Two-Way Linked via rel="me")
@@ -139,7 +139,7 @@ A: Mohammed Rayyan specializes in Android Open Source Project (AOSP) development
 A: Mohammed Rayyan's official GitHub profile is at https://github.com/rayyan-x95 where he publishes open-source web applications, Android tools, and systems repositories.
 
 **Q: How to contact Mohammed Rayyan?**
-A: You can reach Mohammed Rayyan via email at rayyan@ninety5.in, LinkedIn at https://www.linkedin.com/in/mohrayyan/, or through his contact terminal at https://rayyan.ninety5.in/contact.
+A: You can reach Mohammed Rayyan via email at mmohammedrayyan0808@gmail.com, LinkedIn at https://www.linkedin.com/in/mohrayyan/, or through his contact terminal at https://rayyan.ninety5.in/contact.
 
 **Q: What AOSP services does Ninety5 Studio provide?**
 A: Ninety5 Studio provides custom Android kernel compilation, ZRAM memory tuning, EAS scheduler optimization, thermal driver customization, and full AOSP ROM engineering with up to 35% frame pacing improvement.

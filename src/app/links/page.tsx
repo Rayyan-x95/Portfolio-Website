@@ -47,7 +47,7 @@ const links = [
   { name: "Instagram", icon: Camera, url: "https://www.instagram.com/rayyan.x95", color: "from-purple-500/20" },
   { name: "Telegram", icon: Send, url: "https://t.me/rayyan_x95", color: "from-accent-primary/20" },
   { name: "Twitter / X", icon: XTwitterIcon, url: "https://x.com/rayyan_x95", color: "from-cyan-500/20" },
-  { name: "Email Transmission", icon: Mail, url: "mailto:rayyan@ninety5.in", color: "from-accent-primary/20" },
+  { name: "Email Transmission", icon: Mail, url: "mailto:mmohammedrayyan0808@gmail.com", color: "from-accent-primary/20" },
   { name: "Studio Website", icon: Globe, url: "https://www.ninety5.in/", color: "from-accent-secondary/20" },
   { name: "Portfolio Core", icon: Globe, url: "/", color: "from-white/10" },
 ];
