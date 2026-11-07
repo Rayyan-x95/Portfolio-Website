@@ -72,14 +72,14 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-[100] border-b-2 border-ink/60 bg-paper/90 text-ink backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-[100] border-b border-ink/20 bg-paper text-ink">
         <div className="mx-auto max-w-[1600px] px-4 md:px-8">
           <div className="flex h-16 items-center justify-between md:h-20">
             <Link
               href="/"
               className="font-heading text-lg font-black uppercase tracking-[-0.02em] md:text-xl"
             >
-              RAY—95 <span className="animate-wiggle inline-block text-signal">★</span>
+              RAY—95
               <span className="sr-only"> — Mohammed Rayyan, home</span>
             </Link>
 
@@ -111,9 +111,9 @@ export function Navbar() {
                   window.dispatchEvent(new CustomEvent("open-command-palette"))
                 }
                 aria-label="Open command palette"
-                className="mono-label btn-pop hidden items-center gap-2 border-2 border-ink bg-signal px-3 py-1.5 text-ink sm:inline-flex"
+                className="mono-label hidden items-center gap-2 border border-ink/30 px-2.5 py-1.5 transition-colors duration-150 hover:bg-ink hover:text-paper sm:inline-flex"
               >
-                ⌘K ✦
+                ⌘K
               </button>
               <button
                 ref={menuButtonRef}
@@ -121,9 +121,9 @@ export function Navbar() {
                 onClick={() => setIsOpen(true)}
                 aria-expanded={isOpen}
                 aria-controls="mobile-menu"
-                className="mono-label btn-pop border-2 border-ink bg-paper-elevated px-4 py-1.5 text-ink lg:hidden"
+                className="mono-label border border-ink/30 px-3 py-1.5 transition-colors duration-150 hover:bg-ink hover:text-paper lg:hidden"
               >
-                Menu ☰
+                Menu
               </button>
             </div>
           </div>

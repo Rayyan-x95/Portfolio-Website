@@ -29,18 +29,14 @@ export function Hero() {
       ref={containerRef}
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-paper pb-6 pt-24 text-ink md:pt-28"
     >
-      {/* Arcade glow orbs */}
-      <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-signal/30 blur-[110px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-16 top-40 h-64 w-64 rounded-full bg-signal-pink/30 blur-[110px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-10 left-1/3 h-56 w-56 rounded-full bg-signal-violet/30 blur-[110px]" />
       <div className="mx-auto flex w-full max-w-[1600px] flex-1 flex-col px-4 md:px-8">
         <div className="hero-fade mono-label flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-ink/25 pb-3">
           <span>Portfolio / Vol. 03</span>
           <span className="hidden text-muted lg:block">
             Chennai, IN — 13.0827°N / 80.2707°E
           </span>
-          <span className="flex items-center gap-2 rounded-full border-2 border-ink/60 bg-paper-elevated px-3 py-1 text-ink">
-            <span className="h-2 w-2 rounded-full bg-signal-mint" aria-hidden="true" />
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 bg-signal" aria-hidden="true" />
             Available for select projects
           </span>
         </div>
@@ -51,17 +47,12 @@ export function Hero() {
               <span className="text-signal" aria-hidden="true">▪</span>
               Creative technologist — Founder, Ninety5
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <span className="sticker animate-wiggle bg-signal text-ink">● AI-native</span>
-              <span className="sticker animate-floaty bg-signal-pink text-ink" style={{ ["--tilt" as never]: "2deg" }}>✦ shipped</span>
-              <span className="sticker animate-floaty bg-signal-mint text-ink" style={{ ["--tilt" as never]: "-3deg" }}>★ Chennai → World</span>
-            </div>
             <h1 className="mt-6 font-heading text-[clamp(3.4rem,11.4vw,10.5rem)] font-black uppercase leading-[0.82] tracking-[-0.04em] md:mt-8">
               <span className="block overflow-hidden pb-[0.06em] -mb-[0.06em]">
                 <span className="hero-line block">Design the</span>
               </span>
               <span className="block overflow-hidden pb-[0.06em] -mb-[0.06em]">
-                <span className="hero-line block bg-gradient-to-r from-signal via-signal-pink to-signal-violet bg-clip-text text-transparent">Machine.</span>
+                <span className="hero-line block text-signal">Machine.</span>
               </span>
             </h1>
           </div>
@@ -83,7 +74,7 @@ export function Hero() {
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link
                 href="#work"
-                className="mono-label btn-pop group inline-flex items-center gap-3 bg-signal px-6 py-4 text-ink"
+                className="mono-label group inline-flex items-center gap-3 bg-ink px-5 py-3.5 text-paper transition-colors hover:bg-signal hover:text-ink"
               >
                 Selected work
                 <span
@@ -95,9 +86,9 @@ export function Hero() {
               </Link>
               <Link
                 href="/contact"
-                className="mono-label btn-pop inline-flex items-center gap-2 border-2 border-ink/60 bg-paper-elevated px-6 py-4 text-ink transition-colors hover:bg-signal hover:text-ink"
+                className="mono-label underline decoration-1 underline-offset-4 transition-colors hover:text-signal"
               >
-                Start a project ✦
+                Start a project
               </Link>
             </div>
           </div>
@@ -117,7 +108,7 @@ export function Hero() {
 
       <div className="mx-auto mt-10 w-full max-w-[1600px] px-4 md:px-8">
         <div className="mono-label flex items-center justify-between border-t border-ink/25 pt-3 text-muted">
-          <span className="animate-bob">Scroll ↓</span>
+          <span>Scroll ↓</span>
           <span className="hidden sm:block">Design / AOSP / Motion</span>
           <span>00 — 04</span>
         </div>

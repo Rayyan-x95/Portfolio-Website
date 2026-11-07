@@ -15,7 +15,7 @@ export function Capability() {
         <SectionHead
           number="02"
           title="Capability"
-          meta="What I do ✦"
+          meta="What I do"
           action={{ label: "Full services", href: "/services" }}
         />
 
@@ -25,20 +25,20 @@ export function Capability() {
               Four disciplines, one operator. I take products from a blank Figma
               file to a running system — no handoff gaps.
             </p>
-            <p className="mono-label mt-8 rounded-full border border-ink/40 bg-paper-elevated px-3 py-1 text-muted">Stack index</p>
-            <p className="mt-4 rounded-2xl border-2 border-ink bg-signal/15 p-3 font-mono text-xs leading-relaxed tracking-wide">
+            <p className="mono-label mt-8 text-muted">Stack index</p>
+            <p className="mt-2 font-mono text-xs leading-relaxed tracking-wide">
               NEXT.JS / REACT / TYPESCRIPT / KOTLIN / AOSP / LINUX / GSAP / FIGMA
             </p>
           </div>
 
-          <div className="col-span-12 space-y-3 md:col-span-8">
+          <div className="col-span-12 md:col-span-8">
             {services.map((service, index) => (
               <Link
                 key={service.title}
                 href="/services"
-                className="group grid grid-cols-12 items-baseline gap-x-4 gap-y-1 rounded-2xl border-2 border-ink/20 bg-paper-elevated px-5 py-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-signal hover:shadow-[5px_5px_0_rgba(0,0,0,.55)]"
+                className="group grid grid-cols-12 items-baseline gap-x-4 gap-y-1 border-t border-ink/25 py-5 last:border-b"
               >
-                <span className="mono-label col-span-2 rounded-full border-2 border-ink bg-signal-pink px-2 py-1 text-center text-ink">
+                <span className="mono-label col-span-2 text-muted">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="col-span-10 font-heading text-xl font-bold uppercase tracking-tight transition-colors duration-150 group-hover:text-signal md:col-span-6 md:text-2xl">

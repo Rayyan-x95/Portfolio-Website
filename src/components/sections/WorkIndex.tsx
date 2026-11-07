@@ -64,9 +64,9 @@ export function WorkIndex() {
                 onMouseEnter={() => setActive(index)}
                 onFocus={() => setActive(index)}
                 onBlur={() => setActive(null)}
-                className="group flex items-baseline gap-4 rounded-2xl border-2 border-ink/20 bg-paper-elevated px-4 py-4 transition-all duration-200 last:border-b hover:-translate-y-0.5 hover:border-signal hover:shadow-[5px_5px_0_rgba(0,0,0,.55)] md:gap-6 md:px-6 md:py-6"
+                className="group flex items-baseline gap-4 border-t border-ink/25 py-4 last:border-b md:gap-6 md:py-6"
               >
-                <span className="mono-label w-10 shrink-0 rounded-full border-2 border-ink bg-signal px-2 py-1 text-center text-ink">
+                <span className="mono-label w-7 shrink-0 text-muted">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="flex-1 font-heading text-[clamp(1.7rem,4.4vw,3.4rem)] font-black uppercase leading-none tracking-[-0.03em] transition-colors duration-150 group-hover:text-signal">
@@ -102,19 +102,19 @@ export function WorkIndex() {
         } transition-opacity duration-150`}
       >
         {active !== null && (
-          <div className="rotate-2 rounded-3xl border-2 border-ink bg-signal p-3 shadow-[8px_8px_0_rgba(0,0,0,.55)]">
-            <div className="flex items-start justify-between border-b-2 border-ink/20 pb-2">
-              <span className="mono-label rounded-full bg-ink px-2 py-1 text-signal">
+          <div className="border border-ink bg-paper p-3">
+            <div className="flex items-start justify-between border-b border-ink/25 pb-2">
+              <span className="mono-label text-signal">
                 {String(active + 1).padStart(2, "0")}
               </span>
-              <span className="h-3 w-3 animate-wiggle rounded-full bg-signal-pink" aria-hidden="true" />
+              <span className="h-3 w-3 bg-signal" aria-hidden="true" />
             </div>
             <div className="flex h-[190px] items-end pt-6">
-              <p className="font-heading text-3xl font-black uppercase leading-[0.9] tracking-[-0.03em] text-ink">
+              <p className="font-heading text-3xl font-black uppercase leading-[0.9] tracking-[-0.03em]">
                 {selected[active].title}
               </p>
             </div>
-            <div className="mono-label flex justify-between gap-4 border-t-2 border-ink/20 pt-2 text-ink/70">
+            <div className="mono-label flex justify-between gap-4 border-t border-ink/25 pt-2 text-muted">
               <span>{selected[active].tags.join(" / ")}</span>
               <span>View ↗</span>
             </div>

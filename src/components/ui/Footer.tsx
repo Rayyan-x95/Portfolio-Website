@@ -47,14 +47,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t-4 border-ink bg-paper-elevated px-4 py-10 text-ink md:px-8 md:py-14">
+    <footer className="border-t border-paper/20 bg-ink px-4 py-10 text-paper md:px-8 md:py-14">
       <div className="mx-auto max-w-[1600px]">
-        <div className="grid grid-cols-12 gap-8 border-b-2 border-ink/20 pb-10 md:gap-10 md:pb-14">
+        <div className="grid grid-cols-12 gap-8 border-b border-paper/20 pb-10 md:gap-10 md:pb-14">
           <div className="col-span-12 lg:col-span-5">
-            <p className="mono-label rounded-full border border-ink/40 bg-paper px-3 py-1 text-muted">Ninety5 Studio / Portfolio ✦</p>
+            <p className="mono-label text-paper/50">Ninety5 Studio / Portfolio</p>
             <Link
               href="/"
-              className="mt-3 block font-heading text-[clamp(2.6rem,5vw,4.5rem)] font-black uppercase leading-none tracking-[-0.04em] transition-colors hover:text-signal-pink"
+              className="mt-3 block font-heading text-[clamp(2.6rem,5vw,4.5rem)] font-black uppercase leading-none tracking-[-0.04em] transition-colors hover:text-signal"
             >
               RAY—95
             </Link>

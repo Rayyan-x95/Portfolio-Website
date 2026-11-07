@@ -1,5 +1,5 @@
 ﻿import type { Metadata, Viewport } from "next";
-import { Archivo, JetBrains_Mono, Fredoka } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/ui/Navbar";
@@ -17,12 +17,6 @@ const archivo = Archivo({
 const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
-});
-
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -86,7 +80,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#07061A",
+  themeColor: "#1B1B18",
 };
 
 export default function RootLayout({
@@ -260,9 +254,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${jetbrains.variable} ${fredoka.variable} antialiased`}
+      className={`${archivo.variable} ${jetbrains.variable} antialiased`}
     >
-      <body className={`${archivo.variable} ${jetbrains.variable} ${fredoka.variable} font-sans bg-background text-foreground antialiased`}>
+      <body className={`${archivo.variable} ${jetbrains.variable} font-sans bg-background text-foreground antialiased`}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <PageTransition />
         <JsonLd data={personSchema} />
