@@ -62,9 +62,7 @@ export function Contact() {
       setErrors(newErrors);
       setTouched({ name: true, email: true, message: true });
       
-      // Screen-reader announcement of the first error
       const firstErrorField = Object.keys(newErrors)[0];
-      const errorMsg = newErrors[firstErrorField];
       const el = document.getElementById(`contact-${firstErrorField}`);
       if (el) el.focus();
       return;
