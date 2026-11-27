@@ -71,9 +71,9 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://forms-backend.coeffx.tech/api/v1/submit/02b00925-5609-44d7-b7ba-5dce2e7e561d", {
+      const response = await fetch("https://formspree.io/f/xeagddgo", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(formState),
       });
 
