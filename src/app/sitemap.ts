@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route: '',
       priority: 1.0,
       changeFrequency: 'weekly',
-      lastModified: latestBlogDate,
+      lastModified: '2026-11-27T00:00:00.000Z',
       images: [`${baseUrl}/og-image.png`, `${baseUrl}/profile.webp`],
     },
     {
@@ -106,7 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route: '/contact',
       priority: 0.8,
       changeFrequency: 'monthly',
-      lastModified: '2026-11-07T00:00:00.000Z',
+      lastModified: '2026-11-27T00:00:00.000Z',
       images: [`${baseUrl}/og-image.png`],
     },
     {
